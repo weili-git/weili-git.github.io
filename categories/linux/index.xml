@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Hugo tranquilpeak theme</title>
+    <link>https://example.org/categories/linux/</link>
+    <description>Recent content in Linux on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Oct 2021 12:57:11 +0800</lastBuildDate><atom:link href="https://example.org/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Engine</title>
+      <link>https://example.org/2021/10/docker-engine/</link>
+      <pubDate>Tue, 26 Oct 2021 12:57:11 +0800</pubDate>
+      
+      <guid>https://example.org/2021/10/docker-engine/</guid>
+      <description>1. Install Docker First, we need to install Docker Engine according to the instructions on the official website. Then, for convenience, we can do the following to avoid typing &amp;lsquo;sudo&amp;rsquo; each time.
+cat /etc/group | grep docker sudo groupadd docker # if no output sudo gpasswd -a ${USER} docker sudo service docker restart newgrp - docker 2. Image Command 2.1 search We can search Docker Hub to find docker images that we want.</description>
+    </item>
+    
+  </channel>
+</rss>

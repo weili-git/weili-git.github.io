@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    
+    <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+    >
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/example.org\/",
+  "author": {
+    "@type": "Person",
+    "name": "LI WEI",
+    
+    "image": "https://avatars.githubusercontent.com/u/28665739?v=4"
+    
+  },
+  "name":"Hugo tranquilpeak theme",
+  "description":"Hugo tranquilpeak theme demo",
+  "url":"https:\/\/example.org\/",
+  "keywords":"[]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="LI WEI">
+<meta name="keywords" content="">
+<meta name="description" content="Hugo tranquilpeak theme demo">
+
+
+<meta property="og:description" content="Hugo tranquilpeak theme demo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hugo tranquilpeak theme">
+<meta name="twitter:title" content="Hugo tranquilpeak theme">
+<meta property="og:url" content="https://example.org/">
+<meta property="twitter:url" content="https://example.org/">
+<meta property="og:site_name" content="Hugo tranquilpeak theme">
+<meta property="og:description" content="Hugo tranquilpeak theme demo">
+<meta name="twitter:description" content="Hugo tranquilpeak theme demo">
+<meta property="og:locale" content="en-us">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/28665739?v=4">
+  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/28665739?v=4">
+
+
+
+
+
+
+    <title>Hugo tranquilpeak theme</title>
+
+    <link rel="icon" href="https://example.org/favicon.png">
+    
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://example.org/index.xml">
+    
+
+    
+
+    <link rel="canonical" href="https://example.org/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://example.org/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="2">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://example.org/" aria-label="Go to homepage">Hugo tranquilpeak theme</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://example.org/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://avatars.githubusercontent.com/u/28665739?v=4" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="2">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://example.org/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://avatars.githubusercontent.com/u/28665739?v=4" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">LI WEI</h4>
+        
+          <h5 class="sidebar-profile-bio">苟日新，日日新，又日新</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/weili-git" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/13952920/weili-git" target="_blank" rel="noopener" title="Stack Overflow">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="2"
+        class="
+               hasCoverMetaIn
+               ">
+        <section class="postShorten-group main-content-wrap">
+          
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2022/04/sequential-model/" aria-label="Open the post: Sequential Model">
+      
+          Sequential Model
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-04-03T20:26:00&#43;08:00">
+        
+  April 3, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Sequential Model 1.1 Conditional Probability $$P(\bold x)=P(x_1)P(x_2|x_1)P(x_3|x_1,x_2)&hellip;P(x_t|x_1,x_2,&hellip;,x_{t-1})$$
+1.2 Autoregressive Model For ever-known model, we call it AR Model.
+$$p(x_t|x_1,x_2,&hellip;,x_{t-1})=p(x_t|f(x_1,x_2,&hellip;,x_{t-1}))$$
+1.3 Markov Model By Markov Hypothesis, the current state is determined by previous$$\tau$$ points.
+$$p(x_t|x_1,x_2,&hellip;,x_{t-1})=p(x_t|x_{t-\tau},&hellip;,x_{t-1})=p(x_t|f(x_{t-\tau},&hellip;,x_{t-1}))$$
+1.4 Latent Model 潜变量模型 we use a variable to represent the inner states (RNN is one of the Latent Model)
+$$h_t=f(x_1,&hellip;,x_{t-1})$$
+$$x_t=p(x_t|h_t)$$
+QA&hellip;
+      
+      <p>
+        
+          <a href="https://example.org/2022/04/sequential-model/" class="postShorten-excerpt_link link" aria-label="Open the post: Sequential Model">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2022/02/fourier-transform/" aria-label="Open the post: Fourier Transform">
+      
+          Fourier Transform
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-02-10T10:25:00&#43;08:00">
+        
+  February 10, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/signals-and-systems">Signals and Systems</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Fourier Series Orthogonal Basis Functions The &lsquo;orthogonal basis functions&rsquo; are a set of functions of time, $$\phi(t)$$, such that the followings holds over some specified time interval $$T$$,
+$$\forall k,\forall m,k \neq m, \int_{T} \overline{\phi_k(t)} \phi_m(t) =0$$
+Triangle Fourier Series the &lsquo;OBF&rsquo; of triangle fourier series are as follows
+$${cos(nw_0t),sin(nw_0t)}$$
+which satisfy that
+$$\int_Tcos(nw_0t)sin(mw_0t)dt = 0$$
+$$\int_Tcos(nw_0t)cos(mw_0t)dt = \int_Tsin(nw_0t)sin(mw_0t)dt = \begin{cases} \frac{T}{2},m=n\ 0,m\neq n \end{cases}$$
+$$\int_T1dt=T$$
+Therefore, we can express a periodic signal with fundamental period T as a sum of sinusoids,
+      
+      <p>
+        
+          <a href="https://example.org/2022/02/fourier-transform/" class="postShorten-excerpt_link link" aria-label="Open the post: Fourier Transform">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2022/02/signals-convolution/" aria-label="Open the post: Signal&#39;s Convolution">
+      
+          Signal&#39;s Convolution
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-02-09T10:35:00&#43;08:00">
+        
+  February 9, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/signals-and-systems">Signals and Systems</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Moving Average(MA) filter N-points MA filter is defined as
+$$y[n]=\sum_{i=0}^{N-1}\frac{1}{N}x[n-i]$$
+where N is a positive integer.
+For example, in the 3-points MA filter, the output is
+$$y[n]=\frac{1}{3}x[n]+\frac{1}{3}x[n-1]+\frac{1}{3}x[n-2]$$
+As a general class of system, the input/output relationship is defined as
+$$y[n] = \sum_{i=0}^{n}w_ix[n-i],n\ge 0$$
+it turns out that any &lsquo;causal linear time-invariant&rsquo; DT system with the input x[n] equal to 0 for all n &lt; 0 can be expressed as above.
+      
+      <p>
+        
+          <a href="https://example.org/2022/02/signals-convolution/" class="postShorten-excerpt_link link" aria-label="Open the post: Signal&#39;s Convolution">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2022/02/signals-properties/" aria-label="Open the post: Signal&#39;s Properties">
+      
+          Signal&#39;s Properties
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-02-08T19:58:00&#43;08:00">
+        
+  February 8, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/signals-and-systems">Signals and Systems</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1.Periodic Continuous-Time Signals given two periodic CT signals
+$$\forall t, x_1(t+T_1) = x_1(t)$$
+and
+$$\forall t, x_2(t+T_2) = x_2(t)$$
+if the sum of them is periodic, then
+$$\forall t, x_1(t+T)+x_2(t+T)=x_1(t)+x_2(t)$$
+it is satisfied if and only if
+$$\exists p,q \in N^*, T=pT_1=qT_2$$
+in other word, p and q are coprime
+$$\frac{T_1}{T_2}=\frac{p}{q}\in Q$$
+2. Sifting Property note that $$\forall \lambda \neq t_1, \delta(\lambda-t_1)=0$$
+it follows that
+$$\int_{-\infty}^{+\infty}f(\lambda)\delta(\lambda-t_1)d\lambda=\int_{t_1-\epsilon}^{t_1+\epsilon}f(\lambda)\delta(\lambda-t_1)d\lambda=f(t_1)$$
+where $$f(t)$$ is continuous at $$t=t_1$$
+      
+      <p>
+        
+          <a href="https://example.org/2022/02/signals-properties/" class="postShorten-excerpt_link link" aria-label="Open the post: Signal&#39;s Properties">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2022/01/cross-entropy/" aria-label="Open the post: Cross Entropy">
+      
+          Cross Entropy
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-01-25T11:58:00&#43;08:00">
+        
+  January 25, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Review of Entropy Entropy is usually used to represent the average amount of self-information. The calculation formula is as follows:
+$$H(X) = E(log\frac{1}{p_i}) = -\sum_{i=1}^{n}p_ilogp_i $$
+For example, supposed that we have a probability distribution X = [0.7, 0.3]. Then we have,
+$$H(X) = -0.7log0.7-0.3log0.3 = 0.88 bit$$
+What&rsquo;s more, we can easily find that $$0\le H(X) \le logn$$ is always true.
+The proof of the left inequality is trivial because $$0\le p\le 1$$ the equality is established if and only if $$p_i=1$$
+      
+      <p>
+        
+          <a href="https://example.org/2022/01/cross-entropy/" class="postShorten-excerpt_link link" aria-label="Open the post: Cross Entropy">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2021/12/annoying-scissors/" aria-label="Open the post: Annoying Scissors">
+      
+          Annoying Scissors
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-14T22:58:00&#43;08:00">
+        
+  December 14, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/article">Article</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        When I was in college, I bought a pair of scissors in the supermarket. It&rsquo;s durable and handy. Every time I use it to cut things, an inexplicable &ldquo;sense of fulfillment&rdquo; flooded into my heart. Although it is merely an ordinary pair of scissors, with the increase of use, I seem to have &ldquo;relied&rdquo; on it. Why do you say that? Because there are many times that I spend a lot of time finding it, even though several other scissors are at home.
+      
+      <p>
+        
+          <a href="https://example.org/2021/12/annoying-scissors/" class="postShorten-excerpt_link link" aria-label="Open the post: Annoying Scissors">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2021/12/resnet/" aria-label="Open the post: ResNet">
+      
+          ResNet
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-14T10:02:00&#43;08:00">
+        
+  December 14, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Preface Does deeper model always have good performance? Not Really!
+2. ResNet Block Similar to VGG and GoogLeNet, ResNet make it easy to training deep neural networks.
+$$f(x)= x + g(x)$$
+3. Q&amp;A 
+      
+      <p>
+        
+          <a href="https://example.org/2021/12/resnet/" class="postShorten-excerpt_link link" aria-label="Open the post: ResNet">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+          
+  <div class="pagination-bar">
+    <ul class="pagination">
+      
+        
+          <li class="pagination-prev">
+            <a class="btn btn--default btn--small" href="https://example.org/page/3/" aria-label="NEWER POSTS">
+              <i class="fa fa-angle-left text-base icon-mr"></i>
+              <span>NEWER POSTS</span>
+            </a>
+          </li>
+        
+        
+          <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="https://example.org/page/5/" aria-label="OLDER POSTS">
+              <span>OLDER POSTS</span>
+              <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+          </li>
+        
+      
+      <li class="pagination-number">page 4 of 6</li>
+    </ul>
+  </div>
+
+
+        </section>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 LI WEI. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://avatars.githubusercontent.com/u/28665739?v=4" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">LI WEI</h4>
+    
+      <div id="about-card-bio">苟日新，日日新，又日新</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Not yet
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Tokyo
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://example.org/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://example.org/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

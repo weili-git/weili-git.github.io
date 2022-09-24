@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    
+    <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+    >
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/example.org\/",
+  "author": {
+    "@type": "Person",
+    "name": "LI WEI",
+    
+    "image": "https://avatars.githubusercontent.com/u/28665739?v=4"
+    
+  },
+  "name":"Hugo tranquilpeak theme",
+  "description":"Hugo tranquilpeak theme demo",
+  "url":"https:\/\/example.org\/",
+  "keywords":"[]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="LI WEI">
+<meta name="keywords" content="">
+<meta name="description" content="Hugo tranquilpeak theme demo">
+
+
+<meta property="og:description" content="Hugo tranquilpeak theme demo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hugo tranquilpeak theme">
+<meta name="twitter:title" content="Hugo tranquilpeak theme">
+<meta property="og:url" content="https://example.org/">
+<meta property="twitter:url" content="https://example.org/">
+<meta property="og:site_name" content="Hugo tranquilpeak theme">
+<meta property="og:description" content="Hugo tranquilpeak theme demo">
+<meta name="twitter:description" content="Hugo tranquilpeak theme demo">
+<meta property="og:locale" content="en-us">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/28665739?v=4">
+  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/28665739?v=4">
+
+
+
+
+
+
+    <title>Hugo tranquilpeak theme</title>
+
+    <link rel="icon" href="https://example.org/favicon.png">
+    
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://example.org/index.xml">
+    
+
+    
+
+    <link rel="canonical" href="https://example.org/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://example.org/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="2">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://example.org/" aria-label="Go to homepage">Hugo tranquilpeak theme</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://example.org/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://avatars.githubusercontent.com/u/28665739?v=4" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="2">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://example.org/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://avatars.githubusercontent.com/u/28665739?v=4" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">LI WEI</h4>
+        
+          <h5 class="sidebar-profile-bio">苟日新，日日新，又日新</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/weili-git" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/13952920/weili-git" target="_blank" rel="noopener" title="Stack Overflow">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="2"
+        class="
+               hasCoverMetaIn
+               ">
+        <section class="postShorten-group main-content-wrap">
+          
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2021/12/batchnorm/" aria-label="Open the post: BatchNorm">
+      
+          BatchNorm
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-13T10:05:00&#43;08:00">
+        
+  December 13, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Preface As the Neural Network grows deeper, there are a few questions.
+the loss comes at the end the top layers train faster the bottom layers train slowly the data is at the bottom as the bottom layers update, all other layers need to change the top layers retrain many times slower convergence 2. BatchNorm Fix mini-batch&rsquo;s mean and variance:
+$$\mu_B=\frac{1}{|B|}\sum_{i\in B}x_i$$
+and
+$$\sigma_{B}^{2}=\frac{1}{|B|}\sum_{i\in B}(x_i-\mu_B)^2+\epsilon$$
+additional adjustments (trainable parameters):
+      
+      <p>
+        
+          <a href="https://example.org/2021/12/batchnorm/" class="postShorten-excerpt_link link" aria-label="Open the post: BatchNorm">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2021/12/googlenet/" aria-label="Open the post: GoogLeNet">
+      
+          GoogLeNet
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-12T20:08:00&#43;08:00">
+        
+  December 12, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Inception Block (v1) Extract information from 4 different paths, and then concatenate them in output channel. It has less parameters and time complexity. The assignment of channels are based on the significance.
+1x1 Conv (64) 1x1 Conv (96); 3x3 Conv, pad 1 (128) 1x1 Conv (16); 5x5 Conv, pad 2 (32) 3x3 MaxPool, pad 1; 1x1 Conv (32) 2. Architecture You can see that there are so many hyper-parameters (num of channels).
+      
+      <p>
+        
+          <a href="https://example.org/2021/12/googlenet/" class="postShorten-excerpt_link link" aria-label="Open the post: GoogLeNet">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2021/12/nin/" aria-label="Open the post: NiN">
+      
+          NiN
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-11T10:20:00&#43;08:00">
+        
+  December 11, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. NiN block Since &lsquo;Dense Layer&rsquo; has so many parameters, we replace them by &lsquo;1x1 Conv&rsquo;. The shape doesn&rsquo;t change while using &lsquo;1x1 Conv&rsquo;.
+Conv2d (the same as AlexNet, ReLu) 1x1 Conv, stride 1, no pad (out_channel = in_channel, ReLU) 1x1 Conv, stride 1, no pad (out_channel = in_channel, ReLU) 2. Architecture NiN&rsquo;s architecture is based on AlexNet, but we don&rsquo;t use &lsquo;Dense Layer&rsquo;.
+NiN block 3x3 MaxPool, stride 2 (half size) &hellip; Dropout(0.
+      
+      <p>
+        
+          <a href="https://example.org/2021/12/nin/" class="postShorten-excerpt_link link" aria-label="Open the post: NiN">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2021/12/vgg/" aria-label="Open the post: VGG">
+      
+          VGG
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-11T09:35:00&#43;08:00">
+        
+  December 11, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. VGG block 3x3 Conv, pad 1 (n layers, m channels usually double, ReLU) 2x2 MaxPool, stride 2 (half size per block) It turns out that &lsquo;deeper 3x3 Conv&rsquo; is better than &lsquo;5x5 Conv&rsquo;.
+2. Architecture multiple VGG blocks Dense (4096) (Flatten, Linear, ReLU, Dropout) Dense (4096) (Linear, ReLU, Dropout) Dense (1000) 3. Code import torch from torch import nn def vgg_block(num_conv,in_channels,out_channels) -&gt;nn.Sequential: layers: List[nn.Module] = [] for _ in range(num_conv): layers.
+      
+      <p>
+        
+          <a href="https://example.org/2021/12/vgg/" class="postShorten-excerpt_link link" aria-label="Open the post: VGG">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2021/12/alexnet/" aria-label="Open the post: AlexNet">
+      
+          AlexNet
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-09T10:49:00&#43;08:00">
+        
+  December 9, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. AlexNet Compared with LeNet, it has some changes.
+Add noise and avoid overfitting(data transform). bigger and deeper use dropout (normalization) AvgPooling -&gt; MaxPooling Sigmoid -&gt; ReLU 2. Code net = nn.Sequential( nn.Conv2d(3,96,kernel_size=11,stride=4,padding=2),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), # nn.Conv2d(96,128*2,kernel_size=5,padding=2),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), nn.Conv2d(128*2,192*2,kernel_size=3,padding=1),nn.ReLU(), nn.Conv2d(192*2,192*2,kernel_size=3,padding=1),nn.ReLU(), nn.Conv2d(192*2,128*2,kernel_size=3,padding=1),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), # 6*6*256 nn.Flatten(), nn.Linear(6*6*256,2048*2),nn.ReLU(),nn.Dropout(p=0.5), nn.Linear(2048*2,2048*2),nn.ReLU(),nn.Dropout(p=0.5), nn.Linear(2048*2,1000),nn.ReLU(), ) 3. Q&amp;A CNN提取的特征只是针对最后的分类任务，对于人来说大部分难以理解，因此它的可解释性较差。 Last two 4096 Full Connected Layers is necessary. A good name. 
+      
+      <p>
+        
+          <a href="https://example.org/2021/12/alexnet/" class="postShorten-excerpt_link link" aria-label="Open the post: AlexNet">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2021/12/live2d/" aria-label="Open the post: Live2d">
+      
+          Live2d
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-09T10:49:00&#43;08:00">
+        
+  December 9, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/web">Web</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Install Hexo npm install hexo-cli -g hexo init blog cd blog npm install hexo server 2. Add Live2d npm install --save hexo-helper-live2d then, insert code into _config.xml
+live2d: enable: true scriptFrom: local pluginRootPath: live2dw/ pluginJsPath: lib/ pluginModelPath: assets/ tagMode: false debug: false model: use: wanko display: position: right width: 150 height: 300 mobile: show: true pull your &lsquo;assets&rsquo; contents from live2d model directory to &lsquo;./live2d_models/wanko&rsquo;. At last, let&rsquo;s run and compile the project
+      
+      <p>
+        
+          <a href="https://example.org/2021/12/live2d/" class="postShorten-excerpt_link link" aria-label="Open the post: Live2d">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://example.org/2021/11/cnn/" aria-label="Open the post: CNN">
+      
+          CNN
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-11-27T13:30:00&#43;08:00">
+        
+  November 27, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Concept Applying &rsquo;translation invariance&rsquo; and &rsquo;locality&rsquo; to the MLP, we then get a CNN which can significantly reduce the parameters.
+$$h_{i,j} = \sum_{a,b}v_{i,j,a,b}x_{i+a,j+b}$$
+$$\Rightarrow h_{i,j} = \sum_{a=-\Delta}^{\Delta}\sum_{b=-\Delta}^{\Delta}v_{a,b}x_{i+a,j+b}$$
+2. Conv2d 2.1 Definition Input $$X: (N, C_{in}, H, W)$$
+Kernel $$W: (h,w)$$
+Bias: $$b$$
+Output $$Y: (N, C_{out}, H&rsquo;, W&rsquo;)$$
+$$Y=X\star W+b$$
+2.2 Cross Correlation $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{a,b}x_{i+a,j+b}$$
+2.3 Conv2d $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{-a,-b}x_{i+a,j+b}$$
+As for implementation, we use &lsquo;Cross Correlation&rsquo; but call it &lsquo;Conv2d&rsquo;.
+      
+      <p>
+        
+          <a href="https://example.org/2021/11/cnn/" class="postShorten-excerpt_link link" aria-label="Open the post: CNN">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+          
+  <div class="pagination-bar">
+    <ul class="pagination">
+      
+        
+          <li class="pagination-prev">
+            <a class="btn btn--default btn--small" href="https://example.org/page/4/" aria-label="NEWER POSTS">
+              <i class="fa fa-angle-left text-base icon-mr"></i>
+              <span>NEWER POSTS</span>
+            </a>
+          </li>
+        
+        
+          <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="https://example.org/page/6/" aria-label="OLDER POSTS">
+              <span>OLDER POSTS</span>
+              <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+          </li>
+        
+      
+      <li class="pagination-number">page 5 of 6</li>
+    </ul>
+  </div>
+
+
+        </section>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 LI WEI. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://avatars.githubusercontent.com/u/28665739?v=4" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">LI WEI</h4>
+    
+      <div id="about-card-bio">苟日新，日日新，又日新</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Not yet
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Tokyo
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://example.org/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://example.org/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

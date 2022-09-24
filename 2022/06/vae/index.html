@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    
+    <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+    >
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "VAE",
+  
+  "datePublished": "2022-06-14T10:43:00+08:00",
+  "dateModified": "2022-06-14T10:43:00+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "LI WEI",
+    
+    "image": "https://avatars.githubusercontent.com/u/28665739?v=4"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/example.org\/2022\/06\/vae\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hugo tranquilpeak theme",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://avatars.githubusercontent.com/u/28665739?v=4"
+    }
+    
+  },
+  "description": "1. Auto Encoder Before we formally introduce the VAE, let\u0026rsquo;s first look at the structure of AE. It consists of an Encoder and a Decoder.\nThe input data will be input to the Encoder to get the \u0026lsquo;hidden states\u0026rsquo;. Then the Decoder will eat these \u0026lsquo;hidden states\u0026rsquo; to recover the input which means the output should be as close to the input as possible.\nUsually, we hope that the dimension of \u0026lsquo;hidden states\u0026rsquo; will be less than the input to achieve dimension reduction.",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.104.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="LI WEI">
+<meta name="keywords" content="">
+<meta name="description" content="变分自动编码器">
+
+
+<meta property="og:description" content="变分自动编码器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VAE">
+<meta name="twitter:title" content="VAE">
+<meta property="og:url" content="https://example.org/2022/06/vae/">
+<meta property="twitter:url" content="https://example.org/2022/06/vae/">
+<meta property="og:site_name" content="Hugo tranquilpeak theme">
+<meta property="og:description" content="变分自动编码器">
+<meta name="twitter:description" content="变分自动编码器">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-06-14T10:43:00">
+  
+  
+    <meta property="article:modified_time" content="2022-06-14T10:43:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Deep-learning">
+    
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/28665739?v=4">
+  <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/28665739?v=4">
+
+
+
+
+
+
+    <title>VAE</title>
+
+    <link rel="icon" href="https://example.org/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://example.org/2022/06/vae/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://example.org/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://example.org/" aria-label="Go to homepage">Hugo tranquilpeak theme</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://example.org/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://avatars.githubusercontent.com/u/28665739?v=4" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://example.org/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://avatars.githubusercontent.com/u/28665739?v=4" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">LI WEI</h4>
+        
+          <h5 class="sidebar-profile-bio">苟日新，日日新，又日新</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/weili-git" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/13952920/weili-git" target="_blank" rel="noopener" title="Stack Overflow">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      VAE
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-06-14T10:43:00&#43;08:00">
+        
+  June 14, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://example.org/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <h1 id="1-auto-encoder">1. Auto Encoder</h1>
+<p>Before we formally introduce the VAE, let&rsquo;s first look at the structure of AE. It consists of an Encoder and a Decoder.</p>
+<p>The input data will be input to the Encoder to get the &lsquo;hidden states&rsquo;. Then the Decoder will eat these &lsquo;hidden states&rsquo; to recover the input which means the output should be as close to the input as possible.</p>
+<p>Usually, we hope that the dimension of &lsquo;hidden states&rsquo; will be less than the input to achieve dimension reduction.</p>
+<h1 id="2-variational-auto-encoder">2. Variational Auto Encoder</h1>
+<p>The difference here between VAE and AE is that the &lsquo;hidden states&rsquo; of VAE is not a fixed variable but a distribution.</p>
+<p>For example, to get the GMM &lsquo;hidden states&rsquo;, the Encoder will output a &lsquo;mean vector&rsquo; and a &lsquo;covariance vector&rsquo;.</p>
+<p>The loss function here includes &lsquo;Recontruction Loss&rsquo; and &lsquo;KL Divergence&rsquo;. The &lsquo;RL&rsquo; is the same as AE. The &lsquo;KLD&rsquo; is used to control the &lsquo;hidden states&rsquo; to be close to GMM.</p>
+<p>Reparameterization Trick</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch.autograd <span style="color:#f92672">import</span> Variable
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> torch.nn.functional <span style="color:#66d9ef">as</span> F
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> torchvision
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torchvision <span style="color:#f92672">import</span> transforms
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> torch.optim <span style="color:#66d9ef">as</span> optim
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torch <span style="color:#f92672">import</span> nn
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib
+</span></span><span style="display:flex;"><span>matplotlib<span style="color:#f92672">.</span>use(<span style="color:#e6db74">&#39;AGG&#39;</span>)<span style="color:#75715e">#或者PDF, SVG或PS</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> torchvision.utils <span style="color:#f92672">import</span> save_image
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Normal</span>(object):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, mu, sigma, log_sigma, v<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>, r<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>mu <span style="color:#f92672">=</span> mu
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>sigma <span style="color:#f92672">=</span> sigma  <span style="color:#75715e"># either stdev diagonal itself, or stdev diagonal from decomposition</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>logsigma <span style="color:#f92672">=</span> log_sigma
+</span></span><span style="display:flex;"><span>        dim <span style="color:#f92672">=</span> mu<span style="color:#f92672">.</span>get_shape()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> v <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            v <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>FloatTensor(<span style="color:#f92672">*</span>dim)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> r <span style="color:#f92672">is</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            r <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>FloatTensor(<span style="color:#f92672">*</span>dim)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>v <span style="color:#f92672">=</span> v
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>r <span style="color:#f92672">=</span> r
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Encoder</span>(torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, D_in, H, D_out):
+</span></span><span style="display:flex;"><span>        super(Encoder, self)<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>linear1 <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>Linear(D_in, H)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>linear2 <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>Linear(H, D_out)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>relu(self<span style="color:#f92672">.</span>linear1(x))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> F<span style="color:#f92672">.</span>relu(self<span style="color:#f92672">.</span>linear2(x))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Decoder</span>(torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, D_in, H, D_out):
+</span></span><span style="display:flex;"><span>        super(Decoder, self)<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>linear1 <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>Linear(D_in, H)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>linear2 <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>Linear(H, D_out)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, x):
+</span></span><span style="display:flex;"><span>        x <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>relu(self<span style="color:#f92672">.</span>linear1(x))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> F<span style="color:#f92672">.</span>relu(self<span style="color:#f92672">.</span>linear2(x))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">VAE</span>(torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span>    latent_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, encoder, decoder):
+</span></span><span style="display:flex;"><span>        super(VAE, self)<span style="color:#f92672">.</span>__init__()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>encoder <span style="color:#f92672">=</span> encoder
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>decoder <span style="color:#f92672">=</span> decoder
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_enc_mu <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_enc_log_sigma <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>nn<span style="color:#f92672">.</span>Linear(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_sample_latent</span>(self, h_enc):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Return the latent normal sample z ~ N(mu, sigma^2)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        mu <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_enc_mu(h_enc)
+</span></span><span style="display:flex;"><span>        log_sigma <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_enc_log_sigma(h_enc)
+</span></span><span style="display:flex;"><span>        sigma <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>exp(log_sigma)
+</span></span><span style="display:flex;"><span>        std_z <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>from_numpy(np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, size<span style="color:#f92672">=</span>sigma<span style="color:#f92672">.</span>size()))<span style="color:#f92672">.</span>float()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>z_mean <span style="color:#f92672">=</span> mu
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>z_sigma <span style="color:#f92672">=</span> sigma
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> mu <span style="color:#f92672">+</span> sigma <span style="color:#f92672">*</span> Variable(std_z, requires_grad<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)  <span style="color:#75715e"># Reparameterization trick</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, state):
+</span></span><span style="display:flex;"><span>        h_enc <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>encoder(state)
+</span></span><span style="display:flex;"><span>        z <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_sample_latent(h_enc)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>decoder(z)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">latent_loss</span>(z_mean, z_stddev):
+</span></span><span style="display:flex;"><span>    mean_sq <span style="color:#f92672">=</span> z_mean <span style="color:#f92672">*</span> z_mean
+</span></span><span style="display:flex;"><span>    stddev_sq <span style="color:#f92672">=</span> z_stddev <span style="color:#f92672">*</span> z_stddev
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0.5</span> <span style="color:#f92672">*</span> torch<span style="color:#f92672">.</span>mean(mean_sq <span style="color:#f92672">+</span> stddev_sq <span style="color:#f92672">-</span> torch<span style="color:#f92672">.</span>log(stddev_sq) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    input_dim <span style="color:#f92672">=</span> <span style="color:#ae81ff">28</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">28</span>
+</span></span><span style="display:flex;"><span>    batch_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">32</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#mnist = torchvision.datasets.MNIST(&#39;./&#39;, download=True, transform=transform)</span>
+</span></span><span style="display:flex;"><span>    mnist <span style="color:#f92672">=</span> torchvision<span style="color:#f92672">.</span>datasets<span style="color:#f92672">.</span>MNIST(root<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;../data/&#39;</span>, train<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, transform <span style="color:#f92672">=</span> transforms<span style="color:#f92672">.</span>Compose([transforms<span style="color:#f92672">.</span>ToTensor()]), download<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    dataloader <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>utils<span style="color:#f92672">.</span>data<span style="color:#f92672">.</span>DataLoader(mnist, batch_size<span style="color:#f92672">=</span>batch_size,
+</span></span><span style="display:flex;"><span>                                             shuffle<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, num_workers<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#39;Number of samples: &#39;</span>, len(mnist))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    encoder <span style="color:#f92672">=</span> Encoder(input_dim, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>)
+</span></span><span style="display:flex;"><span>    decoder <span style="color:#f92672">=</span> Decoder(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">100</span>, input_dim)
+</span></span><span style="display:flex;"><span>    vae <span style="color:#f92672">=</span> VAE(encoder, decoder)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    criterion <span style="color:#f92672">=</span> nn<span style="color:#f92672">.</span>MSELoss()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    optimizer <span style="color:#f92672">=</span> optim<span style="color:#f92672">.</span>Adam(vae<span style="color:#f92672">.</span>parameters(), lr<span style="color:#f92672">=</span><span style="color:#ae81ff">0.0002</span>)
+</span></span><span style="display:flex;"><span>    l <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    losse <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> epoch <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">10000</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i, data <span style="color:#f92672">in</span> enumerate(dataloader, <span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>            inputs, classes <span style="color:#f92672">=</span> data
+</span></span><span style="display:flex;"><span>            inputs, classes <span style="color:#f92672">=</span> Variable(inputs<span style="color:#f92672">.</span>resize_(batch_size, input_dim)), Variable(classes)
+</span></span><span style="display:flex;"><span>            optimizer<span style="color:#f92672">.</span>zero_grad()
+</span></span><span style="display:flex;"><span>            dec <span style="color:#f92672">=</span> vae(inputs)
+</span></span><span style="display:flex;"><span>            ll <span style="color:#f92672">=</span> latent_loss(vae<span style="color:#f92672">.</span>z_mean, vae<span style="color:#f92672">.</span>z_sigma)
+</span></span><span style="display:flex;"><span>            loss <span style="color:#f92672">=</span> criterion(dec, inputs) <span style="color:#f92672">+</span> ll
+</span></span><span style="display:flex;"><span>            loss<span style="color:#f92672">.</span>backward()
+</span></span><span style="display:flex;"><span>            optimizer<span style="color:#f92672">.</span>step()
+</span></span><span style="display:flex;"><span>            l <span style="color:#f92672">=</span> loss<span style="color:#f92672">.</span>item()
+</span></span><span style="display:flex;"><span>        print(epoch, l)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        losse<span style="color:#f92672">.</span>append(l)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> epoch <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>plot(losse, <span style="color:#e6db74">&#39;-&#39;</span>)
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;epoch&#39;</span>)
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;loss&#39;</span>)
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#39;Losses&#39;</span>)
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;Losses.jpg&#39;</span>)
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">#plt.show()</span>
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>imshow(inputs<span style="color:#f92672">.</span>data[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>numpy()<span style="color:#f92672">.</span>reshape(<span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>), cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gray&#39;</span>)
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>subplot(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>imshow(vae(inputs)<span style="color:#f92672">.</span>data[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>numpy()<span style="color:#f92672">.</span>reshape(<span style="color:#ae81ff">28</span>, <span style="color:#ae81ff">28</span>), cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gray&#39;</span>)
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>savefig(<span style="color:#e6db74">&#39;picture_G.jpg&#39;</span>)
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">#plt.show()</span>
+</span></span><span style="display:flex;"><span>          plt<span style="color:#f92672">.</span>close()
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> epoch <span style="color:#f92672">%</span> <span style="color:#ae81ff">50</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>          torch<span style="color:#f92672">.</span>save(vae<span style="color:#f92672">.</span>state_dict(), <span style="color:#e6db74">&#39;vae.pth&#39;</span>)      
+</span></span></code></pre></div>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2022/06/mfcc/" data-tooltip="MFCC" aria-label="NEXT: MFCC">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2022/05/javascript-review/" data-tooltip="Javascript Review" aria-label="PREVIOUS: Javascript Review">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://example.org/2022/06/vae/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://example.org/2022/06/vae/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://example.org/2022/06/vae/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/example.org\/2022\/06\/vae\/';
+        
+          this.page.identifier = '\/2022\/06\/vae\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'hugo-tranquilpeak-theme';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 LI WEI. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2022/06/mfcc/" data-tooltip="MFCC" aria-label="NEXT: MFCC">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2022/05/javascript-review/" data-tooltip="Javascript Review" aria-label="PREVIOUS: Javascript Review">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://example.org/2022/06/vae/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://example.org/2022/06/vae/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://example.org/2022/06/vae/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.org%2F2022%2F06%2Fvae%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fexample.org%2F2022%2F06%2Fvae%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fexample.org%2F2022%2F06%2Fvae%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://avatars.githubusercontent.com/u/28665739?v=4" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">LI WEI</h4>
+    
+      <div id="about-card-bio">苟日新，日日新，又日新</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Not yet
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Tokyo
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://example.org/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://example.org/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Hugo tranquilpeak theme</title>
+    <link>https://example.org/categories/web/</link>
+    <description>Recent content in Web on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Sep 2022 10:09:00 +0900</lastBuildDate><atom:link href="https://example.org/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>react</title>
+      <link>https://example.org/2022/09/react/</link>
+      <pubDate>Thu, 22 Sep 2022 10:09:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/react/</guid>
+      <description>1. Install $f(x)=\lambda x$
+def foo(): print(&amp;#34;aa&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title>bootstrap</title>
+      <link>https://example.org/2022/09/bootstrap/</link>
+      <pubDate>Wed, 21 Sep 2022 21:10:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/bootstrap/</guid>
+      <description>1. Quick Start &amp;lt;head&amp;gt; ... &amp;lt;!-- development --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;static/plugins/bootstrap-3.4.1/css/bootstrap.css&amp;#34;&amp;gt; &amp;lt;!-- production --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;static/plugins/bootstrap-3.4.1/css/bootstrap.min.css&amp;#34;&amp;gt; &amp;lt;style&amp;gt; .navbar{ border-radius: 0; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- button --&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;enter&amp;#34; class=&amp;#34;btn btn-primary&amp;#34;/&amp;gt; &amp;lt;!-- col-xs --&amp;gt; &amp;lt;div class=&amp;#34;col-xs-offset-2 col-xs-2&amp;#34; style=&amp;#34;color:red;&amp;#34;&amp;gt;1&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;col-xs-2&amp;#34; style=&amp;#34;color:green;&amp;#34;&amp;gt;2&amp;lt;/div&amp;gt; &amp;lt;!-- col-sm col-md col-lg --&amp;gt; &amp;lt;/body&amp;gt; </description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://example.org/2022/09/css/</link>
+      <pubDate>Mon, 19 Sep 2022 11:19:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/css/</guid>
+      <description>1. Intro 1.1 &amp;lt;div style=&amp;#34;color:red;&amp;#34;&amp;gt; contents &amp;lt;/div&amp;gt; 1.2 &amp;lt;head&amp;gt; &amp;lt;style&amp;gt; .c1{ color: red; } #c２{ color: green; } li{ /* global */ color: pink; } input[type=&amp;#39;text&amp;#39;]{ border: 1px solid red; } .v1[attr=&amp;#39;123&amp;#39;]{ ... } .mylist li{ /* children and grandchildren */ color: red; } .mydiv &amp;gt; a{ /* only children */ } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; ... &amp;lt;div class=&amp;#39;c1&amp;#39;&amp;gt;contents&amp;lt;/div&amp;gt; &amp;lt;div id=&amp;#39;c2&amp;#39;&amp;gt;contents&amp;lt;/div&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt; ccc &amp;lt;/li&amp;gt; ... &amp;lt;/ul&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; /&amp;gt; &amp;lt;input type=&amp;#34;password&amp;#34; /&amp;gt; 1.</description>
+    </item>
+    
+    <item>
+      <title>Ajax</title>
+      <link>https://example.org/2022/09/ajax/</link>
+      <pubDate>Fri, 16 Sep 2022 11:44:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/ajax/</guid>
+      <description>1. Intro Ajax can send request without refreshing the webpage.
+1.1 Get function clickMe(){ $.ajax({ url: &amp;#34;/user/list&amp;#34;, type: &amp;#34;get&amp;#34;, data: { name: $(&amp;#34;#input1&amp;#34;).val(), passwd: $(&amp;#34;#input2&amp;#34;).val() }, // data: $(&amp;#34;#form1&amp;#34;).serialize(), dataType: &amp;#34;JSON&amp;#34;, success:function(res){ console.log(res.data); } }) } ... &amp;lt;div&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;button&amp;#34; onclick=&amp;#34;clickMe();&amp;#34; /&amp;gt; &amp;lt;/div&amp;gt; ... Or, we can use JQuery to bind the event of button click.
+1.2 Post # views.py from django.shortcuts import render, HttpResponse from django.http import JsonResponse from django.</description>
+    </item>
+    
+    <item>
+      <title>ORM</title>
+      <link>https://example.org/2022/09/orm/</link>
+      <pubDate>Thu, 15 Sep 2022 15:14:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/orm/</guid>
+      <description>1. Install pip install mysqlclient # python&amp;lt;=3.5 pip install pymysql # python&amp;gt;3.5 2. connect # mysite/settings.py ... import pymysql # python&amp;gt;=3.5 pymysql.install_as_MySQLdb() DATABASES = { &amp;#39;default&amp;#39;: { &amp;#39;ENGINE&amp;#39;: &amp;#39;django.db.backends.mysql&amp;#39;, &amp;#39;NAME&amp;#39;: &amp;#39;table111&amp;#39;, &amp;#39;USER&amp;#39;: &amp;#39;root&amp;#39;, &amp;#39;PASSWORD&amp;#39;: &amp;#39;Root1234@&amp;#39;, &amp;#39;HOST&amp;#39;: &amp;#39;localhost&amp;#39;, &amp;#39;PORT&amp;#39;: 3306, } } ... 3. CRUD # models.py from django.db import models class User(models.Model): name = models.CharField(max_len=32) passwd = models.CharField(max_len=64) age = models.IntegerField() &amp;#34;&amp;#34;&amp;#34; create table myapp_user( id bigint auto_increment primary key, name varchar(32), passwd varchar(64), age int ) &amp;#34;&amp;#34;&amp;#34; Make sure that we have registered our &amp;lsquo;myapp&amp;rsquo; in &amp;lsquo;mysite&amp;rsquo; project.</description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://example.org/2022/09/mysql/</link>
+      <pubDate>Mon, 12 Sep 2022 11:35:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/mysql/</guid>
+      <description>1. install brew install mysql mysql.server start mysql_secure_installation Root1234@ See details for installation.
+2. basics mysql -u root -p mysql&amp;gt; show databases; mysql&amp;gt; create database table_name; mysql&amp;gt; use table_name; mysql&amp;gt; create table test( id int auto_increment primary key, name varchar(16) not null, age int default 18, salary decimal(8,2), birth datetime ); mysql&amp;gt; show tables; mysql&amp;gt; insert into test values (1, &amp;#34;zhang san&amp;#34;, 23); mysql&amp;gt; insert into test (name, age) values (&amp;#34;li si&amp;#34;, 25), (&amp;#34;wang wu&amp;#34;, 27); mysql&amp;gt; select * from test where id&amp;gt;3; mysql&amp;gt; delete from test where id=1; mysql&amp;gt; update test set name=&amp;#34;abc&amp;#34; where id=2; mysql&amp;gt; drop table test; mysql&amp;gt; drop database table_name; mysql&amp;gt; exit; 3.</description>
+    </item>
+    
+    <item>
+      <title>Django Quick Start</title>
+      <link>https://example.org/2022/09/django-quick-start/</link>
+      <pubDate>Fri, 09 Sep 2022 14:38:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/django-quick-start/</guid>
+      <description>1. Preparation Firstly, we can install django and create our project as follows.
+# to install django framework pip install django pip install djangorestframework # create our applications django-admin startproject mysite cd mysite python managy.py startapp myapp To test the project, we can use &amp;ldquo;runserver&amp;rdquo; command.
+python manage.py runserver 2. Models In the file &amp;ldquo;myapp/models.py&amp;rdquo;, we can create some models to specify the layout of our database.
+from django.db import models class User(models.</description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://example.org/2022/05/nginx/</link>
+      <pubDate>Sun, 08 May 2022 22:21:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/nginx/</guid>
+      <description>1. Function Load Balance(负载均衡) and Reverse Proxy(反向代理).
+https://www.runoob.com/linux/nginx-install-setup.html
+2. Command nginx nginx -s reload # reload config file. </description>
+    </item>
+    
+    <item>
+      <title>SpringBoot</title>
+      <link>https://example.org/2022/05/springboot/</link>
+      <pubDate>Sat, 07 May 2022 22:33:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/springboot/</guid>
+      <description>1. Create Project We can get access to Spring and download the project. Don&amp;rsquo;t forget to add &amp;lsquo;Spring Web&amp;rsquo; dependency.
+After that, we can run the project with IDEA. It&amp;rsquo;ll take around 20 minutes to download the necessary files. Then, we can follow the guidance from Quick Start to test the installation.
+If you got trouble &amp;lsquo;Port 8080 was already in use&amp;rsquo;, you can create a file &amp;lsquo;/resource/application.yml&amp;rsquo;, and add the configuration.</description>
+    </item>
+    
+    <item>
+      <title>Live2d</title>
+      <link>https://example.org/2021/12/live2d/</link>
+      <pubDate>Thu, 09 Dec 2021 10:49:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/12/live2d/</guid>
+      <description>1. Install Hexo npm install hexo-cli -g hexo init blog cd blog npm install hexo server 2. Add Live2d npm install --save hexo-helper-live2d then, insert code into _config.xml
+live2d: enable: true scriptFrom: local pluginRootPath: live2dw/ pluginJsPath: lib/ pluginModelPath: assets/ tagMode: false debug: false model: use: wanko display: position: right width: 150 height: 300 mobile: show: true pull your &amp;lsquo;assets&amp;rsquo; contents from live2d model directory to &amp;lsquo;./live2d_models/wanko&amp;rsquo;. At last, let&amp;rsquo;s run and compile the project</description>
+    </item>
+    
+  </channel>
+</rss>

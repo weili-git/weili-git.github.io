@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo tranquilpeak theme</title>
+    <link>https://example.org/</link>
+    <description>Recent content on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Sep 2022 10:09:00 +0900</lastBuildDate><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>react</title>
+      <link>https://example.org/2022/09/react/</link>
+      <pubDate>Thu, 22 Sep 2022 10:09:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/react/</guid>
+      <description>1. Install $f(x)=\lambda x$
+def foo(): print(&amp;#34;aa&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title>bootstrap</title>
+      <link>https://example.org/2022/09/bootstrap/</link>
+      <pubDate>Wed, 21 Sep 2022 21:10:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/bootstrap/</guid>
+      <description>1. Quick Start &amp;lt;head&amp;gt; ... &amp;lt;!-- development --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;static/plugins/bootstrap-3.4.1/css/bootstrap.css&amp;#34;&amp;gt; &amp;lt;!-- production --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;static/plugins/bootstrap-3.4.1/css/bootstrap.min.css&amp;#34;&amp;gt; &amp;lt;style&amp;gt; .navbar{ border-radius: 0; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- button --&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;enter&amp;#34; class=&amp;#34;btn btn-primary&amp;#34;/&amp;gt; &amp;lt;!-- col-xs --&amp;gt; &amp;lt;div class=&amp;#34;col-xs-offset-2 col-xs-2&amp;#34; style=&amp;#34;color:red;&amp;#34;&amp;gt;1&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;col-xs-2&amp;#34; style=&amp;#34;color:green;&amp;#34;&amp;gt;2&amp;lt;/div&amp;gt; &amp;lt;!-- col-sm col-md col-lg --&amp;gt; &amp;lt;/body&amp;gt; </description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://example.org/2022/09/css/</link>
+      <pubDate>Mon, 19 Sep 2022 11:19:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/css/</guid>
+      <description>1. Intro 1.1 &amp;lt;div style=&amp;#34;color:red;&amp;#34;&amp;gt; contents &amp;lt;/div&amp;gt; 1.2 &amp;lt;head&amp;gt; &amp;lt;style&amp;gt; .c1{ color: red; } #c２{ color: green; } li{ /* global */ color: pink; } input[type=&amp;#39;text&amp;#39;]{ border: 1px solid red; } .v1[attr=&amp;#39;123&amp;#39;]{ ... } .mylist li{ /* children and grandchildren */ color: red; } .mydiv &amp;gt; a{ /* only children */ } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; ... &amp;lt;div class=&amp;#39;c1&amp;#39;&amp;gt;contents&amp;lt;/div&amp;gt; &amp;lt;div id=&amp;#39;c2&amp;#39;&amp;gt;contents&amp;lt;/div&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt; ccc &amp;lt;/li&amp;gt; ... &amp;lt;/ul&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; /&amp;gt; &amp;lt;input type=&amp;#34;password&amp;#34; /&amp;gt; 1.</description>
+    </item>
+    
+    <item>
+      <title>Ajax</title>
+      <link>https://example.org/2022/09/ajax/</link>
+      <pubDate>Fri, 16 Sep 2022 11:44:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/ajax/</guid>
+      <description>1. Intro Ajax can send request without refreshing the webpage.
+1.1 Get function clickMe(){ $.ajax({ url: &amp;#34;/user/list&amp;#34;, type: &amp;#34;get&amp;#34;, data: { name: $(&amp;#34;#input1&amp;#34;).val(), passwd: $(&amp;#34;#input2&amp;#34;).val() }, // data: $(&amp;#34;#form1&amp;#34;).serialize(), dataType: &amp;#34;JSON&amp;#34;, success:function(res){ console.log(res.data); } }) } ... &amp;lt;div&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;button&amp;#34; onclick=&amp;#34;clickMe();&amp;#34; /&amp;gt; &amp;lt;/div&amp;gt; ... Or, we can use JQuery to bind the event of button click.
+1.2 Post # views.py from django.shortcuts import render, HttpResponse from django.http import JsonResponse from django.</description>
+    </item>
+    
+    <item>
+      <title>ORM</title>
+      <link>https://example.org/2022/09/orm/</link>
+      <pubDate>Thu, 15 Sep 2022 15:14:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/orm/</guid>
+      <description>1. Install pip install mysqlclient # python&amp;lt;=3.5 pip install pymysql # python&amp;gt;3.5 2. connect # mysite/settings.py ... import pymysql # python&amp;gt;=3.5 pymysql.install_as_MySQLdb() DATABASES = { &amp;#39;default&amp;#39;: { &amp;#39;ENGINE&amp;#39;: &amp;#39;django.db.backends.mysql&amp;#39;, &amp;#39;NAME&amp;#39;: &amp;#39;table111&amp;#39;, &amp;#39;USER&amp;#39;: &amp;#39;root&amp;#39;, &amp;#39;PASSWORD&amp;#39;: &amp;#39;Root1234@&amp;#39;, &amp;#39;HOST&amp;#39;: &amp;#39;localhost&amp;#39;, &amp;#39;PORT&amp;#39;: 3306, } } ... 3. CRUD # models.py from django.db import models class User(models.Model): name = models.CharField(max_len=32) passwd = models.CharField(max_len=64) age = models.IntegerField() &amp;#34;&amp;#34;&amp;#34; create table myapp_user( id bigint auto_increment primary key, name varchar(32), passwd varchar(64), age int ) &amp;#34;&amp;#34;&amp;#34; Make sure that we have registered our &amp;lsquo;myapp&amp;rsquo; in &amp;lsquo;mysite&amp;rsquo; project.</description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://example.org/2022/09/mysql/</link>
+      <pubDate>Mon, 12 Sep 2022 11:35:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/mysql/</guid>
+      <description>1. install brew install mysql mysql.server start mysql_secure_installation Root1234@ See details for installation.
+2. basics mysql -u root -p mysql&amp;gt; show databases; mysql&amp;gt; create database table_name; mysql&amp;gt; use table_name; mysql&amp;gt; create table test( id int auto_increment primary key, name varchar(16) not null, age int default 18, salary decimal(8,2), birth datetime ); mysql&amp;gt; show tables; mysql&amp;gt; insert into test values (1, &amp;#34;zhang san&amp;#34;, 23); mysql&amp;gt; insert into test (name, age) values (&amp;#34;li si&amp;#34;, 25), (&amp;#34;wang wu&amp;#34;, 27); mysql&amp;gt; select * from test where id&amp;gt;3; mysql&amp;gt; delete from test where id=1; mysql&amp;gt; update test set name=&amp;#34;abc&amp;#34; where id=2; mysql&amp;gt; drop table test; mysql&amp;gt; drop database table_name; mysql&amp;gt; exit; 3.</description>
+    </item>
+    
+    <item>
+      <title>Django Quick Start</title>
+      <link>https://example.org/2022/09/django-quick-start/</link>
+      <pubDate>Fri, 09 Sep 2022 14:38:00 +0900</pubDate>
+      
+      <guid>https://example.org/2022/09/django-quick-start/</guid>
+      <description>1. Preparation Firstly, we can install django and create our project as follows.
+# to install django framework pip install django pip install djangorestframework # create our applications django-admin startproject mysite cd mysite python managy.py startapp myapp To test the project, we can use &amp;ldquo;runserver&amp;rdquo; command.
+python manage.py runserver 2. Models In the file &amp;ldquo;myapp/models.py&amp;rdquo;, we can create some models to specify the layout of our database.
+from django.db import models class User(models.</description>
+    </item>
+    
+    <item>
+      <title>Formants</title>
+      <link>https://example.org/2022/06/formants/</link>
+      <pubDate>Sat, 18 Jun 2022 18:34:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/06/formants/</guid>
+      <description>1. What is the formant? Formant is a characteristic component of the quality of a speech sound. It is the strongest part on the spectrogram where the botton one is the fundamental frequency F0.
+Pitch, actually, is a similar concept that
+reference https://www.zhihu.com/question/24190826/answer/280149476</description>
+    </item>
+    
+    <item>
+      <title>MFCC</title>
+      <link>https://example.org/2022/06/mfcc/</link>
+      <pubDate>Wed, 15 Jun 2022 21:49:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/06/mfcc/</guid>
+      <description>1. Mel Frequency Cepstrum Coefficient $$Mel(f)=2585*log_{10}(1+\frac{f}{700})$$
+import numpy as np import matplotlib.pyplot as plt x = np.arange(8001) y = 2595 * np.log10(1+x/700) plt.plot(x, y, color=&amp;#39;blue&amp;#39;, linewidth=3) plt.xlabel(&amp;#34;f&amp;#34;, fontsize=17) plt.ylabel(&amp;#34;Mel(f)&amp;#34;, fontsize=17) plt.xlim(0,x[-1]) plt.ylim(0,y[-1]) plt.savefig(&amp;#39;mel_f.png&amp;#39;, dpi=500) 2. workflow import numpy as np import scipy.io.wavfile from matplotlib import pyplot as plt from scipy.fftpack import dct # 原始数据,读取前3.5s 的数据 sample_rate, signal = scipy.io.wavfile.read(&amp;#39;OSR_us_000_0010_8k.wav&amp;#39;) original_signal = signal[0:int(3.5*sample_rate)] signal_num = np.arange(len(signal)) sample_num = np.arange(len(original_signal)) # 绘图 01 plt.</description>
+    </item>
+    
+    <item>
+      <title>VAE</title>
+      <link>https://example.org/2022/06/vae/</link>
+      <pubDate>Tue, 14 Jun 2022 10:43:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/06/vae/</guid>
+      <description>1. Auto Encoder Before we formally introduce the VAE, let&amp;rsquo;s first look at the structure of AE. It consists of an Encoder and a Decoder.
+The input data will be input to the Encoder to get the &amp;lsquo;hidden states&amp;rsquo;. Then the Decoder will eat these &amp;lsquo;hidden states&amp;rsquo; to recover the input which means the output should be as close to the input as possible.
+Usually, we hope that the dimension of &amp;lsquo;hidden states&amp;rsquo; will be less than the input to achieve dimension reduction.</description>
+    </item>
+    
+    <item>
+      <title>Javascript Review</title>
+      <link>https://example.org/2022/05/javascript-review/</link>
+      <pubDate>Tue, 17 May 2022 09:56:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/javascript-review/</guid>
+      <description>1. Variable var a = 5; // declare global function myfunc(){ var a = 10; // override global { let a = 5; // local // here a = 5; } // here a = 10; } // only &amp;#39;var&amp;#39; can override in the same block // var a = 10; // let a = 5; illegal statement 2. Constant const a = 5; // initial value must be assigned a = 3 // illegal statement // the atribution of constant object can be changed const b = [&amp;#34;Python&amp;#34;, &amp;#34;Java&amp;#34;, &amp;#34;C++&amp;#34;]; b[0] = &amp;#34;Ruby&amp;#34;; // legal statement // but the object itself can not be re-assigned b = [&amp;#34;C#&amp;#34;, &amp;#34;VB&amp;#34;]; // illegal statment // more example const car = {type:&amp;#34;porsche&amp;#34;, model:&amp;#34;911&amp;#34;, color:&amp;#34;Black&amp;#34;}; car.</description>
+    </item>
+    
+    <item>
+      <title>Prosody Ttransfer ETTS</title>
+      <link>https://example.org/2022/05/prosody-ttransfer-etts/</link>
+      <pubDate>Thu, 12 May 2022 19:45:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/prosody-ttransfer-etts/</guid>
+      <description>Prosody is underspecified by the text. (eg. rising intonation)
+Add a multi-speaker model to Tacotron. (speaker embedding)
+reference encoder: using a fixed-dimension embeddings.
+Reference https://arxiv.org/pdf/1803.09047.pdf</description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://example.org/2022/05/nginx/</link>
+      <pubDate>Sun, 08 May 2022 22:21:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/nginx/</guid>
+      <description>1. Function Load Balance(负载均衡) and Reverse Proxy(反向代理).
+https://www.runoob.com/linux/nginx-install-setup.html
+2. Command nginx nginx -s reload # reload config file. </description>
+    </item>
+    
+    <item>
+      <title>SpringBoot</title>
+      <link>https://example.org/2022/05/springboot/</link>
+      <pubDate>Sat, 07 May 2022 22:33:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/springboot/</guid>
+      <description>1. Create Project We can get access to Spring and download the project. Don&amp;rsquo;t forget to add &amp;lsquo;Spring Web&amp;rsquo; dependency.
+After that, we can run the project with IDEA. It&amp;rsquo;ll take around 20 minutes to download the necessary files. Then, we can follow the guidance from Quick Start to test the installation.
+If you got trouble &amp;lsquo;Port 8080 was already in use&amp;rsquo;, you can create a file &amp;lsquo;/resource/application.yml&amp;rsquo;, and add the configuration.</description>
+    </item>
+    
+    <item>
+      <title>Attention</title>
+      <link>https://example.org/2022/05/attention/</link>
+      <pubDate>Sun, 01 May 2022 20:43:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/attention/</guid>
+      <description>1. Input There&amp;rsquo;re 3 inputs Q(query), K(key), V(value) for attention mechanism. If Q=K=V, we call it &amp;lsquo;self-attention&amp;rsquo;. Also, there&amp;rsquo;re several rules to calculate it.
+$$Attention(Q,K,V) = Softmax(Linear([Q,K])) \cdot V$$
+$$Attention(Q,K,V) = Softmax(sum(\tanh(Linear([Q,K])))) \cdot V$$
+$$Attention(Q,K,V) = Softmax(\frac{Q \cdot K^T}{\sqrt{d_k}}) \cdot V$$
+The &amp;lsquo;bmm&amp;rsquo; is a special tensor multiply operation, batch matrices multiplication.
+$$(b, n, m)*(b, m, p) \rightarrow (b, n, p)$$
+Attention is usually used in seq2seq task.
+import torch import torch.</description>
+    </item>
+    
+    <item>
+      <title>Recurrent Neural Network</title>
+      <link>https://example.org/2022/05/recurrent-neural-network/</link>
+      <pubDate>Sun, 01 May 2022 09:03:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/recurrent-neural-network/</guid>
+      <description>1. RNN Hidden state at time t depends on the current input and the previous hidden state. Activation function&amp;rsquo;tanh&amp;rsquo; add unlinearity and output values from -1 to 1.
+$$h_t = \tanh(W_t \cdot [h_{t-1}, x_t]+b_t)$$
+import torch import torch.nn as nn rnn = nn.RNN(input_size, hidden_size, num_layers) input1 = torch.randn(sequence_length, batch_size, input_size) h0 = torch.randn(num_layers*num_directions, batch_size, hidden_size) output, hn = rnn(input1, h0) RNN is useful in short sequence, but may encounter &amp;lsquo;gradients vanishing&amp;rsquo; and &amp;lsquo;gradients explosion&amp;rsquo; while processing long sequence.</description>
+    </item>
+    
+    <item>
+      <title>Tacotron2</title>
+      <link>https://example.org/2022/04/tacotron2/</link>
+      <pubDate>Sat, 30 Apr 2022 21:44:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/04/tacotron2/</guid>
+      <description>1. Encoder $$one_hot \Rightarrow char_embedding \Rightarrow 3*Conv_layer \Rightarrow LSTM \Rightarrow Context$$
+Char_level embeddings are vector representation of the original sentences. We can use conv_layers and LSTM to extract meanings of them.
+2. Prenet $$[frame_t, batch, frame_dim] \Rightarrow 2*Linear(ReLU) \Rightarrow F_t$$
+$$concat(F_t,~Context, F_{t-1}) \Rightarrow LSTM_Cell$$</description>
+    </item>
+    
+    <item>
+      <title>Word2vec</title>
+      <link>https://example.org/2022/04/word2vec/</link>
+      <pubDate>Fri, 29 Apr 2022 20:59:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/04/word2vec/</guid>
+      <description>1. CBOW &amp;amp; Skip-Gram Skip-gram is an easier model, so we just discuss it only. Suppose that the size of vocabulary is 10000, and we want to map it into a 300-dim features vector. It&amp;rsquo;s consists of a hidden layer (10000x300) and an output layer(300x10000).
+Note that there are millions of parameters that needs updating, so we have to use some strategies to avoid this.
+Word Pairs &amp;ldquo;New York&amp;rdquo; are regarded as single word, which has different meanings from &amp;ldquo;New&amp;rdquo; and &amp;ldquo;York&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Support Vector Machine</title>
+      <link>https://example.org/2022/04/support-vector-machine/</link>
+      <pubDate>Wed, 27 Apr 2022 21:20:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/04/support-vector-machine/</guid>
+      <description>1. Classification Problem Supposed that we are given a batch of data $$D={(x_1, y_1), (x_2, y_2), &amp;hellip;, (x_m, y_m)},y_i \in {-1,+1}$$, and we want to find a hyper-plane such that it can properly divide these two class of data. A good hyper-plane should be able to accept slight disturbance.
+Multi-class Classification A classification task with the assumption that each sample belongs to one and only one class. $${dog, cat}$$
+Multi-label Classification A classification task that handle several joint classification tasks.</description>
+    </item>
+    
+    <item>
+      <title>Clustering</title>
+      <link>https://example.org/2022/04/clustering/</link>
+      <pubDate>Sun, 24 Apr 2022 17:16:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/04/clustering/</guid>
+      <description>1. Definition Formally, suppose that we have a dataset $$D={x_1,x_2,&amp;hellip;,x_m}$$, in which every sample is a n-dim vector. Clustering is to divide these data into k disjoint &amp;lsquo;cluster&amp;rsquo; $${C_l \vert l=1,2,&amp;hellip;,k}$$. This is just like &amp;lsquo;Disjoint Set&amp;rsquo; that we learn in algorithm course.
+2. K-means The intuition of K-means algorithm is very straight-forward. Initially, we choose k random samples $${ \mu_1,\mu_2,&amp;hellip;,\mu_k }$$ as the &amp;lsquo;mean vector&amp;rsquo;, which represent the center position of k cluster.</description>
+    </item>
+    
+    <item>
+      <title>Transposed Convolution</title>
+      <link>https://example.org/2022/04/transposed-convolution/</link>
+      <pubDate>Thu, 07 Apr 2022 18:16:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/04/transposed-convolution/</guid>
+      <description>1. Function ConvTransposed can be used to enlarge the width and height from the input.
+2. Principle pad=0, strd=1 Fill the input into size kernel-1, then apply Transposed kernel Conv (主副对角线转置).
+3. General Case Insert stride lines between rows/cols , then fill the input into size kernel-padding-1, then Transposed kernel Conv (k, 1, 0)
+ConvTranspose2d
+$$n^* = (n-1)s + k - 2p$$
+Conv2d
+$$n^* = floor( \frac{n -k + 2p + s}{s} )$$</description>
+    </item>
+    
+    <item>
+      <title>Sequential Model</title>
+      <link>https://example.org/2022/04/sequential-model/</link>
+      <pubDate>Sun, 03 Apr 2022 20:26:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/04/sequential-model/</guid>
+      <description>1. Sequential Model 1.1 Conditional Probability $$P(\bold x)=P(x_1)P(x_2|x_1)P(x_3|x_1,x_2)&amp;hellip;P(x_t|x_1,x_2,&amp;hellip;,x_{t-1})$$
+1.2 Autoregressive Model For ever-known model, we call it AR Model.
+$$p(x_t|x_1,x_2,&amp;hellip;,x_{t-1})=p(x_t|f(x_1,x_2,&amp;hellip;,x_{t-1}))$$
+1.3 Markov Model By Markov Hypothesis, the current state is determined by previous$$\tau$$ points.
+$$p(x_t|x_1,x_2,&amp;hellip;,x_{t-1})=p(x_t|x_{t-\tau},&amp;hellip;,x_{t-1})=p(x_t|f(x_{t-\tau},&amp;hellip;,x_{t-1}))$$
+1.4 Latent Model 潜变量模型 we use a variable to represent the inner states (RNN is one of the Latent Model)
+$$h_t=f(x_1,&amp;hellip;,x_{t-1})$$
+$$x_t=p(x_t|h_t)$$
+QA&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Fourier Transform</title>
+      <link>https://example.org/2022/02/fourier-transform/</link>
+      <pubDate>Thu, 10 Feb 2022 10:25:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/02/fourier-transform/</guid>
+      <description>1. Fourier Series Orthogonal Basis Functions The &amp;lsquo;orthogonal basis functions&amp;rsquo; are a set of functions of time, $$\phi(t)$$, such that the followings holds over some specified time interval $$T$$,
+$$\forall k,\forall m,k \neq m, \int_{T} \overline{\phi_k(t)} \phi_m(t) =0$$
+Triangle Fourier Series the &amp;lsquo;OBF&amp;rsquo; of triangle fourier series are as follows
+$${cos(nw_0t),sin(nw_0t)}$$
+which satisfy that
+$$\int_Tcos(nw_0t)sin(mw_0t)dt = 0$$
+$$\int_Tcos(nw_0t)cos(mw_0t)dt = \int_Tsin(nw_0t)sin(mw_0t)dt = \begin{cases} \frac{T}{2},m=n\ 0,m\neq n \end{cases}$$
+$$\int_T1dt=T$$
+Therefore, we can express a periodic signal with fundamental period T as a sum of sinusoids,</description>
+    </item>
+    
+    <item>
+      <title>Signal&#39;s Convolution</title>
+      <link>https://example.org/2022/02/signals-convolution/</link>
+      <pubDate>Wed, 09 Feb 2022 10:35:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/02/signals-convolution/</guid>
+      <description>1. Moving Average(MA) filter N-points MA filter is defined as
+$$y[n]=\sum_{i=0}^{N-1}\frac{1}{N}x[n-i]$$
+where N is a positive integer.
+For example, in the 3-points MA filter, the output is
+$$y[n]=\frac{1}{3}x[n]+\frac{1}{3}x[n-1]+\frac{1}{3}x[n-2]$$
+As a general class of system, the input/output relationship is defined as
+$$y[n] = \sum_{i=0}^{n}w_ix[n-i],n\ge 0$$
+it turns out that any &amp;lsquo;causal linear time-invariant&amp;rsquo; DT system with the input x[n] equal to 0 for all n &amp;lt; 0 can be expressed as above.</description>
+    </item>
+    
+    <item>
+      <title>Signal&#39;s Properties</title>
+      <link>https://example.org/2022/02/signals-properties/</link>
+      <pubDate>Tue, 08 Feb 2022 19:58:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/02/signals-properties/</guid>
+      <description>1.Periodic Continuous-Time Signals given two periodic CT signals
+$$\forall t, x_1(t+T_1) = x_1(t)$$
+and
+$$\forall t, x_2(t+T_2) = x_2(t)$$
+if the sum of them is periodic, then
+$$\forall t, x_1(t+T)+x_2(t+T)=x_1(t)+x_2(t)$$
+it is satisfied if and only if
+$$\exists p,q \in N^*, T=pT_1=qT_2$$
+in other word, p and q are coprime
+$$\frac{T_1}{T_2}=\frac{p}{q}\in Q$$
+2. Sifting Property note that $$\forall \lambda \neq t_1, \delta(\lambda-t_1)=0$$
+it follows that
+$$\int_{-\infty}^{+\infty}f(\lambda)\delta(\lambda-t_1)d\lambda=\int_{t_1-\epsilon}^{t_1+\epsilon}f(\lambda)\delta(\lambda-t_1)d\lambda=f(t_1)$$
+where $$f(t)$$ is continuous at $$t=t_1$$</description>
+    </item>
+    
+    <item>
+      <title>Cross Entropy</title>
+      <link>https://example.org/2022/01/cross-entropy/</link>
+      <pubDate>Tue, 25 Jan 2022 11:58:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/01/cross-entropy/</guid>
+      <description>1. Review of Entropy Entropy is usually used to represent the average amount of self-information. The calculation formula is as follows:
+$$H(X) = E(log\frac{1}{p_i}) = -\sum_{i=1}^{n}p_ilogp_i $$
+For example, supposed that we have a probability distribution X = [0.7, 0.3]. Then we have,
+$$H(X) = -0.7log0.7-0.3log0.3 = 0.88 bit$$
+What&amp;rsquo;s more, we can easily find that $$0\le H(X) \le logn$$ is always true.
+The proof of the left inequality is trivial because $$0\le p\le 1$$ the equality is established if and only if $$p_i=1$$</description>
+    </item>
+    
+    <item>
+      <title>Annoying Scissors</title>
+      <link>https://example.org/2021/12/annoying-scissors/</link>
+      <pubDate>Tue, 14 Dec 2021 22:58:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/12/annoying-scissors/</guid>
+      <description>When I was in college, I bought a pair of scissors in the supermarket. It&amp;rsquo;s durable and handy. Every time I use it to cut things, an inexplicable &amp;ldquo;sense of fulfillment&amp;rdquo; flooded into my heart. Although it is merely an ordinary pair of scissors, with the increase of use, I seem to have &amp;ldquo;relied&amp;rdquo; on it. Why do you say that? Because there are many times that I spend a lot of time finding it, even though several other scissors are at home.</description>
+    </item>
+    
+    <item>
+      <title>ResNet</title>
+      <link>https://example.org/2021/12/resnet/</link>
+      <pubDate>Tue, 14 Dec 2021 10:02:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/12/resnet/</guid>
+      <description>1. Preface Does deeper model always have good performance? Not Really!
+2. ResNet Block Similar to VGG and GoogLeNet, ResNet make it easy to training deep neural networks.
+$$f(x)= x + g(x)$$
+3. Q&amp;amp;A </description>
+    </item>
+    
+    <item>
+      <title>BatchNorm</title>
+      <link>https://example.org/2021/12/batchnorm/</link>
+      <pubDate>Mon, 13 Dec 2021 10:05:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/12/batchnorm/</guid>
+      <description>1. Preface As the Neural Network grows deeper, there are a few questions.
+the loss comes at the end the top layers train faster the bottom layers train slowly the data is at the bottom as the bottom layers update, all other layers need to change the top layers retrain many times slower convergence 2. BatchNorm Fix mini-batch&amp;rsquo;s mean and variance:
+$$\mu_B=\frac{1}{|B|}\sum_{i\in B}x_i$$
+and
+$$\sigma_{B}^{2}=\frac{1}{|B|}\sum_{i\in B}(x_i-\mu_B)^2+\epsilon$$
+additional adjustments (trainable parameters):</description>
+    </item>
+    
+    <item>
+      <title>GoogLeNet</title>
+      <link>https://example.org/2021/12/googlenet/</link>
+      <pubDate>Sun, 12 Dec 2021 20:08:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/12/googlenet/</guid>
+      <description>1. Inception Block (v1) Extract information from 4 different paths, and then concatenate them in output channel. It has less parameters and time complexity. The assignment of channels are based on the significance.
+1x1 Conv (64) 1x1 Conv (96); 3x3 Conv, pad 1 (128) 1x1 Conv (16); 5x5 Conv, pad 2 (32) 3x3 MaxPool, pad 1; 1x1 Conv (32) 2. Architecture You can see that there are so many hyper-parameters (num of channels).</description>
+    </item>
+    
+    <item>
+      <title>NiN</title>
+      <link>https://example.org/2021/12/nin/</link>
+      <pubDate>Sat, 11 Dec 2021 10:20:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/12/nin/</guid>
+      <description>1. NiN block Since &amp;lsquo;Dense Layer&amp;rsquo; has so many parameters, we replace them by &amp;lsquo;1x1 Conv&amp;rsquo;. The shape doesn&amp;rsquo;t change while using &amp;lsquo;1x1 Conv&amp;rsquo;.
+Conv2d (the same as AlexNet, ReLu) 1x1 Conv, stride 1, no pad (out_channel = in_channel, ReLU) 1x1 Conv, stride 1, no pad (out_channel = in_channel, ReLU) 2. Architecture NiN&amp;rsquo;s architecture is based on AlexNet, but we don&amp;rsquo;t use &amp;lsquo;Dense Layer&amp;rsquo;.
+NiN block 3x3 MaxPool, stride 2 (half size) &amp;hellip; Dropout(0.</description>
+    </item>
+    
+    <item>
+      <title>VGG</title>
+      <link>https://example.org/2021/12/vgg/</link>
+      <pubDate>Sat, 11 Dec 2021 09:35:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/12/vgg/</guid>
+      <description>1. VGG block 3x3 Conv, pad 1 (n layers, m channels usually double, ReLU) 2x2 MaxPool, stride 2 (half size per block) It turns out that &amp;lsquo;deeper 3x3 Conv&amp;rsquo; is better than &amp;lsquo;5x5 Conv&amp;rsquo;.
+2. Architecture multiple VGG blocks Dense (4096) (Flatten, Linear, ReLU, Dropout) Dense (4096) (Linear, ReLU, Dropout) Dense (1000) 3. Code import torch from torch import nn def vgg_block(num_conv,in_channels,out_channels) -&amp;gt;nn.Sequential: layers: List[nn.Module] = [] for _ in range(num_conv): layers.</description>
+    </item>
+    
+    <item>
+      <title>AlexNet</title>
+      <link>https://example.org/2021/12/alexnet/</link>
+      <pubDate>Thu, 09 Dec 2021 10:49:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/12/alexnet/</guid>
+      <description>1. AlexNet Compared with LeNet, it has some changes.
+Add noise and avoid overfitting(data transform). bigger and deeper use dropout (normalization) AvgPooling -&amp;gt; MaxPooling Sigmoid -&amp;gt; ReLU 2. Code net = nn.Sequential( nn.Conv2d(3,96,kernel_size=11,stride=4,padding=2),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), # nn.Conv2d(96,128*2,kernel_size=5,padding=2),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), nn.Conv2d(128*2,192*2,kernel_size=3,padding=1),nn.ReLU(), nn.Conv2d(192*2,192*2,kernel_size=3,padding=1),nn.ReLU(), nn.Conv2d(192*2,128*2,kernel_size=3,padding=1),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), # 6*6*256 nn.Flatten(), nn.Linear(6*6*256,2048*2),nn.ReLU(),nn.Dropout(p=0.5), nn.Linear(2048*2,2048*2),nn.ReLU(),nn.Dropout(p=0.5), nn.Linear(2048*2,1000),nn.ReLU(), ) 3. Q&amp;amp;A CNN提取的特征只是针对最后的分类任务，对于人来说大部分难以理解，因此它的可解释性较差。 Last two 4096 Full Connected Layers is necessary. A good name. </description>
+    </item>
+    
+    <item>
+      <title>Live2d</title>
+      <link>https://example.org/2021/12/live2d/</link>
+      <pubDate>Thu, 09 Dec 2021 10:49:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/12/live2d/</guid>
+      <description>1. Install Hexo npm install hexo-cli -g hexo init blog cd blog npm install hexo server 2. Add Live2d npm install --save hexo-helper-live2d then, insert code into _config.xml
+live2d: enable: true scriptFrom: local pluginRootPath: live2dw/ pluginJsPath: lib/ pluginModelPath: assets/ tagMode: false debug: false model: use: wanko display: position: right width: 150 height: 300 mobile: show: true pull your &amp;lsquo;assets&amp;rsquo; contents from live2d model directory to &amp;lsquo;./live2d_models/wanko&amp;rsquo;. At last, let&amp;rsquo;s run and compile the project</description>
+    </item>
+    
+    <item>
+      <title>CNN</title>
+      <link>https://example.org/2021/11/cnn/</link>
+      <pubDate>Sat, 27 Nov 2021 13:30:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/11/cnn/</guid>
+      <description>1. Concept Applying &amp;rsquo;translation invariance&amp;rsquo; and &amp;rsquo;locality&amp;rsquo; to the MLP, we then get a CNN which can significantly reduce the parameters.
+$$h_{i,j} = \sum_{a,b}v_{i,j,a,b}x_{i+a,j+b}$$
+$$\Rightarrow h_{i,j} = \sum_{a=-\Delta}^{\Delta}\sum_{b=-\Delta}^{\Delta}v_{a,b}x_{i+a,j+b}$$
+2. Conv2d 2.1 Definition Input $$X: (N, C_{in}, H, W)$$
+Kernel $$W: (h,w)$$
+Bias: $$b$$
+Output $$Y: (N, C_{out}, H&amp;rsquo;, W&amp;rsquo;)$$
+$$Y=X\star W+b$$
+2.2 Cross Correlation $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{a,b}x_{i+a,j+b}$$
+2.3 Conv2d $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{-a,-b}x_{i+a,j+b}$$
+As for implementation, we use &amp;lsquo;Cross Correlation&amp;rsquo; but call it &amp;lsquo;Conv2d&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>To Do List</title>
+      <link>https://example.org/2021/11/to-do-list/</link>
+      <pubDate>Sun, 21 Nov 2021 19:30:00 +0800</pubDate>
+      
+      <guid>https://example.org/2021/11/to-do-list/</guid>
+      <description>Homepage add publish time simplfy the layout page support search Navigator navigation link Categories list categories add sidebar cat navigate Live2d baisc function switch model Markdown Mathjax In progress.. </description>
+    </item>
+    
+    <item>
+      <title>Details</title>
+      <link>https://example.org/2021/10/details/</link>
+      <pubDate>Tue, 26 Oct 2021 12:57:11 +0800</pubDate>
+      
+      <guid>https://example.org/2021/10/details/</guid>
+      <description>Text can be bold, italic, or strikethrough.
+Link to another page.
+Link to blog1.
+Read Me.
+There should be whitespace between paragraphs.
+There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+Header 1 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</description>
+    </item>
+    
+    <item>
+      <title>Docker Engine</title>
+      <link>https://example.org/2021/10/docker-engine/</link>
+      <pubDate>Tue, 26 Oct 2021 12:57:11 +0800</pubDate>
+      
+      <guid>https://example.org/2021/10/docker-engine/</guid>
+      <description>1. Install Docker First, we need to install Docker Engine according to the instructions on the official website. Then, for convenience, we can do the following to avoid typing &amp;lsquo;sudo&amp;rsquo; each time.
+cat /etc/group | grep docker sudo groupadd docker # if no output sudo gpasswd -a ${USER} docker sudo service docker restart newgrp - docker 2. Image Command 2.1 search We can search Docker Hub to find docker images that we want.</description>
+    </item>
+    
+  </channel>
+</rss>

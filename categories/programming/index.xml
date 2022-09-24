@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Hugo tranquilpeak theme</title>
+    <link>https://example.org/categories/programming/</link>
+    <description>Recent content in Programming on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 May 2022 09:56:00 +0800</lastBuildDate><atom:link href="https://example.org/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript Review</title>
+      <link>https://example.org/2022/05/javascript-review/</link>
+      <pubDate>Tue, 17 May 2022 09:56:00 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/javascript-review/</guid>
+      <description>1. Variable var a = 5; // declare global function myfunc(){ var a = 10; // override global { let a = 5; // local // here a = 5; } // here a = 10; } // only &amp;#39;var&amp;#39; can override in the same block // var a = 10; // let a = 5; illegal statement 2. Constant const a = 5; // initial value must be assigned a = 3 // illegal statement // the atribution of constant object can be changed const b = [&amp;#34;Python&amp;#34;, &amp;#34;Java&amp;#34;, &amp;#34;C++&amp;#34;]; b[0] = &amp;#34;Ruby&amp;#34;; // legal statement // but the object itself can not be re-assigned b = [&amp;#34;C#&amp;#34;, &amp;#34;VB&amp;#34;]; // illegal statment // more example const car = {type:&amp;#34;porsche&amp;#34;, model:&amp;#34;911&amp;#34;, color:&amp;#34;Black&amp;#34;}; car.</description>
+    </item>
+    
+  </channel>
+</rss>
