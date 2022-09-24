@@ -2,155 +2,155 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://weili-git.github.io/categories/</loc>
     <lastmod>2022-09-22T10:09:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>https://weili-git.github.io/</loc>
     <lastmod>2022-09-22T10:09:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
+    <loc>https://weili-git.github.io/posts/</loc>
     <lastmod>2022-09-22T10:09:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/09/react/</loc>
+    <loc>https://weili-git.github.io/2022/09/react/</loc>
     <lastmod>2022-09-22T10:09:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/web/</loc>
+    <loc>https://weili-git.github.io/categories/web/</loc>
     <lastmod>2022-09-22T10:09:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/09/bootstrap/</loc>
+    <loc>https://weili-git.github.io/2022/09/bootstrap/</loc>
     <lastmod>2022-09-21T21:10:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/09/css/</loc>
+    <loc>https://weili-git.github.io/2022/09/css/</loc>
     <lastmod>2022-09-19T11:19:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/09/ajax/</loc>
+    <loc>https://weili-git.github.io/2022/09/ajax/</loc>
     <lastmod>2022-09-16T11:44:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/09/orm/</loc>
+    <loc>https://weili-git.github.io/2022/09/orm/</loc>
     <lastmod>2022-09-15T15:14:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/09/mysql/</loc>
+    <loc>https://weili-git.github.io/2022/09/mysql/</loc>
     <lastmod>2022-09-12T11:35:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/09/django-quick-start/</loc>
+    <loc>https://weili-git.github.io/2022/09/django-quick-start/</loc>
     <lastmod>2022-09-09T14:38:00+09:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/06/formants/</loc>
+    <loc>https://weili-git.github.io/2022/06/formants/</loc>
     <lastmod>2022-06-18T18:34:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/speech/</loc>
+    <loc>https://weili-git.github.io/categories/speech/</loc>
     <lastmod>2022-06-18T18:34:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/06/mfcc/</loc>
+    <loc>https://weili-git.github.io/2022/06/mfcc/</loc>
     <lastmod>2022-06-15T21:49:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/deep-learning/</loc>
+    <loc>https://weili-git.github.io/categories/deep-learning/</loc>
     <lastmod>2022-06-14T10:43:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/06/vae/</loc>
+    <loc>https://weili-git.github.io/2022/06/vae/</loc>
     <lastmod>2022-06-14T10:43:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/05/javascript-review/</loc>
+    <loc>https://weili-git.github.io/2022/05/javascript-review/</loc>
     <lastmod>2022-05-17T09:56:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/programming/</loc>
+    <loc>https://weili-git.github.io/categories/programming/</loc>
     <lastmod>2022-05-17T09:56:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/paper/</loc>
+    <loc>https://weili-git.github.io/categories/paper/</loc>
     <lastmod>2022-05-12T19:45:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/05/prosody-ttransfer-etts/</loc>
+    <loc>https://weili-git.github.io/2022/05/prosody-ttransfer-etts/</loc>
     <lastmod>2022-05-12T19:45:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/05/nginx/</loc>
+    <loc>https://weili-git.github.io/2022/05/nginx/</loc>
     <lastmod>2022-05-08T22:21:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/05/springboot/</loc>
+    <loc>https://weili-git.github.io/2022/05/springboot/</loc>
     <lastmod>2022-05-07T22:33:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/05/attention/</loc>
+    <loc>https://weili-git.github.io/2022/05/attention/</loc>
     <lastmod>2022-05-01T20:43:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/05/recurrent-neural-network/</loc>
+    <loc>https://weili-git.github.io/2022/05/recurrent-neural-network/</loc>
     <lastmod>2022-05-01T09:03:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/04/tacotron2/</loc>
+    <loc>https://weili-git.github.io/2022/04/tacotron2/</loc>
     <lastmod>2022-04-30T21:44:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/04/word2vec/</loc>
+    <loc>https://weili-git.github.io/2022/04/word2vec/</loc>
     <lastmod>2022-04-29T20:59:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/04/support-vector-machine/</loc>
+    <loc>https://weili-git.github.io/2022/04/support-vector-machine/</loc>
     <lastmod>2022-04-27T21:20:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/04/clustering/</loc>
+    <loc>https://weili-git.github.io/2022/04/clustering/</loc>
     <lastmod>2022-04-24T17:16:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/04/transposed-convolution/</loc>
+    <loc>https://weili-git.github.io/2022/04/transposed-convolution/</loc>
     <lastmod>2022-04-07T18:16:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/04/sequential-model/</loc>
+    <loc>https://weili-git.github.io/2022/04/sequential-model/</loc>
     <lastmod>2022-04-03T20:26:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/02/fourier-transform/</loc>
+    <loc>https://weili-git.github.io/2022/02/fourier-transform/</loc>
     <lastmod>2022-02-10T10:25:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/signals-and-systems/</loc>
+    <loc>https://weili-git.github.io/categories/signals-and-systems/</loc>
     <lastmod>2022-02-10T10:25:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/02/signals-convolution/</loc>
+    <loc>https://weili-git.github.io/2022/02/signals-convolution/</loc>
     <lastmod>2022-02-09T10:35:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/02/signals-properties/</loc>
+    <loc>https://weili-git.github.io/2022/02/signals-properties/</loc>
     <lastmod>2022-02-08T19:58:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2022/01/cross-entropy/</loc>
+    <loc>https://weili-git.github.io/2022/01/cross-entropy/</loc>
     <lastmod>2022-01-25T11:58:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/12/annoying-scissors/</loc>
+    <loc>https://weili-git.github.io/2021/12/annoying-scissors/</loc>
     <lastmod>2021-12-14T22:58:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/article/</loc>
+    <loc>https://weili-git.github.io/categories/article/</loc>
     <lastmod>2021-12-14T22:58:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/12/resnet/</loc>
+    <loc>https://weili-git.github.io/2021/12/resnet/</loc>
     <lastmod>2021-12-14T10:02:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/12/batchnorm/</loc>
+    <loc>https://weili-git.github.io/2021/12/batchnorm/</loc>
     <lastmod>2021-12-13T10:05:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/12/googlenet/</loc>
+    <loc>https://weili-git.github.io/2021/12/googlenet/</loc>
     <lastmod>2021-12-12T20:08:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/12/nin/</loc>
+    <loc>https://weili-git.github.io/2021/12/nin/</loc>
     <lastmod>2021-12-11T10:20:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/12/vgg/</loc>
+    <loc>https://weili-git.github.io/2021/12/vgg/</loc>
     <lastmod>2021-12-11T09:35:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/12/alexnet/</loc>
+    <loc>https://weili-git.github.io/2021/12/alexnet/</loc>
     <lastmod>2021-12-09T10:49:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/12/live2d/</loc>
+    <loc>https://weili-git.github.io/2021/12/live2d/</loc>
     <lastmod>2021-12-09T10:49:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/11/cnn/</loc>
+    <loc>https://weili-git.github.io/2021/11/cnn/</loc>
     <lastmod>2021-11-27T13:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/11/to-do-list/</loc>
+    <loc>https://weili-git.github.io/2021/11/to-do-list/</loc>
     <lastmod>2021-11-21T19:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/10/details/</loc>
+    <loc>https://weili-git.github.io/2021/10/details/</loc>
     <lastmod>2021-10-26T12:57:11+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/2021/10/docker-engine/</loc>
+    <loc>https://weili-git.github.io/2021/10/docker-engine/</loc>
     <lastmod>2021-10-26T12:57:11+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/linux/</loc>
+    <loc>https://weili-git.github.io/categories/linux/</loc>
     <lastmod>2021-10-26T12:57:11+08:00</lastmod>
   </url><url>
-    <loc>https://example.org/archives/</loc>
+    <loc>https://weili-git.github.io/archives/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://weili-git.github.io/tags/</loc>
   </url>
 </urlset>

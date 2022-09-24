@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Speech on Hugo tranquilpeak theme</title>
-    <link>https://example.org/categories/speech/</link>
+    <link>https://weili-git.github.io/categories/speech/</link>
     <description>Recent content in Speech on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jun 2022 18:34:00 +0800</lastBuildDate><atom:link href="https://example.org/categories/speech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jun 2022 18:34:00 +0800</lastBuildDate><atom:link href="https://weili-git.github.io/categories/speech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Formants</title>
-      <link>https://example.org/2022/06/formants/</link>
+      <link>https://weili-git.github.io/2022/06/formants/</link>
       <pubDate>Sat, 18 Jun 2022 18:34:00 +0800</pubDate>
       
-      <guid>https://example.org/2022/06/formants/</guid>
+      <guid>https://weili-git.github.io/2022/06/formants/</guid>
       <description>1. What is the formant? Formant is a characteristic component of the quality of a speech sound. It is the strongest part on the spectrogram where the botton one is the fundamental frequency F0.
 Pitch, actually, is a similar concept that
 reference https://www.zhihu.com/question/24190826/answer/280149476</description>
@@ -20,10 +20,10 @@ reference https://www.zhihu.com/question/24190826/answer/280149476</description>
     
     <item>
       <title>MFCC</title>
-      <link>https://example.org/2022/06/mfcc/</link>
+      <link>https://weili-git.github.io/2022/06/mfcc/</link>
       <pubDate>Wed, 15 Jun 2022 21:49:00 +0800</pubDate>
       
-      <guid>https://example.org/2022/06/mfcc/</guid>
+      <guid>https://weili-git.github.io/2022/06/mfcc/</guid>
       <description>1. Mel Frequency Cepstrum Coefficient $$Mel(f)=2585*log_{10}(1+\frac{f}{700})$$
 import numpy as np import matplotlib.pyplot as plt x = np.arange(8001) y = 2595 * np.log10(1+x/700) plt.plot(x, y, color=&amp;#39;blue&amp;#39;, linewidth=3) plt.xlabel(&amp;#34;f&amp;#34;, fontsize=17) plt.ylabel(&amp;#34;Mel(f)&amp;#34;, fontsize=17) plt.xlim(0,x[-1]) plt.ylim(0,y[-1]) plt.savefig(&amp;#39;mel_f.png&amp;#39;, dpi=500) 2. workflow import numpy as np import scipy.io.wavfile from matplotlib import pyplot as plt from scipy.fftpack import dct # 原始数据,读取前3.5s 的数据 sample_rate, signal = scipy.io.wavfile.read(&amp;#39;OSR_us_000_0010_8k.wav&amp;#39;) original_signal = signal[0:int(3.5*sample_rate)] signal_num = np.arange(len(signal)) sample_num = np.arange(len(original_signal)) # 绘图 01 plt.</description>
     </item>

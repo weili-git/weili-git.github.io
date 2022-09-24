@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Hugo tranquilpeak theme</title>
-    <link>https://example.org/categories/</link>
+    <link>https://weili-git.github.io/categories/</link>
     <description>Recent content in Categories on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Sep 2022 10:09:00 +0900</lastBuildDate><atom:link href="https://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Sep 2022 10:09:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web</title>
-      <link>https://example.org/categories/web/</link>
+      <link>https://weili-git.github.io/categories/web/</link>
       <pubDate>Thu, 22 Sep 2022 10:09:00 +0900</pubDate>
       
-      <guid>https://example.org/categories/web/</guid>
+      <guid>https://weili-git.github.io/categories/web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Speech</title>
-      <link>https://example.org/categories/speech/</link>
+      <link>https://weili-git.github.io/categories/speech/</link>
       <pubDate>Sat, 18 Jun 2022 18:34:00 +0800</pubDate>
       
-      <guid>https://example.org/categories/speech/</guid>
+      <guid>https://weili-git.github.io/categories/speech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep-learning</title>
-      <link>https://example.org/categories/deep-learning/</link>
+      <link>https://weili-git.github.io/categories/deep-learning/</link>
       <pubDate>Tue, 14 Jun 2022 10:43:00 +0800</pubDate>
       
-      <guid>https://example.org/categories/deep-learning/</guid>
+      <guid>https://weili-git.github.io/categories/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming</title>
-      <link>https://example.org/categories/programming/</link>
+      <link>https://weili-git.github.io/categories/programming/</link>
       <pubDate>Tue, 17 May 2022 09:56:00 +0800</pubDate>
       
-      <guid>https://example.org/categories/programming/</guid>
+      <guid>https://weili-git.github.io/categories/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Paper</title>
-      <link>https://example.org/categories/paper/</link>
+      <link>https://weili-git.github.io/categories/paper/</link>
       <pubDate>Thu, 12 May 2022 19:45:00 +0800</pubDate>
       
-      <guid>https://example.org/categories/paper/</guid>
+      <guid>https://weili-git.github.io/categories/paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Signals and Systems</title>
-      <link>https://example.org/categories/signals-and-systems/</link>
+      <link>https://weili-git.github.io/categories/signals-and-systems/</link>
       <pubDate>Thu, 10 Feb 2022 10:25:00 +0800</pubDate>
       
-      <guid>https://example.org/categories/signals-and-systems/</guid>
+      <guid>https://weili-git.github.io/categories/signals-and-systems/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Article</title>
-      <link>https://example.org/categories/article/</link>
+      <link>https://weili-git.github.io/categories/article/</link>
       <pubDate>Tue, 14 Dec 2021 22:58:00 +0800</pubDate>
       
-      <guid>https://example.org/categories/article/</guid>
+      <guid>https://weili-git.github.io/categories/article/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://example.org/categories/linux/</link>
+      <link>https://weili-git.github.io/categories/linux/</link>
       <pubDate>Tue, 26 Oct 2021 12:57:11 +0800</pubDate>
       
-      <guid>https://example.org/categories/linux/</guid>
+      <guid>https://weili-git.github.io/categories/linux/</guid>
       <description></description>
     </item>
     

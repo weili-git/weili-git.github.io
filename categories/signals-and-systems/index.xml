@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Signals and Systems on Hugo tranquilpeak theme</title>
-    <link>https://example.org/categories/signals-and-systems/</link>
+    <link>https://weili-git.github.io/categories/signals-and-systems/</link>
     <description>Recent content in Signals and Systems on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Feb 2022 10:25:00 +0800</lastBuildDate><atom:link href="https://example.org/categories/signals-and-systems/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Feb 2022 10:25:00 +0800</lastBuildDate><atom:link href="https://weili-git.github.io/categories/signals-and-systems/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fourier Transform</title>
-      <link>https://example.org/2022/02/fourier-transform/</link>
+      <link>https://weili-git.github.io/2022/02/fourier-transform/</link>
       <pubDate>Thu, 10 Feb 2022 10:25:00 +0800</pubDate>
       
-      <guid>https://example.org/2022/02/fourier-transform/</guid>
+      <guid>https://weili-git.github.io/2022/02/fourier-transform/</guid>
       <description>1. Fourier Series Orthogonal Basis Functions The &amp;lsquo;orthogonal basis functions&amp;rsquo; are a set of functions of time, $$\phi(t)$$, such that the followings holds over some specified time interval $$T$$,
 $$\forall k,\forall m,k \neq m, \int_{T} \overline{\phi_k(t)} \phi_m(t) =0$$
 Triangle Fourier Series the &amp;lsquo;OBF&amp;rsquo; of triangle fourier series are as follows
@@ -26,10 +26,10 @@ Therefore, we can express a periodic signal with fundamental period T as a sum o
     
     <item>
       <title>Signal&#39;s Convolution</title>
-      <link>https://example.org/2022/02/signals-convolution/</link>
+      <link>https://weili-git.github.io/2022/02/signals-convolution/</link>
       <pubDate>Wed, 09 Feb 2022 10:35:00 +0800</pubDate>
       
-      <guid>https://example.org/2022/02/signals-convolution/</guid>
+      <guid>https://weili-git.github.io/2022/02/signals-convolution/</guid>
       <description>1. Moving Average(MA) filter N-points MA filter is defined as
 $$y[n]=\sum_{i=0}^{N-1}\frac{1}{N}x[n-i]$$
 where N is a positive integer.
@@ -42,10 +42,10 @@ it turns out that any &amp;lsquo;causal linear time-invariant&amp;rsquo; DT syst
     
     <item>
       <title>Signal&#39;s Properties</title>
-      <link>https://example.org/2022/02/signals-properties/</link>
+      <link>https://weili-git.github.io/2022/02/signals-properties/</link>
       <pubDate>Tue, 08 Feb 2022 19:58:00 +0800</pubDate>
       
-      <guid>https://example.org/2022/02/signals-properties/</guid>
+      <guid>https://weili-git.github.io/2022/02/signals-properties/</guid>
       <description>1.Periodic Continuous-Time Signals given two periodic CT signals
 $$\forall t, x_1(t+T_1) = x_1(t)$$
 and
