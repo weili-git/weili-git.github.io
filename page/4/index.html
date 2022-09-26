@@ -280,6 +280,72 @@ code.has-jax {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/transposed-convolution/" aria-label="Open the post: Transposed Convolution">
+      
+          Transposed Convolution
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-04-07T18:16:00&#43;08:00">
+        
+  April 7, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Function ConvTransposed can be used to enlarge the width and height from the input.
+2. Principle pad=0, strd=1 Fill the input into size kernel-1, then apply Transposed kernel Conv (主副对角线转置).
+3. General Case Insert stride lines between rows/cols , then fill the input into size kernel-padding-1, then Transposed kernel Conv (k, 1, 0)
+ConvTranspose2d
+$$n^* = (n-1)s + k - 2p$$
+Conv2d
+$$n^* = floor( \frac{n -k + 2p + s}{s} )$$
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/04/transposed-convolution/" class="postShorten-excerpt_link link" aria-label="Open the post: Transposed Convolution">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://weili-git.github.io/2022/04/sequential-model/" aria-label="Open the post: Sequential Model">
       
           Sequential Model
@@ -654,69 +720,6 @@ The proof of the left inequality is trivial because $$0\le p\le 1$$ the equality
       <p>
         
           <a href="https://weili-git.github.io/2021/12/annoying-scissors/" class="postShorten-excerpt_link link" aria-label="Open the post: Annoying Scissors">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2021/12/resnet/" aria-label="Open the post: ResNet">
-      
-          ResNet
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-12-14T10:02:00&#43;08:00">
-        
-  December 14, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Preface Does deeper model always have good performance? Not Really!
-2. ResNet Block Similar to VGG and GoogLeNet, ResNet make it easy to training deep neural networks.
-$$f(x)= x + g(x)$$
-3. Q&amp;A 
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2021/12/resnet/" class="postShorten-excerpt_link link" aria-label="Open the post: ResNet">Continue reading</a>
         
         
       </p>

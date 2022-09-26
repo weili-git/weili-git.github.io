@@ -47,7 +47,7 @@ code.has-jax {
   "headline": "Posts",
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2022-09-22T10:09:00+09:00",
+  "dateModified": "2022-09-26T23:15:00+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -277,6 +277,76 @@ code.has-jax {
         <section class="postShorten-group main-content-wrap">
           
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2021/11/cnn/" aria-label="Open the post: CNN">
+      
+          CNN
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-11-27T13:30:00&#43;08:00">
+        
+  November 27, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Concept Applying &rsquo;translation invariance&rsquo; and &rsquo;locality&rsquo; to the MLP, we then get a CNN which can significantly reduce the parameters.
+$$h_{i,j} = \sum_{a,b}v_{i,j,a,b}x_{i+a,j+b}$$
+$$\Rightarrow h_{i,j} = \sum_{a=-\Delta}^{\Delta}\sum_{b=-\Delta}^{\Delta}v_{a,b}x_{i+a,j+b}$$
+2. Conv2d 2.1 Definition Input $$X: (N, C_{in}, H, W)$$
+Kernel $$W: (h,w)$$
+Bias: $$b$$
+Output $$Y: (N, C_{out}, H&rsquo;, W&rsquo;)$$
+$$Y=X\star W+b$$
+2.2 Cross Correlation $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{a,b}x_{i+a,j+b}$$
+2.3 Conv2d $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{-a,-b}x_{i+a,j+b}$$
+As for implementation, we use &lsquo;Cross Correlation&rsquo; but call it &lsquo;Conv2d&rsquo;.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2021/11/cnn/" class="postShorten-excerpt_link link" aria-label="Open the post: CNN">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   

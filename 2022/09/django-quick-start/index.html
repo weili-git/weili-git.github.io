@@ -423,25 +423,50 @@ code.has-jax {
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, <span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs):
 </span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span>__init__(<span style="color:#f92672">*</span>args, <span style="color:#f92672">**</span>kwargs)
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># if name==&#34;password&#34;:</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#     continue</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> name, field <span style="color:#f92672">in</span> self<span style="color:#f92672">.</span>fields<span style="color:#f92672">.</span>items():
 </span></span><span style="display:flex;"><span>            field<span style="color:#f92672">.</span>widget<span style="color:#f92672">.</span>attrs <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;class&#34;</span>: <span style="color:#e6db74">&#34;form-control&#34;</span>, <span style="color:#e6db74">&#34;placeholder&#34;</span>: field<span style="color:#f92672">.</span>label}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create</span>(request):
-</span></span><span style="display:flex;"><span>    form <span style="color:#f92672">=</span> ArticleModelForm()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#34;create.html&#34;</span>, {<span style="color:#e6db74">&#39;form&#39;</span>: form})
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- create.html --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">new</span>(request):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;GET&#34;</span>:
+</span></span><span style="display:flex;"><span>        form <span style="color:#f92672">=</span> ArticleModelForm()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#34;new.html&#34;</span>, {<span style="color:#e6db74">&#39;form&#39;</span>: form})
+</span></span><span style="display:flex;"><span>    form <span style="color:#f92672">=</span> ArticleModelForm(data<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>POST)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>is_valid():
+</span></span><span style="display:flex;"><span>        form<span style="color:#f92672">.</span>save()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#34;/&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#34;new.html&#34;</span>, {<span style="color:#e6db74">&#39;form&#39;</span>: form})  <span style="color:#75715e"># with error information</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">edit</span>(request, pk):
+</span></span><span style="display:flex;"><span>    row <span style="color:#f92672">=</span> Article<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(id<span style="color:#f92672">=</span>pk)<span style="color:#f92672">.</span>first()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;GET&#34;</span>:
+</span></span><span style="display:flex;"><span>        form <span style="color:#f92672">=</span> ArticleModelForm(instance<span style="color:#f92672">=</span>row)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#34;edit.html&#34;</span>, {<span style="color:#e6db74">&#34;form&#34;</span>: form})
+</span></span><span style="display:flex;"><span>    form <span style="color:#f92672">=</span> ArticleModelForm(data<span style="color:#f92672">=</span>request<span style="color:#f92672">.</span>POST, instance<span style="color:#f92672">=</span>row)    <span style="color:#75715e"># update instead of create</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> form<span style="color:#f92672">.</span>is_valid():
+</span></span><span style="display:flex;"><span>        form<span style="color:#f92672">.</span>save()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#34;/&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> render(request, <span style="color:#e6db74">&#34;new.html&#34;</span>, {<span style="color:#e6db74">&#39;form&#39;</span>: form})  <span style="color:#75715e"># with error information</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">delete</span>(request, pk):
+</span></span><span style="display:flex;"><span>    Article<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(id<span style="color:#f92672">=</span>pk)<span style="color:#f92672">.</span>delete()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#34;/&#34;</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- new.html --&gt;</span>
 </span></span><span style="display:flex;"><span>{% extends &#34;layout.html&#34; %}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>{% block content %}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h1</span>&gt;Create New Article&lt;/<span style="color:#f92672">h1</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>        {% csrf_token %}
 </span></span><span style="display:flex;"><span>        {% for field in form %}
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span>&gt;
-</span></span><span style="display:flex;"><span>            {{field.label}}: {{field}}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-group&#34;</span> &gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">label</span>&gt;{{field.label}}:&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>            {{ field }}
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:red;&#34;</span>&gt;{{ field.errors.0 }}&lt;/<span style="color:#f92672">span</span>&gt;
 </span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>        {% endfor %}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-primary&#34;</span>&gt;Submit&lt;/<span style="color:#f92672">button</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">form</span>&gt;
 </span></span><span style="display:flex;"><span>{% endblock %}
 </span></span></code></pre></div>

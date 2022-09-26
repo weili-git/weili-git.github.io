@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Sep 2022 10:09:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 23:15:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript</title>
+      <link>https://weili-git.github.io/2022/09/javascript/</link>
+      <pubDate>Mon, 26 Sep 2022 23:15:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2022/09/javascript/</guid>
+      <description>1. jQuery &amp;lt;!-- https://jquery.com/download/ --&amp;gt; &amp;lt;script src=&amp;#34;{% static &amp;#39;js/jquery-3.6.1.min.js&amp;#39; %}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;{% static &amp;#39;plugins/bootstrap-3.4.1-dist/js/bootstrap.min.js&amp;#39; %}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; Bootstrap with jQuery will help us to create a lot of dynamic pages.
+&amp;lt;!-- Button trigger modal --&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-primary btn-lg&amp;#34; data-toggle=&amp;#34;modal&amp;#34; data-target=&amp;#34;#myModal&amp;#34;&amp;gt; delete &amp;lt;/button&amp;gt; &amp;lt;!-- Modal --&amp;gt; &amp;lt;div class=&amp;#34;modal fade&amp;#34; id=&amp;#34;myModal&amp;#34; tabindex=&amp;#34;-1&amp;#34; role=&amp;#34;dialog&amp;#34; aria-labelledby=&amp;#34;myModalLabel&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;modal-dialog&amp;#34; role=&amp;#34;document&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;modal-content&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;modal-header&amp;#34;&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;close&amp;#34; data-dismiss=&amp;#34;modal&amp;#34; aria-label=&amp;#34;Close&amp;#34;&amp;gt;&amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt; &amp;lt;h4 class=&amp;#34;modal-title&amp;#34; id=&amp;#34;myModalLabel&amp;#34;&amp;gt;Warning&amp;lt;/h4&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;modal-body&amp;#34;&amp;gt; Are you sure that you want to delete this article?</description>
+    </item>
+    
     <item>
       <title>react</title>
       <link>https://weili-git.github.io/2022/09/react/</link>
