@@ -44,10 +44,10 @@ code.has-jax {
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Support Vector Machine",
+  "headline": "Denosing Diffusion Probability Model",
   
-  "datePublished": "2022-04-27T21:20:00+08:00",
-  "dateModified": "2022-04-27T21:20:00+08:00",
+  "datePublished": "2022-10-02T18:51:00+09:00",
+  "dateModified": "2022-10-02T18:51:00+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -57,7 +57,7 @@ code.has-jax {
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/weili-git.github.io\/2022\/04\/support-vector-machine\/" 
+    "@id": "https:\/\/weili-git.github.io\/2022\/10\/denosing-diffusion-probability-model\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -69,7 +69,7 @@ code.has-jax {
     }
     
   },
-  "description": "1. Classification Problem Supposed that we are given a batch of data $$D={(x_1, y_1), (x_2, y_2), \u0026hellip;, (x_m, y_m)},y_i \\in {-1,+1}$$, and we want to find a hyper-plane such that it can properly divide these two class of data. A good hyper-plane should be able to accept slight disturbance.\nMulti-class Classification A classification task with the assumption that each sample belongs to one and only one class. $${dog, cat}$$\nMulti-label Classification A classification task that handle several joint classification tasks.",
+  "description": "1. Introduction 1.1 KL for two Gaussian distribution $$ KL(p,q) = \\log\\frac{\\sigma_1}{\\sigma_2} + \\frac{\\sigma_1^2+(\\mu_1-\\mu_2)^2}{2\\sigma_2^2} - \\frac{1}{2} $$\n1.2 Reparameterization If we want to sample from $N(\\mu_1,\\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\\sigma*z+\\mu$ which will help us to get partial gradients.\n1.3 Single layer of VAE $$\\begin{aligned} p(x) \u0026amp;= \\int_z p_\\theta(x|z)p(z) \\ \u0026amp;= \\int_z q_\\phi(z|x)\\frac{p_\\theta(x|z)p(z)}{q_\\phi(z|x)} \\ \\log p(x) \u0026amp;= \\log\\mathbb{E}{z\\sim q\\phi{z|x}}[\\frac{p_\\theta(x|z)p(z)}{q_\\phi(z|x)}] \\ \u0026amp;\\ge \\mathbb{E}{z\\sim q\\phi{z|x}}[\\log \\frac{p_\\theta(x|z)p(z)}{q_\\phi(z|x)}] \\end{aligned}$$",
   "keywords": []
 }
 
@@ -80,25 +80,25 @@ code.has-jax {
 <meta name="generator" content="Hugo 0.104.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="LI WEI">
 <meta name="keywords" content="">
-<meta name="description" content="支持向量机">
+<meta name="description" content="Denosing Diffusion Probabilistic Model">
 
 
-<meta property="og:description" content="支持向量机">
+<meta property="og:description" content="Denosing Diffusion Probabilistic Model">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Support Vector Machine">
-<meta name="twitter:title" content="Support Vector Machine">
-<meta property="og:url" content="https://weili-git.github.io/2022/04/support-vector-machine/">
-<meta property="twitter:url" content="https://weili-git.github.io/2022/04/support-vector-machine/">
+<meta property="og:title" content="Denosing Diffusion Probability Model">
+<meta name="twitter:title" content="Denosing Diffusion Probability Model">
+<meta property="og:url" content="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/">
+<meta property="twitter:url" content="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
-<meta property="og:description" content="支持向量机">
-<meta name="twitter:description" content="支持向量机">
+<meta property="og:description" content="Denosing Diffusion Probabilistic Model">
+<meta name="twitter:description" content="Denosing Diffusion Probabilistic Model">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2022-04-27T21:20:00">
+    <meta property="article:published_time" content="2022-10-02T18:51:00">
   
   
-    <meta property="article:modified_time" content="2022-04-27T21:20:00">
+    <meta property="article:modified_time" content="2022-10-02T18:51:00">
   
   
   
@@ -125,14 +125,14 @@ code.has-jax {
 
 
 
-    <title>Support Vector Machine</title>
+    <title>Denosing Diffusion Probability Model</title>
 
     <link rel="icon" href="https://weili-git.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://weili-git.github.io/2022/04/support-vector-machine/">
+    <link rel="canonical" href="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -292,15 +292,15 @@ code.has-jax {
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      Support Vector Machine
+      Denosing Diffusion Probability Model
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-04-27T21:20:00&#43;08:00">
+      <time datetime="2022-10-02T18:51:00&#43;09:00">
         
-  April 27, 2022
+  October 2, 2022
 
       </time>
     
@@ -319,47 +319,27 @@ code.has-jax {
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <h1 id="1-classification-problem">1. Classification Problem</h1>
-<p>Supposed that we are given a batch of data $$D={(x_1, y_1), (x_2, y_2), &hellip;, (x_m, y_m)},y_i \in {-1,+1}$$, and we want to find a hyper-plane such that it can properly divide these two class of data. A good hyper-plane should be able to accept slight disturbance.</p>
-<h2 id="multi-class-classification">Multi-class Classification</h2>
-<p>A classification task with the assumption that each sample belongs to one and only one class. $${dog, cat}$$</p>
-<h2 id="multi-label-classification">Multi-label Classification</h2>
-<p>A classification task that handle several joint classification tasks. $${cat, young, female}$$</p>
-<p><img src="https://weili-git.github.io/assets/images/2022-4-27-1.png" alt="example"></p>
-<h1 id="2-mathematical-description">2. Mathematical Description</h1>
-<h2 id="21-hyper-plane">2.1 Hyper-plane</h2>
-<p>We use ${w, b}$ to describe a hyper-plane in n-dimension vector space, where $w=[w_1, w_2, &hellip;, w_n]^T$ is the normal vector and $b$ is the displacement vector. The mathematical equation of the hyper-plane is</p>
+              <h1 id="1-introduction">1. Introduction</h1>
+<h2 id="11-kl-for-two-gaussian-distribution">1.1 KL for two Gaussian distribution</h2>
 <p>$$
-w_1x_1+w_2x_2+&hellip;+w_nx_n+b=0
+KL(p,q) = \log\frac{\sigma_1}{\sigma_2} + \frac{\sigma_1^2+(\mu_1-\mu_2)^2}{2\sigma_2^2} - \frac{1}{2}
 $$</p>
-<h2 id="22-distrance--sign">2.2 Distrance &amp; Sign</h2>
-<p>To derive the distance of any sample $x=[x_1, x_2, &hellip;, x_n]^T$ to the hyper-plane ${w, b}$, we can first find a point $(-\frac{b}{w_1},0, &hellip;, 0)$ in this hyper-plane. To connect $x$ and this point, we get a new vector</p>
-<p>$$
-n=[x_1+\frac{b}{w_1},x_2,&hellip;,x_n]^T
-$$</p>
-<p>Next, we can get the distance of $x$ to this hyper-plane by using the projection formula.</p>
-<p>$$r=\frac{|w^Tn|}{||w||}=\frac{\vert w^Tx+b\vert}{\lVert w\rVert}$$</p>
-<p>The sign of $w^Tx+b$ depends on the position $x$ with respect to the hyper-plane. If $x$ is in the side that $w$ points to, the result is negative. Otherwise, the result is positive.</p>
-<h2 id="23-hard-margin">2.3 Hard Margin</h2>
-<p>We hope that this hyper-plane can seperate these two class of samples with margins greater than $\frac{1}{\lVert w\rVert}$. This can be expressed as</p>
-<p>$$\begin{cases}
-w^Tx_i+b\ge +1, ~ y_i=+1; \
-w^Tx_i+b\le -1, ~ y_i=-1.
-\end{cases}$$</p>
-<p>Therefore the classification problem is equivalent to</p>
-<p>$$\max_{w,b}\frac{2}{\lVert w\rVert} ~~ s.t. ~~ y_i(w^Tx_i+b)\ge 1, ~~ \forall i=1,2,&hellip;,m$$</p>
-<p>Here, $\frac{2}{\lVert w\rVert}$ is called the margin (间隔), which is supposed to be as great as possible.</p>
-<p>This kind of margin is called &ldquo;hard margin&rdquo; which means that the samples are strictly outside the boundaries.</p>
-<h2 id="24-soft-margin">2.4 Soft Margin</h2>
-<p>Soft margin is another type of SVM margin, which accepts error　$\xi=[\xi_1,\xi_2, &hellip;, \xi_m]^T$. The condition can be written as</p>
-<p>$$\min_{w,b,\xi} \bigg[ \frac{\lVert w\rVert}{2}+C\sum_{i=1}^{m}\xi_i \bigg] ~~ s.t. ~~ y_i(w^Tx_i+b)\ge 1-\xi_i, ~~ \forall i=1,2,&hellip;,m$$</p>
-<p>$C&gt;0$ is a hyper-parameter that is used to adjust the error tolerance. The greater the $C$, the closer the error $\xi$ to zero.</p>
-<h1 id="3-dual-problem-对偶问题">3. Dual Problem (对偶问题)</h1>
-<p>By Lagrange Multiplier Method, we can construct the Lagrange function,</p>
-<p>$$L(w,b,a) = \frac{\vert\vert w \vert\vert^2}{2} + \sum_{i=1}^{m}a_i(1-y_i(w^Tx_i+b))$$</p>
-<p>By setting the derivatives to zero, we have</p>
-<p>$$w=\sum_{i=1}^{m}a_iy_ix_i,\
-0=\sum_{i=1}^{m}a_iy_i$$</p>
+<h2 id="12-reparameterization">1.2 Reparameterization</h2>
+<p>If we want to sample from $N(\mu_1,\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\sigma*z+\mu$ which will help us to get partial gradients.</p>
+<h2 id="13-single-layer-of-vae">1.3 Single layer of VAE</h2>
+<p>$$\begin{aligned}
+p(x) &amp;= \int_z p_\theta(x|z)p(z) \
+&amp;= \int_z q_\phi(z|x)\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)} \
+\log p(x) &amp;= \log\mathbb{E}<em>{z\sim q</em>\phi{z|x}}[\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \
+&amp;\ge \mathbb{E}<em>{z\sim q</em>\phi{z|x}}[\log \frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}]
+\end{aligned}$$</p>
+<h1 id="14-multi-layer-vae">1.4 Multi-layer VAE</h1>
+<p>With Markov&rsquo;s assumption, we have</p>
+<p>$$\begin{aligned}
+p(x) &amp;= \iint q_\phi(z_1,z_2|x)\frac{p_\theta(x,z_1,z_2)}{q_\phi(z_1,z_2|x)} \
+\log p(x) &amp;\ge \mathbb{E}<em>{z_1,z_2\sim q</em>\phi(z_1,z_2|x)}[\log\frac{p_\theta(x,z_1,z_2)}{q_\phi(z_1,z_2|x)}] \
+\mathcal{L}(\theta,\phi) &amp;= \mathbb{E}<em>{z_1,z_2\sim q</em>\phi(z_1,z_2|x)}[\log p(x|z_1)-\log q(z_1|x)+\log p(z_1|z_2)-\log q(z_2|z_1)+\log p(z_2)]
+\end{aligned}$$</p>
 
               
 
@@ -377,7 +357,7 @@ w^Tx_i+b\le -1, ~ y_i=-1.
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2022/04/word2vec/" data-tooltip="Word2vec" aria-label="NEXT: Word2vec">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -385,7 +365,7 @@ w^Tx_i+b\le -1, ~ y_i=-1.
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2022/04/clustering/" data-tooltip="Clustering" aria-label="PREVIOUS: Clustering">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2022/10/generative-flow/" data-tooltip="Generative Flow" aria-label="PREVIOUS: Generative Flow">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -403,19 +383,19 @@ w^Tx_i+b\le -1, ~ y_i=-1.
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2022/04/support-vector-machine/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2022/04/support-vector-machine/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2022/04/support-vector-machine/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -446,9 +426,9 @@ w^Tx_i+b\le -1, ~ y_i=-1.
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/weili-git.github.io\/2022\/04\/support-vector-machine\/';
+        this.page.url = 'https:\/\/weili-git.github.io\/2022\/10\/denosing-diffusion-probability-model\/';
         
-          this.page.identifier = '\/2022\/04\/support-vector-machine\/'
+          this.page.identifier = '\/2022\/10\/denosing-diffusion-probability-model\/'
         
       };
       (function() {
@@ -484,7 +464,7 @@ w^Tx_i+b\le -1, ~ y_i=-1.
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2022/04/word2vec/" data-tooltip="Word2vec" aria-label="NEXT: Word2vec">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -492,7 +472,7 @@ w^Tx_i+b\le -1, ~ y_i=-1.
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2022/04/clustering/" data-tooltip="Clustering" aria-label="PREVIOUS: Clustering">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2022/10/generative-flow/" data-tooltip="Generative Flow" aria-label="PREVIOUS: Generative Flow">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -510,19 +490,19 @@ w^Tx_i+b\le -1, ~ y_i=-1.
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2022/04/support-vector-machine/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2022/04/support-vector-machine/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2022/04/support-vector-machine/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -553,19 +533,19 @@ w^Tx_i+b\le -1, ~ y_i=-1.
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweili-git.github.io%2F2022%2F04%2Fsupport-vector-machine%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweili-git.github.io%2F2022%2F10%2Fdenosing-diffusion-probability-model%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fweili-git.github.io%2F2022%2F04%2Fsupport-vector-machine%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fweili-git.github.io%2F2022%2F10%2Fdenosing-diffusion-probability-model%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fweili-git.github.io%2F2022%2F04%2Fsupport-vector-machine%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fweili-git.github.io%2F2022%2F10%2Fdenosing-diffusion-probability-model%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>

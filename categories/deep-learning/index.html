@@ -283,6 +283,195 @@ code.has-jax {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" aria-label="Open the post: Denosing Diffusion Probability Model">
+      
+          Denosing Diffusion Probability Model
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-10-02T18:51:00&#43;09:00">
+        
+  October 2, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Introduction 1.1 KL for two Gaussian distribution $$ KL(p,q) = \log\frac{\sigma_1}{\sigma_2} + \frac{\sigma_1^2+(\mu_1-\mu_2)^2}{2\sigma_2^2} - \frac{1}{2} $$
+1.2 Reparameterization If we want to sample from $N(\mu_1,\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\sigma*z+\mu$ which will help us to get partial gradients.
+1.3 Single layer of VAE $$\begin{aligned} p(x) &amp;= \int_z p_\theta(x|z)p(z) \ &amp;= \int_z q_\phi(z|x)\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)} \ \log p(x) &amp;= \log\mathbb{E}{z\sim q\phi{z|x}}[\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \ &amp;\ge \mathbb{E}{z\sim q\phi{z|x}}[\log \frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \end{aligned}$$
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" class="postShorten-excerpt_link link" aria-label="Open the post: Denosing Diffusion Probability Model">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/10/generative-flow/" aria-label="Open the post: Generative Flow">
+      
+          Generative Flow
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-10-01T18:53:00&#43;09:00">
+        
+  October 1, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Flow-Based Generatvie Model Give a datapoint $x$ and latent varible $z\sim p_{\theta}(z)$. The function $g_{\theta}(..)$ is invertible such that
+$$\begin{aligned} x&amp;=g_{\theta}(z) \ z&amp;=f_{\theta}(x) =g_{\theta}^{-1}(x) \end{aligned}$$
+The probability density function of the model can be written as:
+$$\begin{aligned} \log p_{\theta}(x) &amp;= \log p_{\theta}(z) + \log | det(dz/dx) | \ &amp;= \log p_{\theta}(z) + \sum_{i=1}^{K}\log | det(dh_i/dh_{i-1}) | \end{aligned}$$
+To simplify the calculation, we can choose transformations with Jacobian $dh_{i}/dh_{i-1}$ is a triangular matrix,
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/10/generative-flow/" class="postShorten-excerpt_link link" aria-label="Open the post: Generative Flow">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/vits/" aria-label="Open the post: VITS">
+      
+          VITS
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-09-30T13:02:00&#43;09:00">
+        
+  September 30, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. ELBO We define that $x$ is target and $z$ is hidden variable.
+$$P(x)=\int_{z}P(x|z)P(z)dz$$
+Since $P(x|z)$ is close to 0, we have to shrink the sample space of $z$. Supposed that $z \sim Q(z|x)$:
+$$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(z|x)] \ KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(x|z) - \log P(z) + \log P(x)] \ \log P(x) - D[Q(z|x),P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \ \log P(x) &amp;\ge \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \end{aligned}$$
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/09/vits/" class="postShorten-excerpt_link link" aria-label="Open the post: VITS">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://weili-git.github.io/2022/06/vae/" aria-label="Open the post: VAE">
       
           VAE
@@ -510,191 +699,6 @@ $$concat(F_t,~Context, F_{t-1}) \Rightarrow LSTM_Cell$$
       <p>
         
           <a href="https://weili-git.github.io/2022/04/tacotron2/" class="postShorten-excerpt_link link" aria-label="Open the post: Tacotron2">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/word2vec/" aria-label="Open the post: Word2vec">
-      
-          Word2vec
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-04-29T20:59:00&#43;08:00">
-        
-  April 29, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. CBOW &amp; Skip-Gram Skip-gram is an easier model, so we just discuss it only. Suppose that the size of vocabulary is 10000, and we want to map it into a 300-dim features vector. It&rsquo;s consists of a hidden layer (10000x300) and an output layer(300x10000).
-Note that there are millions of parameters that needs updating, so we have to use some strategies to avoid this.
-Word Pairs &ldquo;New York&rdquo; are regarded as single word, which has different meanings from &ldquo;New&rdquo; and &ldquo;York&rdquo;.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/04/word2vec/" class="postShorten-excerpt_link link" aria-label="Open the post: Word2vec">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/support-vector-machine/" aria-label="Open the post: Support Vector Machine">
-      
-          Support Vector Machine
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-04-27T21:20:00&#43;08:00">
-        
-  April 27, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Classification Problem Supposed that we are given a batch of data $$D={(x_1, y_1), (x_2, y_2), &hellip;, (x_m, y_m)},y_i \in {-1,+1}$$, and we want to find a hyper-plane such that it can properly divide these two class of data. A good hyper-plane should be able to accept slight disturbance.
-Multi-class Classification A classification task with the assumption that each sample belongs to one and only one class. $${dog, cat}$$
-Multi-label Classification A classification task that handle several joint classification tasks.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/04/support-vector-machine/" class="postShorten-excerpt_link link" aria-label="Open the post: Support Vector Machine">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/clustering/" aria-label="Open the post: Clustering">
-      
-          Clustering
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-04-24T17:16:00&#43;08:00">
-        
-  April 24, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Definition Formally, suppose that we have a dataset $$D={x_1,x_2,&hellip;,x_m}$$, in which every sample is a n-dim vector. Clustering is to divide these data into k disjoint &lsquo;cluster&rsquo; $${C_l \vert l=1,2,&hellip;,k}$$. This is just like &lsquo;Disjoint Set&rsquo; that we learn in algorithm course.
-2. K-means The intuition of K-means algorithm is very straight-forward. Initially, we choose k random samples $${ \mu_1,\mu_2,&hellip;,\mu_k }$$ as the &lsquo;mean vector&rsquo;, which represent the center position of k cluster.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/04/clustering/" class="postShorten-excerpt_link link" aria-label="Open the post: Clustering">Continue reading</a>
         
         
       </p>

@@ -280,6 +280,195 @@ code.has-jax {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" aria-label="Open the post: Denosing Diffusion Probability Model">
+      
+          Denosing Diffusion Probability Model
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-10-02T18:51:00&#43;09:00">
+        
+  October 2, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Introduction 1.1 KL for two Gaussian distribution $$ KL(p,q) = \log\frac{\sigma_1}{\sigma_2} + \frac{\sigma_1^2+(\mu_1-\mu_2)^2}{2\sigma_2^2} - \frac{1}{2} $$
+1.2 Reparameterization If we want to sample from $N(\mu_1,\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\sigma*z+\mu$ which will help us to get partial gradients.
+1.3 Single layer of VAE $$\begin{aligned} p(x) &amp;= \int_z p_\theta(x|z)p(z) \ &amp;= \int_z q_\phi(z|x)\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)} \ \log p(x) &amp;= \log\mathbb{E}{z\sim q\phi{z|x}}[\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \ &amp;\ge \mathbb{E}{z\sim q\phi{z|x}}[\log \frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \end{aligned}$$
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" class="postShorten-excerpt_link link" aria-label="Open the post: Denosing Diffusion Probability Model">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/10/generative-flow/" aria-label="Open the post: Generative Flow">
+      
+          Generative Flow
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-10-01T18:53:00&#43;09:00">
+        
+  October 1, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Flow-Based Generatvie Model Give a datapoint $x$ and latent varible $z\sim p_{\theta}(z)$. The function $g_{\theta}(..)$ is invertible such that
+$$\begin{aligned} x&amp;=g_{\theta}(z) \ z&amp;=f_{\theta}(x) =g_{\theta}^{-1}(x) \end{aligned}$$
+The probability density function of the model can be written as:
+$$\begin{aligned} \log p_{\theta}(x) &amp;= \log p_{\theta}(z) + \log | det(dz/dx) | \ &amp;= \log p_{\theta}(z) + \sum_{i=1}^{K}\log | det(dh_i/dh_{i-1}) | \end{aligned}$$
+To simplify the calculation, we can choose transformations with Jacobian $dh_{i}/dh_{i-1}$ is a triangular matrix,
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/10/generative-flow/" class="postShorten-excerpt_link link" aria-label="Open the post: Generative Flow">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/vits/" aria-label="Open the post: VITS">
+      
+          VITS
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-09-30T13:02:00&#43;09:00">
+        
+  September 30, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. ELBO We define that $x$ is target and $z$ is hidden variable.
+$$P(x)=\int_{z}P(x|z)P(z)dz$$
+Since $P(x|z)$ is close to 0, we have to shrink the sample space of $z$. Supposed that $z \sim Q(z|x)$:
+$$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(z|x)] \ KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(x|z) - \log P(z) + \log P(x)] \ \log P(x) - D[Q(z|x),P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \ \log P(x) &amp;\ge \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \end{aligned}$$
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/09/vits/" class="postShorten-excerpt_link link" aria-label="Open the post: VITS">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://weili-git.github.io/2022/09/javascript/" aria-label="Open the post: javascript">
       
           javascript
@@ -497,189 +686,6 @@ def foo(): print(&#34;aa&#34;)
       <p>
         
           <a href="https://weili-git.github.io/2022/09/css/" class="postShorten-excerpt_link link" aria-label="Open the post: CSS">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/ajax/" aria-label="Open the post: Ajax">
-      
-          Ajax
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-16T11:44:00&#43;09:00">
-        
-  September 16, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Intro Ajax can send request without refreshing the webpage.
-1.1 Get function clickMe(){ $.ajax({ url: &#34;/user/list&#34;, type: &#34;get&#34;, data: { name: $(&#34;#input1&#34;).val(), passwd: $(&#34;#input2&#34;).val() }, // data: $(&#34;#form1&#34;).serialize(), dataType: &#34;JSON&#34;, success:function(res){ console.log(res.data); } }) } ... &lt;div&gt; &lt;input type=&#34;button&#34; value=&#34;button&#34; onclick=&#34;clickMe();&#34; /&gt; &lt;/div&gt; ... Or, we can use JQuery to bind the event of button click.
-1.2 Post # views.py from django.shortcuts import render, HttpResponse from django.http import JsonResponse from django.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/ajax/" class="postShorten-excerpt_link link" aria-label="Open the post: Ajax">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/orm/" aria-label="Open the post: ORM">
-      
-          ORM
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-15T15:14:00&#43;09:00">
-        
-  September 15, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Install pip install mysqlclient # python&lt;=3.5 pip install pymysql # python&gt;3.5 2. connect # mysite/settings.py ... import pymysql # python&gt;=3.5 pymysql.install_as_MySQLdb() DATABASES = { &#39;default&#39;: { &#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;, &#39;NAME&#39;: &#39;table111&#39;, &#39;USER&#39;: &#39;root&#39;, &#39;PASSWORD&#39;: &#39;Root1234@&#39;, &#39;HOST&#39;: &#39;localhost&#39;, &#39;PORT&#39;: 3306, } } ... 3. CRUD # models.py from django.db import models class User(models.Model): name = models.CharField(max_len=32) passwd = models.CharField(max_len=64) age = models.IntegerField() &#34;&#34;&#34; create table myapp_user( id bigint auto_increment primary key, name varchar(32), passwd varchar(64), age int ) &#34;&#34;&#34; Make sure that we have registered our &lsquo;myapp&rsquo; in &lsquo;mysite&rsquo; project.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/orm/" class="postShorten-excerpt_link link" aria-label="Open the post: ORM">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/mysql/" aria-label="Open the post: MySQL">
-      
-          MySQL
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-12T11:35:00&#43;09:00">
-        
-  September 12, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. install brew install mysql mysql.server start mysql_secure_installation Root1234@ See details for installation.
-2. basics mysql -u root -p mysql&gt; show databases; mysql&gt; create database table_name; mysql&gt; use table_name; mysql&gt; create table test( id int auto_increment primary key, name varchar(16) not null, age int default 18, salary decimal(8,2), birth datetime ); mysql&gt; show tables; mysql&gt; insert into test values (1, &#34;zhang san&#34;, 23); mysql&gt; insert into test (name, age) values (&#34;li si&#34;, 25), (&#34;wang wu&#34;, 27); mysql&gt; select * from test where id&gt;3; mysql&gt; delete from test where id=1; mysql&gt; update test set name=&#34;abc&#34; where id=2; mysql&gt; drop table test; mysql&gt; drop database table_name; mysql&gt; exit; 3.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/mysql/" class="postShorten-excerpt_link link" aria-label="Open the post: MySQL">Continue reading</a>
         
         
       </p>
