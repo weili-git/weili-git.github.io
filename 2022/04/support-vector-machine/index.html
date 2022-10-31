@@ -347,13 +347,13 @@ w^Tx_i+b\ge +1, ~ y_i=+1; \
 w^Tx_i+b\le -1, ~ y_i=-1.
 \end{cases}$$</p>
 <p>Therefore the classification problem is equivalent to</p>
-<p>$$\max_{w,b}\frac{2}{\lVert w\rVert} ~~ s.t. ~~ y_i(w^Tx_i+b)\ge 1, ~~ \forall i=1,2,&hellip;,m$$</p>
+<p>$$\max_{w,b}\frac{2}{\lVert w\rVert} ~~ s.t. ~~ y_i(w^Tx_i+b)\ge 1,\xi_i \gt0, ~~ \forall i=1,2,&hellip;,m$$</p>
 <p>Here, $\frac{2}{\lVert w\rVert}$ is called the margin (间隔), which is supposed to be as great as possible.</p>
 <p>This kind of margin is called &ldquo;hard margin&rdquo; which means that the samples are strictly outside the boundaries.</p>
 <h2 id="24-soft-margin">2.4 Soft Margin</h2>
 <p>Soft margin is another type of SVM margin, which accepts error　$\xi=[\xi_1,\xi_2, &hellip;, \xi_m]^T$. The condition can be written as</p>
 <p>$$\min_{w,b,\xi} \bigg[ \frac{\lVert w\rVert}{2}+C\sum_{i=1}^{m}\xi_i \bigg] ~~ s.t. ~~ y_i(w^Tx_i+b)\ge 1-\xi_i, ~~ \forall i=1,2,&hellip;,m$$</p>
-<p>$C&gt;0$ is a hyper-parameter that is used to adjust the error tolerance. The greater the $C$, the closer the error $\xi$ to zero.</p>
+<p>$C&gt;0$ is a hyper-parameter that is used to adjust the error tolerance. The greater the $C$, the closer the error $\xi$ to zero.?</p>
 <h1 id="3-dual-problem-对偶问题">3. Dual Problem (对偶问题)</h1>
 <p>By Lagrange Multiplier Method, we can construct the Lagrange function,</p>
 <p>$$L(w,b,a) = \frac{\vert\vert w \vert\vert^2}{2} + \sum_{i=1}^{m}a_i(1-y_i(w^Tx_i+b))$$</p>

@@ -69,7 +69,7 @@ code.has-jax {
     }
     
   },
-  "description": "1. Flow-Based Generatvie Model Give a datapoint $x$ and latent varible $z\\sim p_{\\theta}(z)$. The function $g_{\\theta}(..)$ is invertible such that\n$$\\begin{aligned} x\u0026amp;=g_{\\theta}(z) \\ z\u0026amp;=f_{\\theta}(x) =g_{\\theta}^{-1}(x) \\end{aligned}$$\nThe probability density function of the model can be written as:\n$$\\begin{aligned} \\log p_{\\theta}(x) \u0026amp;= \\log p_{\\theta}(z) + \\log | det(dz/dx) | \\ \u0026amp;= \\log p_{\\theta}(z) + \\sum_{i=1}^{K}\\log | det(dh_i/dh_{i-1}) | \\end{aligned}$$\nTo simplify the calculation, we can choose transformations with Jacobian $dh_{i}/dh_{i-1}$ is a triangular matrix,",
+  "description": "1. Flow-Based Generatvie Model Give a datapoint $x$ and latent varible $z\\sim p_{\\theta}(z)$. The function $g_{\\theta}(..)$ is invertible such that\n$$ \\begin{aligned} x\u0026amp;=g_{\\theta}(z) \\\\ z\u0026amp;=f_{\\theta}(x) =g_{\\theta}^{-1}(x) \\end{aligned} $$\nThe probability density function of the model can be written as:\n$$ \\begin{aligned} \\log p_{\\theta}(x) \u0026amp;= \\log p_{\\theta}(z) + \\log | det(dz/dx) | \\\\ \u0026amp;= \\log p_{\\theta}(z) + \\sum_{i=1}^{K}\\log | det(dh_i/dh_{i-1}) | \\end{aligned} $$\nTo simplify the calculation, we can choose transformations with Jacobian $dh_{i}/dh_{i-1}$ is a triangular matrix,",
   "keywords": []
 }
 
@@ -321,15 +321,19 @@ code.has-jax {
             <div class="main-content-wrap">
               <h1 id="1-flow-based-generatvie-model">1. Flow-Based Generatvie Model</h1>
 <p>Give a datapoint $x$ and latent varible $z\sim p_{\theta}(z)$. The function $g_{\theta}(..)$ is <strong>invertible</strong> such that</p>
-<p>$$\begin{aligned}
-x&amp;=g_{\theta}(z) \
+<p>$$
+\begin{aligned}
+x&amp;=g_{\theta}(z) \\
 z&amp;=f_{\theta}(x) =g_{\theta}^{-1}(x)
-\end{aligned}$$</p>
+\end{aligned}
+$$</p>
 <p>The probability density function of the model can be written as:</p>
-<p>$$\begin{aligned}
-\log p_{\theta}(x) &amp;= \log p_{\theta}(z) + \log | det(dz/dx) | \
+<p>$$
+\begin{aligned}
+\log p_{\theta}(x) &amp;= \log p_{\theta}(z) + \log | det(dz/dx) | \\
 &amp;= \log p_{\theta}(z) + \sum_{i=1}^{K}\log | det(dh_i/dh_{i-1}) |
-\end{aligned}$$</p>
+\end{aligned}
+$$</p>
 <p>To simplify the calculation, we can choose transformations with Jacobian $dh_{i}/dh_{i-1}$ is a triangular matrix,</p>
 <p>$$
 \log| det(dh_{i}/dh_{i-1}) | = sum(\log | diag(dh_{i}/dh_{i-1}) |)
@@ -339,23 +343,23 @@ $$</p>
 <p>One step flow is composed of a actnorm, a invertible 1x1 convolution and a coupling layer.</p>
 <h2 id="21-actnorm">2.1 actnorm</h2>
 <p>$$
-\forall i,j:y_{i,j}=s\odot x_{i,j}+b \
-\forall i,j:x_{i,j}=(y_{i,j}-b)/s \
+\forall i,j:y_{i,j}=s\odot x_{i,j}+b \\
+\forall i,j:x_{i,j}=(y_{i,j}-b)/s \\
 \log| \det | = h\cdot w\cdot sum(\log |s|)
 $$</p>
 <p>For example, $[x1, x2, x3]\odot[w1, w2, w3]=[y1, y2, y3]$ where $\odot$ is element-wise operation. The Jacobian is</p>
 <p>$$\left[
 \begin{matrix}
-w1 &amp; 0 &amp; 0 \
-0 &amp; w2 &amp; 0 \
+w1 &amp; 0 &amp; 0 \\
+0 &amp; w2 &amp; 0 \\
 0 &amp; 0 &amp; w3
 \end{matrix}
 \right]$$</p>
 <p>initialization..</p>
 <h2 id="22-invertible-1x1-convolution">2.2 invertible 1x1 convolution</h2>
 <p>$$
-\forall i,j:y_{i,j}=Wx_{i,j} \
-\forall i,j:x_{i,j}=W^{-1}y_{i,j} \
+\forall i,j:y_{i,j}=Wx_{i,j} \\
+\forall i,j:x_{i,j}=W^{-1}y_{i,j} \\
 \log|\det| = h\cdot w\cdot \log|\det(W)|
 $$</p>
 <p>where the Jacobian is $W:[c \times c]$. We can reduce the complexity from $O(c^3)$ to $O(c)$ by parameterizing $W$ in its PLU decomposition:</p>
@@ -368,20 +372,20 @@ $$</p>
 $$</p>
 <h2 id="23-coupling-layer">2.3 coupling layer</h2>
 <p>$$\begin{aligned}
-x_a, x_b &amp;= split(x) \
-\log s,t &amp;= NN(x_b) \
-s &amp;= \exp(\log s) \
-y_a &amp;= s\odot x_a + t \
-y_b &amp;= x_b \
+x_a, x_b &amp;= split(x) \\
+\log s,t &amp;= NN(x_b) \\
+s &amp;= \exp(\log s) \\
+y_a &amp;= s\odot x_a + t \\
+y_b &amp;= x_b \\
 y &amp;= concat(y_a, y_b)
 \end{aligned}$$</p>
 <p>The inverse is:</p>
 <p>$$\begin{aligned}
-y_a,y_b &amp;= split(y) \
-(\log s,t) &amp;= NN(y_b) \
-s &amp;= \exp(\log s) \
-x_a &amp;= (y_a-t)/s \
-x_b &amp;= y_b \
+y_a,y_b &amp;= split(y) \\
+(\log s,t) &amp;= NN(y_b) \\
+s &amp;= \exp(\log s) \\
+x_a &amp;= (y_a-t)/s \\
+x_b &amp;= y_b \\
 x &amp;= concat(x_a,x_b)
 \end{aligned}$$</p>
 <p>The log-determinant is :</p>
@@ -389,7 +393,7 @@ x &amp;= concat(x_a,x_b)
 <p>where the Jacobian is :</p>
 <p>$$\left[
 \begin{matrix}
-diag(s) &amp; u \
+diag(s) &amp; u \\
 0 &amp; \mathbb{I}
 \end{matrix}
 \right]$$</p>

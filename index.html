@@ -371,9 +371,9 @@ code.has-jax {
     <div class="postShorten-excerpt">
       
         1. Flow-Based Generatvie Model Give a datapoint $x$ and latent varible $z\sim p_{\theta}(z)$. The function $g_{\theta}(..)$ is invertible such that
-$$\begin{aligned} x&amp;=g_{\theta}(z) \ z&amp;=f_{\theta}(x) =g_{\theta}^{-1}(x) \end{aligned}$$
+$$ \begin{aligned} x&amp;=g_{\theta}(z) \\ z&amp;=f_{\theta}(x) =g_{\theta}^{-1}(x) \end{aligned} $$
 The probability density function of the model can be written as:
-$$\begin{aligned} \log p_{\theta}(x) &amp;= \log p_{\theta}(z) + \log | det(dz/dx) | \ &amp;= \log p_{\theta}(z) + \sum_{i=1}^{K}\log | det(dh_i/dh_{i-1}) | \end{aligned}$$
+$$ \begin{aligned} \log p_{\theta}(x) &amp;= \log p_{\theta}(z) + \log | det(dz/dx) | \\ &amp;= \log p_{\theta}(z) + \sum_{i=1}^{K}\log | det(dh_i/dh_{i-1}) | \end{aligned} $$
 To simplify the calculation, we can choose transformations with Jacobian $dh_{i}/dh_{i-1}$ is a triangular matrix,
       
       <p>
