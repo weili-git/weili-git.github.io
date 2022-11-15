@@ -283,6 +283,67 @@ code.has-jax {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/11/multiplication-in-pytorch/" aria-label="Open the post: Multiplication in PyTorch">
+      
+          Multiplication in PyTorch
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-11-15T16:42:00&#43;09:00">
+        
+  November 15, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. dot a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.dot(a, b) # 2 # x1y1 + x2y2 + x3y3 ... 2. mul This is the element-wise multiplication (broadcast). Or we can use &lsquo;*&rsquo;.
+a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.dot(a, b) # (1, -2, 3) a * b # (1, -2, 3) 3. mm &amp; bmm This is the matrix-multiplication. Also, &lsquo;bmm&rsquo; is used for batch data.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/11/multiplication-in-pytorch/" class="postShorten-excerpt_link link" aria-label="Open the post: Multiplication in PyTorch">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" aria-label="Open the post: Denosing Diffusion Probability Model">
       
           Denosing Diffusion Probability Model
@@ -636,69 +697,6 @@ import torch import torch.nn as nn rnn = nn.RNN(input_size, hidden_size, num_lay
       <p>
         
           <a href="https://weili-git.github.io/2022/05/recurrent-neural-network/" class="postShorten-excerpt_link link" aria-label="Open the post: Recurrent Neural Network">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/tacotron2/" aria-label="Open the post: Tacotron2">
-      
-          Tacotron2
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-04-30T21:44:00&#43;08:00">
-        
-  April 30, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Encoder $$one_hot \Rightarrow char_embedding \Rightarrow 3*Conv_layer \Rightarrow LSTM \Rightarrow Context$$
-Char_level embeddings are vector representation of the original sentences. We can use conv_layers and LSTM to extract meanings of them.
-2. Prenet $$[frame_t, batch, frame_dim] \Rightarrow 2*Linear(ReLU) \Rightarrow F_t$$
-$$concat(F_t,~Context, F_{t-1}) \Rightarrow LSTM_Cell$$
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/04/tacotron2/" class="postShorten-excerpt_link link" aria-label="Open the post: Tacotron2">Continue reading</a>
         
         
       </p>

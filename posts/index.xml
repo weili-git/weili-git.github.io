@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Oct 2022 18:51:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Nov 2022 16:42:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multiplication in PyTorch</title>
+      <link>https://weili-git.github.io/2022/11/multiplication-in-pytorch/</link>
+      <pubDate>Tue, 15 Nov 2022 16:42:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2022/11/multiplication-in-pytorch/</guid>
+      <description>1. dot a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.dot(a, b) # 2 # x1y1 + x2y2 + x3y3 ... 2. mul This is the element-wise multiplication (broadcast). Or we can use &amp;lsquo;*&amp;rsquo;.
+a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.dot(a, b) # (1, -2, 3) a * b # (1, -2, 3) 3. mm &amp;amp; bmm This is the matrix-multiplication. Also, &amp;lsquo;bmm&amp;rsquo; is used for batch data.</description>
+    </item>
+    
     <item>
       <title>Denosing Diffusion Probability Model</title>
       <link>https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/</link>

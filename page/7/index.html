@@ -280,17 +280,17 @@ code.has-jax {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/06/vae/" aria-label="Open the post: VAE">
+        <a class="link-unstyled" href="https://weili-git.github.io/2021/10/docker-engine/" aria-label="Open the post: Docker Engine">
       
-          VAE
+          Docker Engine
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-06-14T10:43:00&#43;08:00">
+      <time datetime="2021-10-26T12:57:11&#43;08:00">
         
-  June 14, 2022
+  October 26, 2021
 
       </time>
     
@@ -299,7 +299,7 @@ code.has-jax {
   
     <span>in</span>
     
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+      <a class="category-link" href="https://weili-git.github.io/categories/linux">Linux</a>
     
   
 
@@ -308,389 +308,12 @@ code.has-jax {
     </div>
     <div class="postShorten-excerpt">
       
-        1. Auto Encoder Before we formally introduce the VAE, let&rsquo;s first look at the structure of AE. It consists of an Encoder and a Decoder.
-The input data will be input to the Encoder to get the &lsquo;hidden states&rsquo;. Then the Decoder will eat these &lsquo;hidden states&rsquo; to recover the input which means the output should be as close to the input as possible.
-Usually, we hope that the dimension of &lsquo;hidden states&rsquo; will be less than the input to achieve dimension reduction.
+        1. Install Docker First, we need to install Docker Engine according to the instructions on the official website. Then, for convenience, we can do the following to avoid typing &lsquo;sudo&rsquo; each time.
+cat /etc/group | grep docker sudo groupadd docker # if no output sudo gpasswd -a ${USER} docker sudo service docker restart newgrp - docker 2. Image Command 2.1 search We can search Docker Hub to find docker images that we want.
       
       <p>
         
-          <a href="https://weili-git.github.io/2022/06/vae/" class="postShorten-excerpt_link link" aria-label="Open the post: VAE">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/05/javascript-review/" aria-label="Open the post: Javascript Review">
-      
-          Javascript Review
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-05-17T09:56:00&#43;08:00">
-        
-  May 17, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/programming">Programming</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Variable var a = 5; // declare global function myfunc(){ var a = 10; // override global { let a = 5; // local // here a = 5; } // here a = 10; } // only &#39;var&#39; can override in the same block // var a = 10; // let a = 5; illegal statement 2. Constant const a = 5; // initial value must be assigned a = 3 // illegal statement // the atribution of constant object can be changed const b = [&#34;Python&#34;, &#34;Java&#34;, &#34;C++&#34;]; b[0] = &#34;Ruby&#34;; // legal statement // but the object itself can not be re-assigned b = [&#34;C#&#34;, &#34;VB&#34;]; // illegal statment // more example const car = {type:&#34;porsche&#34;, model:&#34;911&#34;, color:&#34;Black&#34;}; car.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/05/javascript-review/" class="postShorten-excerpt_link link" aria-label="Open the post: Javascript Review">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/05/prosody-ttransfer-etts/" aria-label="Open the post: Prosody Ttransfer ETTS">
-      
-          Prosody Ttransfer ETTS
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-05-12T19:45:00&#43;08:00">
-        
-  May 12, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/paper">Paper</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        Prosody is underspecified by the text. (eg. rising intonation)
-Add a multi-speaker model to Tacotron. (speaker embedding)
-reference encoder: using a fixed-dimension embeddings.
-Reference https://arxiv.org/pdf/1803.09047.pdf
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/05/prosody-ttransfer-etts/" class="postShorten-excerpt_link link" aria-label="Open the post: Prosody Ttransfer ETTS">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/05/nginx/" aria-label="Open the post: Nginx">
-      
-          Nginx
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-05-08T22:21:00&#43;08:00">
-        
-  May 8, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Function Load Balance(负载均衡) and Reverse Proxy(反向代理).
-https://www.runoob.com/linux/nginx-install-setup.html
-2. Command nginx nginx -s reload # reload config file. 
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/05/nginx/" class="postShorten-excerpt_link link" aria-label="Open the post: Nginx">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/05/springboot/" aria-label="Open the post: SpringBoot">
-      
-          SpringBoot
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-05-07T22:33:00&#43;08:00">
-        
-  May 7, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Create Project We can get access to Spring and download the project. Don&rsquo;t forget to add &lsquo;Spring Web&rsquo; dependency.
-After that, we can run the project with IDEA. It&rsquo;ll take around 20 minutes to download the necessary files. Then, we can follow the guidance from Quick Start to test the installation.
-If you got trouble &lsquo;Port 8080 was already in use&rsquo;, you can create a file &lsquo;/resource/application.yml&rsquo;, and add the configuration.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/05/springboot/" class="postShorten-excerpt_link link" aria-label="Open the post: SpringBoot">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/05/attention/" aria-label="Open the post: Attention">
-      
-          Attention
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-05-01T20:43:00&#43;08:00">
-        
-  May 1, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Input There&rsquo;re 3 inputs Q(query), K(key), V(value) for attention mechanism. If Q=K=V, we call it &lsquo;self-attention&rsquo;. Also, there&rsquo;re several rules to calculate it.
-$$Attention(Q,K,V) = Softmax(Linear([Q,K])) \cdot V$$
-$$Attention(Q,K,V) = Softmax(sum(\tanh(Linear([Q,K])))) \cdot V$$
-$$Attention(Q,K,V) = Softmax(\frac{Q \cdot K^T}{\sqrt{d_k}}) \cdot V$$
-The &lsquo;bmm&rsquo; is a special tensor multiply operation, batch matrices multiplication.
-$$(b, n, m)*(b, m, p) \rightarrow (b, n, p)$$
-Attention is usually used in seq2seq task.
-import torch import torch.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/05/attention/" class="postShorten-excerpt_link link" aria-label="Open the post: Attention">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/05/recurrent-neural-network/" aria-label="Open the post: Recurrent Neural Network">
-      
-          Recurrent Neural Network
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-05-01T09:03:00&#43;08:00">
-        
-  May 1, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. RNN Hidden state at time t depends on the current input and the previous hidden state. Activation function&rsquo;tanh&rsquo; add unlinearity and output values from -1 to 1.
-$$h_t = \tanh(W_t \cdot [h_{t-1}, x_t]+b_t)$$
-import torch import torch.nn as nn rnn = nn.RNN(input_size, hidden_size, num_layers) input1 = torch.randn(sequence_length, batch_size, input_size) h0 = torch.randn(num_layers*num_directions, batch_size, hidden_size) output, hn = rnn(input1, h0) RNN is useful in short sequence, but may encounter &lsquo;gradients vanishing&rsquo; and &lsquo;gradients explosion&rsquo; while processing long sequence.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/05/recurrent-neural-network/" class="postShorten-excerpt_link link" aria-label="Open the post: Recurrent Neural Network">Continue reading</a>
+          <a href="https://weili-git.github.io/2021/10/docker-engine/" class="postShorten-excerpt_link link" aria-label="Open the post: Docker Engine">Continue reading</a>
         
         
       </p>
@@ -706,22 +329,15 @@ import torch import torch.nn as nn rnn = nn.RNN(input_size, hidden_size, num_lay
       
         
           <li class="pagination-prev">
-            <a class="btn btn--default btn--small" href="https://weili-git.github.io/page/2/" aria-label="NEWER POSTS">
+            <a class="btn btn--default btn--small" href="https://weili-git.github.io/page/6/" aria-label="NEWER POSTS">
               <i class="fa fa-angle-left text-base icon-mr"></i>
               <span>NEWER POSTS</span>
             </a>
           </li>
         
         
-          <li class="pagination-next">
-            <a class="btn btn--default btn--small" href="https://weili-git.github.io/page/4/" aria-label="OLDER POSTS">
-              <span>OLDER POSTS</span>
-              <i class="fa fa-angle-right text-base icon-ml"></i>
-            </a>
-          </li>
-        
       
-      <li class="pagination-number">page 3 of 7</li>
+      <li class="pagination-number">page 7 of 7</li>
     </ul>
   </div>
 
