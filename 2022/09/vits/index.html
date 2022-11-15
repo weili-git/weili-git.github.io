@@ -69,7 +69,7 @@ code.has-jax {
     }
     
   },
-  "description": "1. ELBO We define that $x$ is target and $z$ is hidden variable.\n$$P(x)=\\int_{z}P(x|z)P(z)dz$$\nSince $P(x|z)$ is close to 0, we have to shrink the sample space of $z$. Supposed that $z \\sim Q(z|x)$:\n$$\\begin{aligned} KL[Q(z|x) || P(z|x)] \u0026amp;= \\Epsilon_{z\\sim Q(z|x)}[\\log Q(z|x) - \\log P(z|x)] \\ KL[Q(z|x) || P(z|x)] \u0026amp;= \\Epsilon_{z\\sim Q(z|x)}[\\log Q(z|x) - \\log P(x|z) - \\log P(z) + \\log P(x)] \\ \\log P(x) - D[Q(z|x),P(z|x)] \u0026amp;= \\Epsilon_{z\\sim Q(z|x)}[\\log P(x|z)] - KL[P(z) || Q(z|x)] \\ \\log P(x) \u0026amp;\\ge \\Epsilon_{z\\sim Q(z|x)}[\\log P(x|z)] - KL[P(z) || Q(z|x)] \\end{aligned}$$",
+  "description": "1. ELBO We define that $x$ is target and $z$ is hidden variable.\n$$P(x)=\\int_{z}P(x|z)P(z)dz$$\nSince $P(x|z)$ is close to 0, we have to shrink the sample space of $z$. Supposed that $z \\sim Q(z|x)$:\n$$\\begin{aligned} KL[Q(z|x) || P(z|x)] \u0026amp;= \\Epsilon_{z\\sim Q(z|x)}[\\log Q(z|x) - \\log P(z|x)] \\\\ KL[Q(z|x) || P(z|x)] \u0026amp;= \\Epsilon_{z\\sim Q(z|x)}[\\log Q(z|x) - \\log P(x|z) - \\log P(z) + \\log P(x)] \\\\ \\log P(x) - D[Q(z|x),P(z|x)] \u0026amp;= \\Epsilon_{z\\sim Q(z|x)}[\\log P(x|z)] - KL[P(z) || Q(z|x)] \\\\ \\log P(x) \u0026amp;\\ge \\Epsilon_{z\\sim Q(z|x)}[\\log P(x|z)] - KL[P(z) || Q(z|x)] \\end{aligned}$$",
   "keywords": []
 }
 
@@ -324,9 +324,9 @@ code.has-jax {
 <p>$$P(x)=\int_{z}P(x|z)P(z)dz$$</p>
 <p>Since $P(x|z)$ is close to 0, we have to shrink the sample space of $z$. Supposed that $z \sim Q(z|x)$:</p>
 <p>$$\begin{aligned}
-KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(z|x)] \
-KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(x|z) - \log P(z) + \log P(x)] \
-\log P(x) - D[Q(z|x),P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \
+KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(z|x)] \\
+KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(x|z) - \log P(z) + \log P(x)] \\
+\log P(x) - D[Q(z|x),P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \\
 \log P(x) &amp;\ge \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)]
 \end{aligned}$$</p>
 <p>On the right hand side, the first term is the decoder and the second term is the distance between prior distribution $P(Z)$ and posterior distribution $Q(z|x)$.</p>

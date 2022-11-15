@@ -313,7 +313,7 @@ code.has-jax {
       
         1. Introduction 1.1 KL for two Gaussian distribution $$ KL(p,q) = \log\frac{\sigma_1}{\sigma_2} + \frac{\sigma_1^2+(\mu_1-\mu_2)^2}{2\sigma_2^2} - \frac{1}{2} $$
 1.2 Reparameterization If we want to sample from $N(\mu_1,\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\sigma*z+\mu$ which will help us to get partial gradients.
-1.3 Single layer of VAE $$\begin{aligned} p(x) &amp;= \int_z p_\theta(x|z)p(z) \ &amp;= \int_z q_\phi(z|x)\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)} \ \log p(x) &amp;= \log\mathbb{E}{z\sim q\phi{z|x}}[\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \ &amp;\ge \mathbb{E}{z\sim q\phi{z|x}}[\log \frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \end{aligned}$$
+1.3 Single layer of VAE $$\begin{aligned} p(x) &amp;= \int_z p_\theta(x|z)p(z) \\ &amp;= \int_z q_\phi(z|x)\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)} \\ \log p(x) &amp;= \log\mathbb{E}{z\sim q\phi{z|x}}[\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \\ &amp;\ge \mathbb{E}{z\sim q\phi{z|x}}[\log \frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \end{aligned}$$
       
       <p>
         
@@ -440,7 +440,7 @@ To simplify the calculation, we can choose transformations with Jacobian $dh_{i}
         1. ELBO We define that $x$ is target and $z$ is hidden variable.
 $$P(x)=\int_{z}P(x|z)P(z)dz$$
 Since $P(x|z)$ is close to 0, we have to shrink the sample space of $z$. Supposed that $z \sim Q(z|x)$:
-$$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(z|x)] \ KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(x|z) - \log P(z) + \log P(x)] \ \log P(x) - D[Q(z|x),P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \ \log P(x) &amp;\ge \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \end{aligned}$$
+$$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(z|x)] \\ KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(x|z) - \log P(z) + \log P(x)] \\ \log P(x) - D[Q(z|x),P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \\ \log P(x) &amp;\ge \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \end{aligned}$$
       
       <p>
         
