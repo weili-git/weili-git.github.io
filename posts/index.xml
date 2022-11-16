@@ -14,7 +14,7 @@
       
       <guid>https://weili-git.github.io/2022/11/multiplication-in-pytorch/</guid>
       <description>1. dot a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.dot(a, b) # 2 # x1y1 + x2y2 + x3y3 ... 2. mul This is the element-wise multiplication (broadcast). Or we can use &amp;lsquo;*&amp;rsquo;.
-a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.dot(a, b) # (1, -2, 3) a * b # (1, -2, 3) 3. mm &amp;amp; bmm This is the matrix-multiplication. Also, &amp;lsquo;bmm&amp;rsquo; is used for batch data.</description>
+a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.mul(a, b) # (1, -2, 3) a * b # (1, -2, 3) 3. mm &amp;amp; bmm This is the matrix-multiplication. Also, &amp;lsquo;bmm&amp;rsquo; is used for batch data.</description>
     </item>
     
     <item>
