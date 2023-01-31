@@ -72,6 +72,7 @@ def foo(): print(&amp;#34;aa&amp;#34;) </description>
       
       <guid>https://weili-git.github.io/2022/09/mysql/</guid>
       <description>1. install brew install mysql mysql.server start mysql_secure_installation Root1234@ See details for installation.
+If you get an error &amp;ldquo;The server quit without updating PID file (xxx.lock.pid)&amp;rdquo; while running the commands above, you can remove the file &amp;ldquo;/tmp/mysql.sock&amp;rdquo; and try again.
 2. basics mysql -u root -p mysql&amp;gt; show databases; mysql&amp;gt; create database table_name; mysql&amp;gt; use table_name; mysql&amp;gt; create table test( id int auto_increment primary key, name varchar(16) not null, age int default 18, salary decimal(8,2), birth datetime ); mysql&amp;gt; show tables; mysql&amp;gt; insert into test values (1, &amp;#34;zhang san&amp;#34;, 23); mysql&amp;gt; insert into test (name, age) values (&amp;#34;li si&amp;#34;, 25), (&amp;#34;wang wu&amp;#34;, 27); mysql&amp;gt; select * from test where id&amp;gt;3; mysql&amp;gt; delete from test where id=1; mysql&amp;gt; update test set name=&amp;#34;abc&amp;#34; where id=2; mysql&amp;gt; drop table test; mysql&amp;gt; drop database table_name; mysql&amp;gt; exit; 3.</description>
     </item>
     

@@ -678,6 +678,7 @@ def foo(): print(&#34;aa&#34;)
     <div class="postShorten-excerpt">
       
         1. install brew install mysql mysql.server start mysql_secure_installation Root1234@ See details for installation.
+If you get an error &ldquo;The server quit without updating PID file (xxx.lock.pid)&rdquo; while running the commands above, you can remove the file &ldquo;/tmp/mysql.sock&rdquo; and try again.
 2. basics mysql -u root -p mysql&gt; show databases; mysql&gt; create database table_name; mysql&gt; use table_name; mysql&gt; create table test( id int auto_increment primary key, name varchar(16) not null, age int default 18, salary decimal(8,2), birth datetime ); mysql&gt; show tables; mysql&gt; insert into test values (1, &#34;zhang san&#34;, 23); mysql&gt; insert into test (name, age) values (&#34;li si&#34;, 25), (&#34;wang wu&#34;, 27); mysql&gt; select * from test where id&gt;3; mysql&gt; delete from test where id=1; mysql&gt; update test set name=&#34;abc&#34; where id=2; mysql&gt; drop table test; mysql&gt; drop database table_name; mysql&gt; exit; 3.
       
       <p>
@@ -715,7 +716,7 @@ def foo(): print(&#34;aa&#34;)
         
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 LI WEI. All Rights Reserved
+    &copy; 2023 LI WEI. All Rights Reserved
   </span>
 </footer>
 

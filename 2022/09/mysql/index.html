@@ -69,7 +69,7 @@ code.has-jax {
     }
     
   },
-  "description": "1. install brew install mysql mysql.server start mysql_secure_installation Root1234@ See details for installation.\n2. basics mysql -u root -p mysql\u0026gt; show databases; mysql\u0026gt; create database table_name; mysql\u0026gt; use table_name; mysql\u0026gt; create table test( id int auto_increment primary key, name varchar(16) not null, age int default 18, salary decimal(8,2), birth datetime ); mysql\u0026gt; show tables; mysql\u0026gt; insert into test values (1, \u0026#34;zhang san\u0026#34;, 23); mysql\u0026gt; insert into test (name, age) values (\u0026#34;li si\u0026#34;, 25), (\u0026#34;wang wu\u0026#34;, 27); mysql\u0026gt; select * from test where id\u0026gt;3; mysql\u0026gt; delete from test where id=1; mysql\u0026gt; update test set name=\u0026#34;abc\u0026#34; where id=2; mysql\u0026gt; drop table test; mysql\u0026gt; drop database table_name; mysql\u0026gt; exit; 3.",
+  "description": "1. install brew install mysql mysql.server start mysql_secure_installation Root1234@ See details for installation.\nIf you get an error \u0026ldquo;The server quit without updating PID file (xxx.lock.pid)\u0026rdquo; while running the commands above, you can remove the file \u0026ldquo;/tmp/mysql.sock\u0026rdquo; and try again.\n2. basics mysql -u root -p mysql\u0026gt; show databases; mysql\u0026gt; create database table_name; mysql\u0026gt; use table_name; mysql\u0026gt; create table test( id int auto_increment primary key, name varchar(16) not null, age int default 18, salary decimal(8,2), birth datetime ); mysql\u0026gt; show tables; mysql\u0026gt; insert into test values (1, \u0026#34;zhang san\u0026#34;, 23); mysql\u0026gt; insert into test (name, age) values (\u0026#34;li si\u0026#34;, 25), (\u0026#34;wang wu\u0026#34;, 27); mysql\u0026gt; select * from test where id\u0026gt;3; mysql\u0026gt; delete from test where id=1; mysql\u0026gt; update test set name=\u0026#34;abc\u0026#34; where id=2; mysql\u0026gt; drop table test; mysql\u0026gt; drop database table_name; mysql\u0026gt; exit; 3.",
   "keywords": []
 }
 
@@ -326,6 +326,7 @@ code.has-jax {
 </span></span><span style="display:flex;"><span>mysql_secure_installation
 </span></span><span style="display:flex;"><span>Root1234@
 </span></span></code></pre></div><p>See <a href="https://cloud.tencent.com/developer/article/1868895">details</a> for installation.</p>
+<p>If you get an error &ldquo;The server quit without updating PID file (xxx.lock.pid)&rdquo; while running the commands above, you can remove the file &ldquo;/tmp/mysql.sock&rdquo; and try again.</p>
 <h1 id="2-basics">2. basics</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>mysql -u root -p
 </span></span><span style="display:flex;"><span>
@@ -480,7 +481,7 @@ code.has-jax {
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 LI WEI. All Rights Reserved
+    &copy; 2023 LI WEI. All Rights Reserved
   </span>
 </footer>
 
