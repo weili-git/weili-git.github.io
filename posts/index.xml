@@ -6,7 +6,39 @@
     <description>Recent content in Posts on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Nov 2022 16:42:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Feb 2023 22:36:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intro to Redis</title>
+      <link>https://weili-git.github.io/2023/02/intro-to-redis/</link>
+      <pubDate>Wed, 15 Feb 2023 22:36:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/02/intro-to-redis/</guid>
+      <description>1. Basic Concepts Redis is a NoSql database. Its characteristics are non-structured, non-relational, no SQL grammar. Other NoSQL includes MongoDB, elaticsearch. Besides, Redis only has base transaction.
+Redis stores key-value, runs in single thread with low latency. Data persistence is supported in case of blackout.
+2. Install See Redis. For mac os, we can just run
+brew install redis 3. Basic Commands brew services start redis # start redis redis-cli -h 127.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Kubenetes</title>
+      <link>https://weili-git.github.io/2023/02/introduction-to-kubenetes/</link>
+      <pubDate>Wed, 15 Feb 2023 21:37:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/02/introduction-to-kubenetes/</guid>
+      <description>1. Install See minikube.</description>
+    </item>
+    
+    <item>
+      <title>All kinds of Django View</title>
+      <link>https://weili-git.github.io/2023/02/all-kinds-of-django-view/</link>
+      <pubDate>Mon, 13 Feb 2023 16:31:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/02/all-kinds-of-django-view/</guid>
+      <description>1. First Example Suppose that we are going to build a blog application. The following codes will create the index page.
+# urls.py urlpatterns = [ path(&amp;#39;&amp;#39;, views.index, name=&amp;#39;index&amp;#39;), ] # views.py def index(request): latest = Post.objects.order_by(&amp;#34;-modified_time&amp;#34;) return render(request, &amp;#34;index.html&amp;#34;, {&amp;#34;post_list&amp;#34;: latest}) If we use View class, the codes will be easier to read.
+# urls.py urlpatterns = [ path(&amp;#39;&amp;#39;, views.IndexView.as_view(), name=&amp;#39;index&amp;#39;), ] # views.py from django.views.generic import ListView class IndexView(ListView): queryset = Post.</description>
+    </item>
+    
     <item>
       <title>Multiplication in PyTorch</title>
       <link>https://weili-git.github.io/2022/11/multiplication-in-pytorch/</link>
@@ -484,6 +516,15 @@ $$Y=X\star W+b$$
 2.2 Cross Correlation $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{a,b}x_{i+a,j+b}$$
 2.3 Conv2d $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{-a,-b}x_{i+a,j+b}$$
 As for implementation, we use &amp;lsquo;Cross Correlation&amp;rsquo; but call it &amp;lsquo;Conv2d&amp;rsquo;.</description>
+    </item>
+    
+    <item>
+      <title>To Do List</title>
+      <link>https://weili-git.github.io/2021/11/to-do-list/</link>
+      <pubDate>Sun, 21 Nov 2021 19:30:00 +0800</pubDate>
+      
+      <guid>https://weili-git.github.io/2021/11/to-do-list/</guid>
+      <description>Homepage add publish time simplfy the layout page support search Navigator navigation link Categories list categories add sidebar cat navigate Live2d baisc function switch model Markdown Mathjax In progress.. </description>
     </item>
     
     <item>

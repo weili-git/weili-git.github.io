@@ -283,6 +283,191 @@ code.has-jax {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://weili-git.github.io/2023/02/intro-to-redis/" aria-label="Open the post: Intro to Redis">
+      
+          Intro to Redis
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-02-15T22:36:00&#43;09:00">
+        
+  February 15, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Basic Concepts Redis is a NoSql database. Its characteristics are non-structured, non-relational, no SQL grammar. Other NoSQL includes MongoDB, elaticsearch. Besides, Redis only has base transaction.
+Redis stores key-value, runs in single thread with low latency. Data persistence is supported in case of blackout.
+2. Install See Redis. For mac os, we can just run
+brew install redis 3. Basic Commands brew services start redis # start redis redis-cli -h 127.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2023/02/intro-to-redis/" class="postShorten-excerpt_link link" aria-label="Open the post: Intro to Redis">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2023/02/introduction-to-kubenetes/" aria-label="Open the post: Introduction to Kubenetes">
+      
+          Introduction to Kubenetes
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-02-15T21:37:00&#43;09:00">
+        
+  February 15, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Install See minikube.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2023/02/introduction-to-kubenetes/" class="postShorten-excerpt_link link" aria-label="Open the post: Introduction to Kubenetes">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2023/02/all-kinds-of-django-view/" aria-label="Open the post: All kinds of Django View">
+      
+          All kinds of Django View
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-02-13T16:31:00&#43;09:00">
+        
+  February 13, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. First Example Suppose that we are going to build a blog application. The following codes will create the index page.
+# urls.py urlpatterns = [ path(&#39;&#39;, views.index, name=&#39;index&#39;), ] # views.py def index(request): latest = Post.objects.order_by(&#34;-modified_time&#34;) return render(request, &#34;index.html&#34;, {&#34;post_list&#34;: latest}) If we use View class, the codes will be easier to read.
+# urls.py urlpatterns = [ path(&#39;&#39;, views.IndexView.as_view(), name=&#39;index&#39;), ] # views.py from django.views.generic import ListView class IndexView(ListView): queryset = Post.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2023/02/all-kinds-of-django-view/" class="postShorten-excerpt_link link" aria-label="Open the post: All kinds of Django View">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://weili-git.github.io/2022/09/javascript/" aria-label="Open the post: javascript">
       
           javascript
@@ -500,190 +685,6 @@ def foo(): print(&#34;aa&#34;)
       <p>
         
           <a href="https://weili-git.github.io/2022/09/css/" class="postShorten-excerpt_link link" aria-label="Open the post: CSS">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/ajax/" aria-label="Open the post: Ajax">
-      
-          Ajax
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-16T11:44:00&#43;09:00">
-        
-  September 16, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Intro Ajax can send request without refreshing the webpage.
-1.1 Get function clickMe(){ $.ajax({ url: &#34;/user/list&#34;, type: &#34;get&#34;, data: { name: $(&#34;#input1&#34;).val(), passwd: $(&#34;#input2&#34;).val() }, // data: $(&#34;#form1&#34;).serialize(), dataType: &#34;JSON&#34;, success:function(res){ console.log(res.data); } }) } ... &lt;div&gt; &lt;input type=&#34;button&#34; value=&#34;button&#34; onclick=&#34;clickMe();&#34; /&gt; &lt;/div&gt; ... Or, we can use JQuery to bind the event of button click.
-1.2 Post # views.py from django.shortcuts import render, HttpResponse from django.http import JsonResponse from django.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/ajax/" class="postShorten-excerpt_link link" aria-label="Open the post: Ajax">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/orm/" aria-label="Open the post: ORM">
-      
-          ORM
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-15T15:14:00&#43;09:00">
-        
-  September 15, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Install pip install mysqlclient # python&lt;=3.5 pip install pymysql # python&gt;3.5 2. connect # mysite/settings.py ... import pymysql # python&gt;=3.5 pymysql.install_as_MySQLdb() DATABASES = { &#39;default&#39;: { &#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;, &#39;NAME&#39;: &#39;table111&#39;, &#39;USER&#39;: &#39;root&#39;, &#39;PASSWORD&#39;: &#39;Root1234@&#39;, &#39;HOST&#39;: &#39;localhost&#39;, &#39;PORT&#39;: 3306, } } ... 3. CRUD # models.py from django.db import models class User(models.Model): name = models.CharField(max_len=32) passwd = models.CharField(max_len=64) age = models.IntegerField() &#34;&#34;&#34; create table myapp_user( id bigint auto_increment primary key, name varchar(32), passwd varchar(64), age int ) &#34;&#34;&#34; Make sure that we have registered our &lsquo;myapp&rsquo; in &lsquo;mysite&rsquo; project.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/orm/" class="postShorten-excerpt_link link" aria-label="Open the post: ORM">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/mysql/" aria-label="Open the post: MySQL">
-      
-          MySQL
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-12T11:35:00&#43;09:00">
-        
-  September 12, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. install brew install mysql mysql.server start mysql_secure_installation Root1234@ See details for installation.
-If you get an error &ldquo;The server quit without updating PID file (xxx.lock.pid)&rdquo; while running the commands above, you can remove the file &ldquo;/tmp/mysql.sock&rdquo; and try again.
-2. basics mysql -u root -p mysql&gt; show databases; mysql&gt; create database table_name; mysql&gt; use table_name; mysql&gt; create table test( id int auto_increment primary key, name varchar(16) not null, age int default 18, salary decimal(8,2), birth datetime ); mysql&gt; show tables; mysql&gt; insert into test values (1, &#34;zhang san&#34;, 23); mysql&gt; insert into test (name, age) values (&#34;li si&#34;, 25), (&#34;wang wu&#34;, 27); mysql&gt; select * from test where id&gt;3; mysql&gt; delete from test where id=1; mysql&gt; update test set name=&#34;abc&#34; where id=2; mysql&gt; drop table test; mysql&gt; drop database table_name; mysql&gt; exit; 3.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/mysql/" class="postShorten-excerpt_link link" aria-label="Open the post: MySQL">Continue reading</a>
         
         
       </p>

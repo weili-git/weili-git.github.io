@@ -280,6 +280,208 @@ code.has-jax {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/transposed-convolution/" aria-label="Open the post: Transposed Convolution">
+      
+          Transposed Convolution
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-04-07T18:16:00&#43;08:00">
+        
+  April 7, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Function ConvTransposed can be used to enlarge the width and height from the input.
+2. Principle pad=0, strd=1 Fill the input into size kernel-1, then apply Transposed kernel Conv (主副对角线转置).
+3. General Case Insert stride lines between rows/cols , then fill the input into size kernel-padding-1, then Transposed kernel Conv (k, 1, 0)
+ConvTranspose2d
+$$n^* = (n-1)s + k - 2p$$
+Conv2d
+$$n^* = floor( \frac{n -k + 2p + s}{s} )$$
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/04/transposed-convolution/" class="postShorten-excerpt_link link" aria-label="Open the post: Transposed Convolution">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/sequential-model/" aria-label="Open the post: Sequential Model">
+      
+          Sequential Model
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-04-03T20:26:00&#43;08:00">
+        
+  April 3, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Sequential Model 1.1 Conditional Probability $$P(\bold x)=P(x_1)P(x_2|x_1)P(x_3|x_1,x_2)&hellip;P(x_t|x_1,x_2,&hellip;,x_{t-1})$$
+1.2 Autoregressive Model For ever-known model, we call it AR Model.
+$$p(x_t|x_1,x_2,&hellip;,x_{t-1})=p(x_t|f(x_1,x_2,&hellip;,x_{t-1}))$$
+1.3 Markov Model By Markov Hypothesis, the current state is determined by previous$$\tau$$ points.
+$$p(x_t|x_1,x_2,&hellip;,x_{t-1})=p(x_t|x_{t-\tau},&hellip;,x_{t-1})=p(x_t|f(x_{t-\tau},&hellip;,x_{t-1}))$$
+1.4 Latent Model 潜变量模型 we use a variable to represent the inner states (RNN is one of the Latent Model)
+$$h_t=f(x_1,&hellip;,x_{t-1})$$
+$$x_t=p(x_t|h_t)$$
+QA&hellip;
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/04/sequential-model/" class="postShorten-excerpt_link link" aria-label="Open the post: Sequential Model">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/02/fourier-transform/" aria-label="Open the post: Fourier Transform">
+      
+          Fourier Transform
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-02-10T10:25:00&#43;08:00">
+        
+  February 10, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/signals-and-systems">Signals and Systems</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Fourier Series Orthogonal Basis Functions The &lsquo;orthogonal basis functions&rsquo; are a set of functions of time, $$\phi(t)$$, such that the followings holds over some specified time interval $$T$$,
+$$\forall k,\forall m,k \neq m, \int_{T} \overline{\phi_k(t)} \phi_m(t) =0$$
+Triangle Fourier Series the &lsquo;OBF&rsquo; of triangle fourier series are as follows
+$${cos(nw_0t),sin(nw_0t)}$$
+which satisfy that
+$$\int_Tcos(nw_0t)sin(mw_0t)dt = 0$$
+$$\int_Tcos(nw_0t)cos(mw_0t)dt = \int_Tsin(nw_0t)sin(mw_0t)dt = \begin{cases} \frac{T}{2},m=n\ 0,m\neq n \end{cases}$$
+$$\int_T1dt=T$$
+Therefore, we can express a periodic signal with fundamental period T as a sum of sinusoids,
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/02/fourier-transform/" class="postShorten-excerpt_link link" aria-label="Open the post: Fourier Transform">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://weili-git.github.io/2022/02/signals-convolution/" aria-label="Open the post: Signal&#39;s Convolution">
       
           Signal&#39;s Convolution
@@ -527,195 +729,6 @@ The proof of the left inequality is trivial because $$0\le p\le 1$$ the equality
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2021/12/resnet/" aria-label="Open the post: ResNet">
-      
-          ResNet
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-12-14T10:02:00&#43;08:00">
-        
-  December 14, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Preface Does deeper model always have good performance? Not Really!
-2. ResNet Block Similar to VGG and GoogLeNet, ResNet make it easy to training deep neural networks.
-$$f(x)= x + g(x)$$
-3. Q&amp;A 
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2021/12/resnet/" class="postShorten-excerpt_link link" aria-label="Open the post: ResNet">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2021/12/batchnorm/" aria-label="Open the post: BatchNorm">
-      
-          BatchNorm
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-12-13T10:05:00&#43;08:00">
-        
-  December 13, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Preface As the Neural Network grows deeper, there are a few questions.
-the loss comes at the end the top layers train faster the bottom layers train slowly the data is at the bottom as the bottom layers update, all other layers need to change the top layers retrain many times slower convergence 2. BatchNorm Fix mini-batch&rsquo;s mean and variance:
-$$\mu_B=\frac{1}{|B|}\sum_{i\in B}x_i$$
-and
-$$\sigma_{B}^{2}=\frac{1}{|B|}\sum_{i\in B}(x_i-\mu_B)^2+\epsilon$$
-additional adjustments (trainable parameters):
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2021/12/batchnorm/" class="postShorten-excerpt_link link" aria-label="Open the post: BatchNorm">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2021/12/googlenet/" aria-label="Open the post: GoogLeNet">
-      
-          GoogLeNet
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-12-12T20:08:00&#43;08:00">
-        
-  December 12, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Inception Block (v1) Extract information from 4 different paths, and then concatenate them in output channel. It has less parameters and time complexity. The assignment of channels are based on the significance.
-1x1 Conv (64) 1x1 Conv (96); 3x3 Conv, pad 1 (128) 1x1 Conv (16); 5x5 Conv, pad 2 (32) 3x3 MaxPool, pad 1; 1x1 Conv (32) 2. Architecture You can see that there are so many hyper-parameters (num of channels).
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2021/12/googlenet/" class="postShorten-excerpt_link link" aria-label="Open the post: GoogLeNet">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -737,7 +750,7 @@ additional adjustments (trainable parameters):
           </li>
         
       
-      <li class="pagination-number">page 5 of 6</li>
+      <li class="pagination-number">page 5 of 7</li>
     </ul>
   </div>
 
