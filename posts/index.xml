@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Feb 2023 22:36:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Feb 2023 20:16:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python knowledge</title>
+      <link>https://weili-git.github.io/2023/02/python-knowledge/</link>
+      <pubDate>Wed, 22 Feb 2023 20:16:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/02/python-knowledge/</guid>
+      <description>1. Mutable &amp;amp; Immutable In python, built-in types are classified as mutable and immutable.
+immutable: tuple, string, number, bool mutable: list, dict, set
+example city_list = [&amp;#39;New York&amp;#39;, &amp;#39;London&amp;#39;, &amp;#39;Tokyo&amp;#39;] city_list.append(&amp;#39;Paris&amp;#39;) print(city_list) # [&amp;#39;New York&amp;#39;, &amp;#39;London&amp;#39;, &amp;#39;Tokyo&amp;#39;, &amp;#39;Paris&amp;#39;] tuple_a = (1, 2) tuple_a[0] = 3 # error, since tuple_a is immutable, we can&amp;#39;t modify it tuple_b = ([], 0) tuple_b[0].append(1) # success, because the address of the first element didn&amp;#39;t change print(tuple_b) # ([1], 0) Conlusion Mutable objects are often used in the situations where we want to do updates.</description>
+    </item>
+    
     <item>
       <title>Intro to Redis</title>
       <link>https://weili-git.github.io/2023/02/intro-to-redis/</link>
@@ -516,15 +527,6 @@ $$Y=X\star W+b$$
 2.2 Cross Correlation $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{a,b}x_{i+a,j+b}$$
 2.3 Conv2d $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{-a,-b}x_{i+a,j+b}$$
 As for implementation, we use &amp;lsquo;Cross Correlation&amp;rsquo; but call it &amp;lsquo;Conv2d&amp;rsquo;.</description>
-    </item>
-    
-    <item>
-      <title>To Do List</title>
-      <link>https://weili-git.github.io/2021/11/to-do-list/</link>
-      <pubDate>Sun, 21 Nov 2021 19:30:00 +0800</pubDate>
-      
-      <guid>https://weili-git.github.io/2021/11/to-do-list/</guid>
-      <description>Homepage add publish time simplfy the layout page support search Navigator navigation link Categories list categories add sidebar cat navigate Live2d baisc function switch model Markdown Mathjax In progress.. </description>
     </item>
     
     <item>

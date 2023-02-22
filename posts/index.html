@@ -47,7 +47,7 @@ code.has-jax {
   "headline": "Posts",
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2023-02-15T22:36:00+09:00",
+  "dateModified": "2023-02-22T20:16:00+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -277,6 +277,68 @@ code.has-jax {
         <section class="postShorten-group main-content-wrap">
           
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2023/02/python-knowledge/" aria-label="Open the post: Python knowledge">
+      
+          Python knowledge
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-02-22T20:16:00&#43;09:00">
+        
+  February 22, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Mutable &amp; Immutable In python, built-in types are classified as mutable and immutable.
+immutable: tuple, string, number, bool mutable: list, dict, set
+example city_list = [&#39;New York&#39;, &#39;London&#39;, &#39;Tokyo&#39;] city_list.append(&#39;Paris&#39;) print(city_list) # [&#39;New York&#39;, &#39;London&#39;, &#39;Tokyo&#39;, &#39;Paris&#39;] tuple_a = (1, 2) tuple_a[0] = 3 # error, since tuple_a is immutable, we can&#39;t modify it tuple_b = ([], 0) tuple_b[0].append(1) # success, because the address of the first element didn&#39;t change print(tuple_b) # ([1], 0) Conlusion Mutable objects are often used in the situations where we want to do updates.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2023/02/python-knowledge/" class="postShorten-excerpt_link link" aria-label="Open the post: Python knowledge">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -641,69 +703,6 @@ To simplify the calculation, we can choose transformations with Jacobian $dh_{i}
       <p>
         
           <a href="https://weili-git.github.io/2022/10/generative-flow/" class="postShorten-excerpt_link link" aria-label="Open the post: Generative Flow">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/vits/" aria-label="Open the post: VITS">
-      
-          VITS
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-30T13:02:00&#43;09:00">
-        
-  September 30, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. ELBO We define that $x$ is target and $z$ is hidden variable.
-$$P(x)=\int_{z}P(x|z)P(z)dz$$
-Since $P(x|z)$ is close to 0, we have to shrink the sample space of $z$. Supposed that $z \sim Q(z|x)$:
-$$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(z|x)] \\ KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(x|z) - \log P(z) + \log P(x)] \\ \log P(x) - D[Q(z|x),P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \\ \log P(x) &amp;\ge \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \end{aligned}$$
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/vits/" class="postShorten-excerpt_link link" aria-label="Open the post: VITS">Continue reading</a>
         
         
       </p>
