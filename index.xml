@@ -6,7 +6,19 @@
     <description>Recent content on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Feb 2023 20:16:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Feb 2023 08:45:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Internet Basics</title>
+      <link>https://weili-git.github.io/2023/02/internet-basics/</link>
+      <pubDate>Thu, 23 Feb 2023 08:45:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/02/internet-basics/</guid>
+      <description>1. Open System Interconncetion Reference Model (OSI model) Physical Layer: Network interface controller (网卡), ethernet hub (集线器), network switch, transmission medium. It converts digital bits to electrical, radio or optical signals. Voltage characteristics are defined.
+Datalink Layer: Medium access control (MAC) layer, logical link control (LLC) layer. Correct errors that may occur in physical layers.
+Network Layer: Provides to transfer packets from node to node. (IP)
+Transport Layer: Provides to transfer variable length data sequences from source host to destination host.</description>
+    </item>
+    
     <item>
       <title>Python knowledge</title>
       <link>https://weili-git.github.io/2023/02/python-knowledge/</link>
@@ -14,7 +26,8 @@
       
       <guid>https://weili-git.github.io/2023/02/python-knowledge/</guid>
       <description>1. Mutable &amp;amp; Immutable In python, built-in types are classified as mutable and immutable.
-immutable: tuple, string, number, bool mutable: list, dict, set
+immutable: tuple, string, number, bool
+mutable: list, dict, set
 example city_list = [&amp;#39;New York&amp;#39;, &amp;#39;London&amp;#39;, &amp;#39;Tokyo&amp;#39;] city_list.append(&amp;#39;Paris&amp;#39;) print(city_list) # [&amp;#39;New York&amp;#39;, &amp;#39;London&amp;#39;, &amp;#39;Tokyo&amp;#39;, &amp;#39;Paris&amp;#39;] tuple_a = (1, 2) tuple_a[0] = 3 # error, since tuple_a is immutable, we can&amp;#39;t modify it tuple_b = ([], 0) tuple_b[0].append(1) # success, because the address of the first element didn&amp;#39;t change print(tuple_b) # ([1], 0) Conlusion Mutable objects are often used in the situations where we want to do updates.</description>
     </item>
     
