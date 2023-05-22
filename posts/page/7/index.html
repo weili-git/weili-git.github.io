@@ -47,7 +47,7 @@ code.has-jax {
   "headline": "Posts",
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2023-02-23T08:45:00+09:00",
+  "dateModified": "2023-03-25T11:02:00+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -277,6 +277,67 @@ code.has-jax {
         <section class="postShorten-group main-content-wrap">
           
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2021/12/vgg/" aria-label="Open the post: VGG">
+      
+          VGG
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-11T09:35:00&#43;08:00">
+        
+  December 11, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. VGG block 3x3 Conv, pad 1 (n layers, m channels usually double, ReLU) 2x2 MaxPool, stride 2 (half size per block) It turns out that &lsquo;deeper 3x3 Conv&rsquo; is better than &lsquo;5x5 Conv&rsquo;.
+2. Architecture multiple VGG blocks Dense (4096) (Flatten, Linear, ReLU, Dropout) Dense (4096) (Linear, ReLU, Dropout) Dense (1000) 3. Code import torch from torch import nn def vgg_block(num_conv,in_channels,out_channels) -&gt;nn.Sequential: layers: List[nn.Module] = [] for _ in range(num_conv): layers.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2021/12/vgg/" class="postShorten-excerpt_link link" aria-label="Open the post: VGG">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -588,6 +649,69 @@ cat /etc/group | grep docker sudo groupadd docker # if no output sudo gpasswd -a
       <p>
         
           <a href="https://weili-git.github.io/2021/10/docker-engine/" class="postShorten-excerpt_link link" aria-label="Open the post: Docker Engine">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/1/01/tts-note-1/" aria-label="Open the post: TTS note 1">
+      
+          TTS note 1
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="0001-01-01T00:00:00Z">
+        
+  January 1, 1
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/tts">TTS</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Continual Speaker Adaptation for Text-to-Speech Synthesis Catastrophic Forgetting (CA) happens when we try to fine-tune TTS model with new speakers. It will result in the decrease of performance for existing speakers.
+To solve this problem, experience replay (ER) is utilized which will keep a buffer of samples from previous speakers and combine them with current task.
+2. Bottleneck Layer Squeeze-and-Excitation Networks
+&ldquo;global pooling -&gt; fc -&gt; relu -&gt; fc -&gt; sigmoid&rdquo;
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/1/01/tts-note-1/" class="postShorten-excerpt_link link" aria-label="Open the post: TTS note 1">Continue reading</a>
         
         
       </p>

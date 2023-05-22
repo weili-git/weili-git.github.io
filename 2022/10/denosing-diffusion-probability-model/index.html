@@ -69,7 +69,7 @@ code.has-jax {
     }
     
   },
-  "description": "1. Introduction 1.1 KL for two Gaussian distribution $$ KL(p,q) = \\log\\frac{\\sigma_1}{\\sigma_2} + \\frac{\\sigma_1^2+(\\mu_1-\\mu_2)^2}{2\\sigma_2^2} - \\frac{1}{2} $$\n1.2 Reparameterization If we want to sample from $N(\\mu_1,\\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\\sigma*z+\\mu$ which will help us to get partial gradients.\n1.3 Single layer of VAE $$ \\begin{aligned} p(x) \u0026amp;= \\int_z p_\\theta(x|z)p(z) \\\\ \u0026amp;= \\int_z q_\\phi(z|x)\\frac{p_\\theta(x|z)p(z)}{q_\\phi(z|x)} \\\\ \\log p(x) \u0026amp;= \\log E_{z\\sim q_\\phi{z|x}}[\\frac{p_\\theta(x|z)p(z)}{q_\\phi(z|x)}] \\\\ \u0026amp;\\ge E_{z\\sim q_\\phi{z|x}}[\\log \\frac{p_\\theta(x|z)p(z)}{q_\\phi(z|x)}] \\end{aligned} $$",
+  "description": "1. Introduction 1.1 KL for two Gaussian distribution $$ KL(p,q) = \\log\\frac{\\sigma_1}{\\sigma_2} + \\frac{\\sigma_1^2+(\\mu_1-\\mu_2)^2}{2\\sigma_2^2} - \\frac{1}{2} $$\n1.2 Reparameterization If we want to sample from $N(\\mu_1,\\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\\sigma*z+\\mu$ which will help us to get partial gradients.\n1.3 Single layer of VAE The variational lower bound, or the evidence lower bound(ELBO), can be derived as follows.\n$$ \\begin{aligned} p(x) \u0026amp;= \\int_z p_\\theta(x|z)p(z) \\\\ \u0026amp;= \\int_z q_\\phi(z|x)\\frac{p_\\theta(x|z)p(z)}{q_\\phi(z|x)} \\\\ \\log p(x) \u0026amp;= \\log E_{z\\sim q_\\phi{z|x}}[\\frac{p_\\theta(x|z)p(z)}{q_\\phi(z|x)}] \\\\ \u0026amp;\\ge E_{z\\sim q_\\phi{z|x}}[\\log \\frac{p_\\theta(x|z)p(z)}{q_\\phi(z|x)}] \\end{aligned} $$",
   "keywords": []
 }
 
@@ -327,6 +327,7 @@ $$</p>
 <h2 id="12-reparameterization">1.2 Reparameterization</h2>
 <p>If we want to sample from $N(\mu_1,\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\sigma*z+\mu$ which will help us to get partial gradients.</p>
 <h2 id="13-single-layer-of-vae">1.3 Single layer of VAE</h2>
+<p>The variational lower bound, or the evidence lower bound(ELBO), can be derived as follows.</p>
 <p>$$
 \begin{aligned}
 p(x) &amp;= \int_z p_\theta(x|z)p(z) \\

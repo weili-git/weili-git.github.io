@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://weili-git.github.io/categories/article/</loc>
+    <lastmod>2023-03-25T11:02:00+09:00</lastmod>
+  </url><url>
     <loc>https://weili-git.github.io/categories/</loc>
-    <lastmod>2023-02-23T08:45:00+09:00</lastmod>
+    <lastmod>2023-03-25T11:02:00+09:00</lastmod>
   </url><url>
     <loc>https://weili-git.github.io/</loc>
-    <lastmod>2023-02-23T08:45:00+09:00</lastmod>
-  </url><url>
-    <loc>https://weili-git.github.io/2023/02/internet-basics/</loc>
-    <lastmod>2023-02-23T08:45:00+09:00</lastmod>
+    <lastmod>2023-03-25T11:02:00+09:00</lastmod>
   </url><url>
     <loc>https://weili-git.github.io/posts/</loc>
+    <lastmod>2023-03-25T11:02:00+09:00</lastmod>
+  </url><url>
+    <loc>https://weili-git.github.io/2023/03/rumination-of-social-anxiety/</loc>
+    <lastmod>2023-03-25T11:02:00+09:00</lastmod>
+  </url><url>
+    <loc>https://weili-git.github.io/2023/02/internet-basics/</loc>
     <lastmod>2023-02-23T08:45:00+09:00</lastmod>
   </url><url>
     <loc>https://weili-git.github.io/categories/web/</loc>
@@ -140,9 +146,6 @@
     <loc>https://weili-git.github.io/2021/12/annoying-scissors/</loc>
     <lastmod>2021-12-14T22:58:00+08:00</lastmod>
   </url><url>
-    <loc>https://weili-git.github.io/categories/article/</loc>
-    <lastmod>2021-12-14T22:58:00+08:00</lastmod>
-  </url><url>
     <loc>https://weili-git.github.io/2021/12/resnet/</loc>
     <lastmod>2021-12-14T10:02:00+08:00</lastmod>
   </url><url>
@@ -179,5 +182,9 @@
     <loc>https://weili-git.github.io/archives/</loc>
   </url><url>
     <loc>https://weili-git.github.io/tags/</loc>
+  </url><url>
+    <loc>https://weili-git.github.io/categories/tts/</loc>
+  </url><url>
+    <loc>https://weili-git.github.io/1/01/tts-note-1/</loc>
   </url>
 </urlset>

@@ -47,7 +47,7 @@ code.has-jax {
   "headline": "Posts",
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2023-02-23T08:45:00+09:00",
+  "dateModified": "2023-03-25T11:02:00+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -277,6 +277,79 @@ code.has-jax {
         <section class="postShorten-group main-content-wrap">
           
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/02/signals-properties/" aria-label="Open the post: Signal&#39;s Properties">
+      
+          Signal&#39;s Properties
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-02-08T19:58:00&#43;08:00">
+        
+  February 8, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/signals-and-systems">Signals and Systems</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1.Periodic Continuous-Time Signals given two periodic CT signals
+$$\forall t, x_1(t+T_1) = x_1(t)$$
+and
+$$\forall t, x_2(t+T_2) = x_2(t)$$
+if the sum of them is periodic, then
+$$\forall t, x_1(t+T)+x_2(t+T)=x_1(t)+x_2(t)$$
+it is satisfied if and only if
+$$\exists p,q \in N^*, T=pT_1=qT_2$$
+in other word, p and q are coprime
+$$\frac{T_1}{T_2}=\frac{p}{q}\in Q$$
+2. Sifting Property note that $$\forall \lambda \neq t_1, \delta(\lambda-t_1)=0$$
+it follows that
+$$\int_{-\infty}^{+\infty}f(\lambda)\delta(\lambda-t_1)d\lambda=\int_{t_1-\epsilon}^{t_1+\epsilon}f(\lambda)\delta(\lambda-t_1)d\lambda=f(t_1)$$
+where $$f(t)$$ is continuous at $$t=t_1$$
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/02/signals-properties/" class="postShorten-excerpt_link link" aria-label="Open the post: Signal&#39;s Properties">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -645,67 +718,6 @@ NiN block 3x3 MaxPool, stride 2 (half size) &hellip; Dropout(0.
       <p>
         
           <a href="https://weili-git.github.io/2021/12/nin/" class="postShorten-excerpt_link link" aria-label="Open the post: NiN">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2021/12/vgg/" aria-label="Open the post: VGG">
-      
-          VGG
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-12-11T09:35:00&#43;08:00">
-        
-  December 11, 2021
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. VGG block 3x3 Conv, pad 1 (n layers, m channels usually double, ReLU) 2x2 MaxPool, stride 2 (half size per block) It turns out that &lsquo;deeper 3x3 Conv&rsquo; is better than &lsquo;5x5 Conv&rsquo;.
-2. Architecture multiple VGG blocks Dense (4096) (Flatten, Linear, ReLU, Dropout) Dense (4096) (Linear, ReLU, Dropout) Dense (1000) 3. Code import torch from torch import nn def vgg_block(num_conv,in_channels,out_channels) -&gt;nn.Sequential: layers: List[nn.Module] = [] for _ in range(num_conv): layers.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2021/12/vgg/" class="postShorten-excerpt_link link" aria-label="Open the post: VGG">Continue reading</a>
         
         
       </p>

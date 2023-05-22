@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TTS on Hugo tranquilpeak theme</title>
+    <link>https://weili-git.github.io/categories/tts/</link>
+    <description>Recent content in TTS on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://weili-git.github.io/categories/tts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TTS note 1</title>
+      <link>https://weili-git.github.io/1/01/tts-note-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://weili-git.github.io/1/01/tts-note-1/</guid>
+      <description>1. Continual Speaker Adaptation for Text-to-Speech Synthesis Catastrophic Forgetting (CA) happens when we try to fine-tune TTS model with new speakers. It will result in the decrease of performance for existing speakers.
+To solve this problem, experience replay (ER) is utilized which will keep a buffer of samples from previous speakers and combine them with current task.
+2. Bottleneck Layer Squeeze-and-Excitation Networks
+&amp;ldquo;global pooling -&amp;gt; fc -&amp;gt; relu -&amp;gt; fc -&amp;gt; sigmoid&amp;rdquo;</description>
+    </item>
+    
+  </channel>
+</rss>

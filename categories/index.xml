@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Feb 2023 08:45:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Mar 2023 11:02:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Article</title>
+      <link>https://weili-git.github.io/categories/article/</link>
+      <pubDate>Sat, 25 Mar 2023 11:02:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/categories/article/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Web</title>
       <link>https://weili-git.github.io/categories/web/</link>
@@ -62,20 +71,20 @@
     </item>
     
     <item>
-      <title>Article</title>
-      <link>https://weili-git.github.io/categories/article/</link>
-      <pubDate>Tue, 14 Dec 2021 22:58:00 +0800</pubDate>
-      
-      <guid>https://weili-git.github.io/categories/article/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Linux</title>
       <link>https://weili-git.github.io/categories/linux/</link>
       <pubDate>Tue, 26 Oct 2021 12:57:11 +0800</pubDate>
       
       <guid>https://weili-git.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TTS</title>
+      <link>https://weili-git.github.io/categories/tts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://weili-git.github.io/categories/tts/</guid>
       <description></description>
     </item>
     

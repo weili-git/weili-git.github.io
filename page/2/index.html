@@ -280,6 +280,69 @@ code.has-jax {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" aria-label="Open the post: Denosing Diffusion Probability Model">
+      
+          Denosing Diffusion Probability Model
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-10-02T18:51:00&#43;09:00">
+        
+  October 2, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Introduction 1.1 KL for two Gaussian distribution $$ KL(p,q) = \log\frac{\sigma_1}{\sigma_2} + \frac{\sigma_1^2+(\mu_1-\mu_2)^2}{2\sigma_2^2} - \frac{1}{2} $$
+1.2 Reparameterization If we want to sample from $N(\mu_1,\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\sigma*z+\mu$ which will help us to get partial gradients.
+1.3 Single layer of VAE The variational lower bound, or the evidence lower bound(ELBO), can be derived as follows.
+$$ \begin{aligned} p(x) &amp;= \int_z p_\theta(x|z)p(z) \\ &amp;= \int_z q_\phi(z|x)\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)} \\ \log p(x) &amp;= \log E_{z\sim q_\phi{z|x}}[\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \\ &amp;\ge E_{z\sim q_\phi{z|x}}[\log \frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \end{aligned} $$
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" class="postShorten-excerpt_link link" aria-label="Open the post: Denosing Diffusion Probability Model">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
         <a class="link-unstyled" href="https://weili-git.github.io/2022/10/generative-flow/" aria-label="Open the post: Generative Flow">
       
           Generative Flow
@@ -624,68 +687,6 @@ def foo(): print(&#34;aa&#34;)
       <p>
         
           <a href="https://weili-git.github.io/2022/09/css/" class="postShorten-excerpt_link link" aria-label="Open the post: CSS">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/ajax/" aria-label="Open the post: Ajax">
-      
-          Ajax
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-16T11:44:00&#43;09:00">
-        
-  September 16, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Intro Ajax can send request without refreshing the webpage.
-1.1 Get function clickMe(){ $.ajax({ url: &#34;/user/list&#34;, type: &#34;get&#34;, data: { name: $(&#34;#input1&#34;).val(), passwd: $(&#34;#input2&#34;).val() }, // data: $(&#34;#form1&#34;).serialize(), dataType: &#34;JSON&#34;, success:function(res){ console.log(res.data); } }) } ... &lt;div&gt; &lt;input type=&#34;button&#34; value=&#34;button&#34; onclick=&#34;clickMe();&#34; /&gt; &lt;/div&gt; ... Or, we can use JQuery to bind the event of button click.
-1.2 Post # views.py from django.shortcuts import render, HttpResponse from django.http import JsonResponse from django.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/ajax/" class="postShorten-excerpt_link link" aria-label="Open the post: Ajax">Continue reading</a>
         
         
       </p>
