@@ -47,7 +47,7 @@ code.has-jax {
   "headline": "Posts",
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2023-03-25T11:02:00+09:00",
+  "dateModified": "2023-11-05T10:19:00+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -277,6 +277,129 @@ code.has-jax {
         <section class="postShorten-group main-content-wrap">
           
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2023/02/all-kinds-of-django-view/" aria-label="Open the post: All kinds of Django View">
+      
+          All kinds of Django View
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-02-13T16:31:00&#43;09:00">
+        
+  February 13, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. First Example Suppose that we are going to build a blog application. The following codes will create the index page.
+# urls.py urlpatterns = [ path(&#39;&#39;, views.index, name=&#39;index&#39;), ] # views.py def index(request): latest = Post.objects.order_by(&#34;-modified_time&#34;) return render(request, &#34;index.html&#34;, {&#34;post_list&#34;: latest}) If we use View class, the codes will be easier to read.
+# urls.py urlpatterns = [ path(&#39;&#39;, views.IndexView.as_view(), name=&#39;index&#39;), ] # views.py from django.views.generic import ListView class IndexView(ListView): queryset = Post.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2023/02/all-kinds-of-django-view/" class="postShorten-excerpt_link link" aria-label="Open the post: All kinds of Django View">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/11/multiplication-in-pytorch/" aria-label="Open the post: Multiplication in PyTorch">
+      
+          Multiplication in PyTorch
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-11-15T16:42:00&#43;09:00">
+        
+  November 15, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. dot a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.dot(a, b) # 2 # x1y1 + x2y2 + x3y3 ... 2. mul This is the element-wise multiplication (broadcast). Or we can use &lsquo;*&rsquo;.
+a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.mul(a, b) # (1, -2, 3) a * b # (1, -2, 3) 3. mm &amp; bmm This is the matrix-multiplication. Also, &lsquo;bmm&rsquo; is used for batch data.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2022/11/multiplication-in-pytorch/" class="postShorten-excerpt_link link" aria-label="Open the post: Multiplication in PyTorch">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -592,126 +715,6 @@ def foo(): print(&#34;aa&#34;)
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/bootstrap/" aria-label="Open the post: bootstrap">
-      
-          bootstrap
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-21T21:10:00&#43;09:00">
-        
-  September 21, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Quick Start &lt;head&gt; ... &lt;!-- development --&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;static/plugins/bootstrap-3.4.1/css/bootstrap.css&#34;&gt; &lt;!-- production --&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;static/plugins/bootstrap-3.4.1/css/bootstrap.min.css&#34;&gt; &lt;style&gt; .navbar{ border-radius: 0; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;!-- button --&gt; &lt;input type=&#34;button&#34; value=&#34;enter&#34; class=&#34;btn btn-primary&#34;/&gt; &lt;!-- col-xs --&gt; &lt;div class=&#34;col-xs-offset-2 col-xs-2&#34; style=&#34;color:red;&#34;&gt;1&lt;/div&gt; &lt;div class=&#34;col-xs-2&#34; style=&#34;color:green;&#34;&gt;2&lt;/div&gt; &lt;!-- col-sm col-md col-lg --&gt; &lt;/body&gt; 
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/bootstrap/" class="postShorten-excerpt_link link" aria-label="Open the post: bootstrap">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/css/" aria-label="Open the post: CSS">
-      
-          CSS
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-19T11:19:00&#43;09:00">
-        
-  September 19, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Intro 1.1 &lt;div style=&#34;color:red;&#34;&gt; contents &lt;/div&gt; 1.2 &lt;head&gt; &lt;style&gt; .c1{ color: red; } #c２{ color: green; } li{ /* global */ color: pink; } input[type=&#39;text&#39;]{ border: 1px solid red; } .v1[attr=&#39;123&#39;]{ ... } .mylist li{ /* children and grandchildren */ color: red; } .mydiv &gt; a{ /* only children */ } &lt;/style&gt; &lt;/head&gt; ... &lt;div class=&#39;c1&#39;&gt;contents&lt;/div&gt; &lt;div id=&#39;c2&#39;&gt;contents&lt;/div&gt; &lt;ul&gt; &lt;li&gt; ccc &lt;/li&gt; ... &lt;/ul&gt; &lt;input type=&#34;text&#34; /&gt; &lt;input type=&#34;password&#34; /&gt; 1.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/css/" class="postShorten-excerpt_link link" aria-label="Open the post: CSS">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -733,7 +736,7 @@ def foo(): print(&#34;aa&#34;)
           </li>
         
       
-      <li class="pagination-number">page 2 of 7</li>
+      <li class="pagination-number">page 2 of 8</li>
     </ul>
   </div>
 

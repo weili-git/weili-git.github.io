@@ -41,10 +41,13 @@ code.has-jax {
     >
     <script type="application/ld+json">
 
-{  
-  "@context":"http://schema.org",
-  "@type":"Website",
-  "@id":"https:\/\/weili-git.github.io\/",
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Posts",
+  
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "2023-11-05T10:19:00+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -52,10 +55,22 @@ code.has-jax {
     "image": "https://avatars.githubusercontent.com/u/28665739?v=4"
     
   },
-  "name":"Hugo tranquilpeak theme",
-  "description":"Hugo tranquilpeak theme demo",
-  "url":"https:\/\/weili-git.github.io\/",
-  "keywords":"[]"
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/weili-git.github.io\/posts\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hugo tranquilpeak theme",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://avatars.githubusercontent.com/u/28665739?v=4"
+    }
+    
+  },
+  "description": "",
+  "keywords": []
 }
 
 </script>
@@ -70,10 +85,10 @@ code.has-jax {
 
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hugo tranquilpeak theme">
-<meta name="twitter:title" content="Hugo tranquilpeak theme">
-<meta property="og:url" content="https://weili-git.github.io/">
-<meta property="twitter:url" content="https://weili-git.github.io/">
+<meta property="og:title" content="Posts">
+<meta name="twitter:title" content="Posts">
+<meta property="og:url" content="https://weili-git.github.io/posts/">
+<meta property="twitter:url" content="https://weili-git.github.io/posts/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta name="twitter:description" content="Hugo tranquilpeak theme demo">
@@ -96,16 +111,16 @@ code.has-jax {
 
 
 
-    <title>Hugo tranquilpeak theme</title>
+    <title>Posts</title>
 
     <link rel="icon" href="https://weili-git.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://weili-git.github.io/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://weili-git.github.io/posts/index.xml">
     
 
     
 
-    <link rel="canonical" href="https://weili-git.github.io/">
+    <link rel="canonical" href="https://weili-git.github.io/posts/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -262,6 +277,7 @@ code.has-jax {
         <section class="postShorten-group main-content-wrap">
           
           
+          
             
   
     
@@ -280,17 +296,17 @@ code.has-jax {
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/05/recurrent-neural-network/" aria-label="Open the post: Recurrent Neural Network">
+        <a class="link-unstyled" href="https://weili-git.github.io/2021/10/docker-engine/" aria-label="Open the post: Docker Engine">
       
-          Recurrent Neural Network
+          Docker Engine
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-05-01T09:03:00&#43;08:00">
+      <time datetime="2021-10-26T12:57:11&#43;08:00">
         
-  May 1, 2022
+  October 26, 2021
 
       </time>
     
@@ -299,7 +315,7 @@ code.has-jax {
   
     <span>in</span>
     
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+      <a class="category-link" href="https://weili-git.github.io/categories/linux">Linux</a>
     
   
 
@@ -308,13 +324,12 @@ code.has-jax {
     </div>
     <div class="postShorten-excerpt">
       
-        1. RNN Hidden state at time t depends on the current input and the previous hidden state. Activation function&rsquo;tanh&rsquo; add unlinearity and output values from -1 to 1.
-$$h_t = \tanh(W_t \cdot [h_{t-1}, x_t]+b_t)$$
-import torch import torch.nn as nn rnn = nn.RNN(input_size, hidden_size, num_layers) input1 = torch.randn(sequence_length, batch_size, input_size) h0 = torch.randn(num_layers*num_directions, batch_size, hidden_size) output, hn = rnn(input1, h0) RNN is useful in short sequence, but may encounter &lsquo;gradients vanishing&rsquo; and &lsquo;gradients explosion&rsquo; while processing long sequence.
+        1. Install Docker First, we need to install Docker Engine according to the instructions on the official website. Then, for convenience, we can do the following to avoid typing &lsquo;sudo&rsquo; each time.
+cat /etc/group | grep docker sudo groupadd docker # if no output sudo gpasswd -a ${USER} docker sudo service docker restart newgrp - docker 2. Image Command 2.1 search We can search Docker Hub to find docker images that we want.
       
       <p>
         
-          <a href="https://weili-git.github.io/2022/05/recurrent-neural-network/" class="postShorten-excerpt_link link" aria-label="Open the post: Recurrent Neural Network">Continue reading</a>
+          <a href="https://weili-git.github.io/2021/10/docker-engine/" class="postShorten-excerpt_link link" aria-label="Open the post: Docker Engine">Continue reading</a>
         
         
       </p>
@@ -342,17 +357,17 @@ import torch import torch.nn as nn rnn = nn.RNN(input_size, hidden_size, num_lay
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/tacotron2/" aria-label="Open the post: Tacotron2">
+        <a class="link-unstyled" href="https://weili-git.github.io/1/01/tts-note-1/" aria-label="Open the post: TTS note 1">
       
-          Tacotron2
+          TTS note 1
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-04-30T21:44:00&#43;08:00">
+      <time datetime="0001-01-01T00:00:00Z">
         
-  April 30, 2022
+  January 1, 1
 
       </time>
     
@@ -361,7 +376,7 @@ import torch import torch.nn as nn rnn = nn.RNN(input_size, hidden_size, num_lay
   
     <span>in</span>
     
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+      <a class="category-link" href="https://weili-git.github.io/categories/tts">TTS</a>
     
   
 
@@ -370,333 +385,14 @@ import torch import torch.nn as nn rnn = nn.RNN(input_size, hidden_size, num_lay
     </div>
     <div class="postShorten-excerpt">
       
-        1. Encoder $$one_hot \Rightarrow char_embedding \Rightarrow 3*Conv_layer \Rightarrow LSTM \Rightarrow Context$$
-Char_level embeddings are vector representation of the original sentences. We can use conv_layers and LSTM to extract meanings of them.
-2. Prenet $$[frame_t, batch, frame_dim] \Rightarrow 2*Linear(ReLU) \Rightarrow F_t$$
-$$concat(F_t,~Context, F_{t-1}) \Rightarrow LSTM_Cell$$
+        1. Continual Speaker Adaptation for Text-to-Speech Synthesis Catastrophic Forgetting (CA) happens when we try to fine-tune TTS model with new speakers. It will result in the decrease of performance for existing speakers.
+To solve this problem, experience replay (ER) is utilized which will keep a buffer of samples from previous speakers and combine them with current task.
+2. Bottleneck Layer Squeeze-and-Excitation Networks
+&ldquo;global pooling -&gt; fc -&gt; relu -&gt; fc -&gt; sigmoid&rdquo;
       
       <p>
         
-          <a href="https://weili-git.github.io/2022/04/tacotron2/" class="postShorten-excerpt_link link" aria-label="Open the post: Tacotron2">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/word2vec/" aria-label="Open the post: Word2vec">
-      
-          Word2vec
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-04-29T20:59:00&#43;08:00">
-        
-  April 29, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. CBOW &amp; Skip-Gram Skip-gram is an easier model, so we just discuss it only. Suppose that the size of vocabulary is 10000, and we want to map it into a 300-dim features vector. It&rsquo;s consists of a hidden layer (10000x300) and an output layer(300x10000).
-Note that there are millions of parameters that needs updating, so we have to use some strategies to avoid this.
-Word Pairs &ldquo;New York&rdquo; are regarded as single word, which has different meanings from &ldquo;New&rdquo; and &ldquo;York&rdquo;.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/04/word2vec/" class="postShorten-excerpt_link link" aria-label="Open the post: Word2vec">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/support-vector-machine/" aria-label="Open the post: Support Vector Machine">
-      
-          Support Vector Machine
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-04-27T21:20:00&#43;08:00">
-        
-  April 27, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Classification Problem Supposed that we are given a batch of data $$D={(x_1, y_1), (x_2, y_2), &hellip;, (x_m, y_m)},y_i \in {-1,+1}$$, and we want to find a hyper-plane such that it can properly divide these two class of data. A good hyper-plane should be able to accept slight disturbance.
-Multi-class Classification A classification task with the assumption that each sample belongs to one and only one class. $${dog, cat}$$
-Multi-label Classification A classification task that handle several joint classification tasks.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/04/support-vector-machine/" class="postShorten-excerpt_link link" aria-label="Open the post: Support Vector Machine">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/clustering/" aria-label="Open the post: Clustering">
-      
-          Clustering
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-04-24T17:16:00&#43;08:00">
-        
-  April 24, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Definition Formally, suppose that we have a dataset $$D={x_1,x_2,&hellip;,x_m}$$, in which every sample is a n-dim vector. Clustering is to divide these data into k disjoint &lsquo;cluster&rsquo; $${C_l \vert l=1,2,&hellip;,k}$$. This is just like &lsquo;Disjoint Set&rsquo; that we learn in algorithm course.
-2. K-means The intuition of K-means algorithm is very straight-forward. Initially, we choose k random samples $${ \mu_1,\mu_2,&hellip;,\mu_k }$$ as the &lsquo;mean vector&rsquo;, which represent the center position of k cluster.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/04/clustering/" class="postShorten-excerpt_link link" aria-label="Open the post: Clustering">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/transposed-convolution/" aria-label="Open the post: Transposed Convolution">
-      
-          Transposed Convolution
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-04-07T18:16:00&#43;08:00">
-        
-  April 7, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Function ConvTransposed can be used to enlarge the width and height from the input.
-2. Principle pad=0, strd=1 Fill the input into size kernel-1, then apply Transposed kernel Conv (主副对角线转置).
-3. General Case Insert stride lines between rows/cols , then fill the input into size kernel-padding-1, then Transposed kernel Conv (k, 1, 0)
-ConvTranspose2d
-$$n^* = (n-1)s + k - 2p$$
-Conv2d
-$$n^* = floor( \frac{n -k + 2p + s}{s} )$$
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/04/transposed-convolution/" class="postShorten-excerpt_link link" aria-label="Open the post: Transposed Convolution">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/04/sequential-model/" aria-label="Open the post: Sequential Model">
-      
-          Sequential Model
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-04-03T20:26:00&#43;08:00">
-        
-  April 3, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Sequential Model 1.1 Conditional Probability $$P(\bold x)=P(x_1)P(x_2|x_1)P(x_3|x_1,x_2)&hellip;P(x_t|x_1,x_2,&hellip;,x_{t-1})$$
-1.2 Autoregressive Model For ever-known model, we call it AR Model.
-$$p(x_t|x_1,x_2,&hellip;,x_{t-1})=p(x_t|f(x_1,x_2,&hellip;,x_{t-1}))$$
-1.3 Markov Model By Markov Hypothesis, the current state is determined by previous$$\tau$$ points.
-$$p(x_t|x_1,x_2,&hellip;,x_{t-1})=p(x_t|x_{t-\tau},&hellip;,x_{t-1})=p(x_t|f(x_{t-\tau},&hellip;,x_{t-1}))$$
-1.4 Latent Model 潜变量模型 we use a variable to represent the inner states (RNN is one of the Latent Model)
-$$h_t=f(x_1,&hellip;,x_{t-1})$$
-$$x_t=p(x_t|h_t)$$
-QA&hellip;
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/04/sequential-model/" class="postShorten-excerpt_link link" aria-label="Open the post: Sequential Model">Continue reading</a>
+          <a href="https://weili-git.github.io/1/01/tts-note-1/" class="postShorten-excerpt_link link" aria-label="Open the post: TTS note 1">Continue reading</a>
         
         
       </p>
@@ -712,22 +408,15 @@ QA&hellip;
       
         
           <li class="pagination-prev">
-            <a class="btn btn--default btn--small" href="https://weili-git.github.io/page/4/" aria-label="NEWER POSTS">
+            <a class="btn btn--default btn--small" href="https://weili-git.github.io/posts/page/7/" aria-label="NEWER POSTS">
               <i class="fa fa-angle-left text-base icon-mr"></i>
               <span>NEWER POSTS</span>
             </a>
           </li>
         
         
-          <li class="pagination-next">
-            <a class="btn btn--default btn--small" href="https://weili-git.github.io/page/6/" aria-label="OLDER POSTS">
-              <span>OLDER POSTS</span>
-              <i class="fa fa-angle-right text-base icon-ml"></i>
-            </a>
-          </li>
-        
       
-      <li class="pagination-number">page 5 of 8</li>
+      <li class="pagination-number">page 8 of 8</li>
     </ul>
   </div>
 

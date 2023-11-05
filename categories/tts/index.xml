@@ -5,7 +5,18 @@
     <link>https://weili-git.github.io/categories/tts/</link>
     <description>Recent content in TTS on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://weili-git.github.io/categories/tts/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Nov 2023 21:18:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/tts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intensity control of speech synthesis</title>
+      <link>https://weili-git.github.io/2023/11/intensity-control-of-speech-synthesis/</link>
+      <pubDate>Sat, 04 Nov 2023 21:18:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/11/intensity-control-of-speech-synthesis/</guid>
+      <description>1. Notes (1) We can&amp;rsquo;t regard different non-neutral speech pair as similar set, otherwise the emotional intensity labels attract each other.
+(2) The intensity predictor should be fixed while training the text-to-speech model, otherwise the intensity cannot be controlled. (maybe because the label for each sample always fluctuates)</description>
+    </item>
+    
     <item>
       <title>TTS note 1</title>
       <link>https://weili-git.github.io/1/01/tts-note-1/</link>

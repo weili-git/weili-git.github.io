@@ -6,7 +6,28 @@
     <description>Recent content on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Mar 2023 11:02:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Nov 2023 10:19:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trouble of life</title>
+      <link>https://weili-git.github.io/2023/11/trouble-of-life/</link>
+      <pubDate>Sun, 05 Nov 2023 10:19:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/11/trouble-of-life/</guid>
+      <description>Chapter two As temperature grows colder, I tend to get up late in the morning. The result is that I find myself getting ready to sleep without doing anything useful.
+I have been living in anxiety and depression. Life seems to be out of my control. I want to change the status quo, but it is not easy.
+My parents are getting old, but I can&amp;rsquo;t stay with them. I have to continue my research until graduation, but I have no good experimental results yet.</description>
+    </item>
+    
+    <item>
+      <title>Intensity control of speech synthesis</title>
+      <link>https://weili-git.github.io/2023/11/intensity-control-of-speech-synthesis/</link>
+      <pubDate>Sat, 04 Nov 2023 21:18:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/11/intensity-control-of-speech-synthesis/</guid>
+      <description>1. Notes (1) We can&amp;rsquo;t regard different non-neutral speech pair as similar set, otherwise the emotional intensity labels attract each other.
+(2) The intensity predictor should be fixed while training the text-to-speech model, otherwise the intensity cannot be controlled. (maybe because the label for each sample always fluctuates)</description>
+    </item>
+    
     <item>
       <title>Rumination of Social Anxiety</title>
       <link>https://weili-git.github.io/2023/03/rumination-of-social-anxiety/</link>
