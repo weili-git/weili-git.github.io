@@ -44,10 +44,10 @@ code.has-jax {
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Docker Engine",
+  "headline": "Trap of Javascript",
   
-  "datePublished": "2021-10-26T12:57:11+08:00",
-  "dateModified": "2021-10-26T12:57:11+08:00",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -57,7 +57,7 @@ code.has-jax {
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/weili-git.github.io\/2021\/10\/docker-engine\/" 
+    "@id": "https:\/\/weili-git.github.io\/1\/01\/trap-of-javascript\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -69,7 +69,7 @@ code.has-jax {
     }
     
   },
-  "description": "1. Install Docker First, we need to install Docker Engine according to the instructions on the official website. Then, for convenience, we can do the following to avoid typing \u0026lsquo;sudo\u0026rsquo; each time.\ncat /etc/group | grep docker sudo groupadd docker # if no output sudo gpasswd -a ${USER} docker sudo service docker restart newgrp - docker 2. Image Command 2.1 search We can search Docker Hub to find docker images that we want.",
+  "description": "1. Reference before assignment function ShuffleArray(array){ // inplace for (let i=array.length-1; i\u0026gt;0;i--){ var j = Math.floor(Math.random()*(i+1)); [arr[i], arr[j]] = [arr[j], arr[i]]; // no error } } This function not only cannot modify the array, but also affects the global variables!\n2. Pass by reference (2d array) arr1 = [[0,0], [1,1]]; arr2 = arr1; console.log(arr1); // output: [[3,0], [1,1]] ??? // console.log(...arr1) instead arr2[0][0] = 3; console.log(arr2); // output: [[3,0], [1,1]] The output will be changed even before the assignment.",
   "keywords": []
 }
 
@@ -80,30 +80,26 @@ code.has-jax {
 <meta name="generator" content="Hugo 0.104.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="LI WEI">
 <meta name="keywords" content="">
-<meta name="description" content="Quick start with a few docker commands">
+<meta name="description" content="Javascript中的陷阱">
 
 
-<meta property="og:description" content="Quick start with a few docker commands">
+<meta property="og:description" content="Javascript中的陷阱">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker Engine">
-<meta name="twitter:title" content="Docker Engine">
-<meta property="og:url" content="https://weili-git.github.io/2021/10/docker-engine/">
-<meta property="twitter:url" content="https://weili-git.github.io/2021/10/docker-engine/">
+<meta property="og:title" content="Trap of Javascript">
+<meta name="twitter:title" content="Trap of Javascript">
+<meta property="og:url" content="https://weili-git.github.io/1/01/trap-of-javascript/">
+<meta property="twitter:url" content="https://weili-git.github.io/1/01/trap-of-javascript/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
-<meta property="og:description" content="Quick start with a few docker commands">
-<meta name="twitter:description" content="Quick start with a few docker commands">
+<meta property="og:description" content="Javascript中的陷阱">
+<meta name="twitter:description" content="Javascript中的陷阱">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2021-10-26T12:57:11">
-  
-  
-    <meta property="article:modified_time" content="2021-10-26T12:57:11">
   
   
   
     
-      <meta property="article:section" content="Linux">
+      <meta property="article:section" content="Javascript">
     
   
   
@@ -125,14 +121,14 @@ code.has-jax {
 
 
 
-    <title>Docker Engine</title>
+    <title>Trap of Javascript</title>
 
     <link rel="icon" href="https://weili-git.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://weili-git.github.io/2021/10/docker-engine/">
+    <link rel="canonical" href="https://weili-git.github.io/1/01/trap-of-javascript/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -292,15 +288,15 @@ code.has-jax {
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      Docker Engine
+      Trap of Javascript
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2021-10-26T12:57:11&#43;08:00">
+      <time datetime="0001-01-01T00:00:00Z">
         
-  October 26, 2021
+  January 1, 1
 
       </time>
     
@@ -309,7 +305,7 @@ code.has-jax {
   
     <span>in</span>
     
-      <a class="category-link" href="https://weili-git.github.io/categories/linux">Linux</a>
+      <a class="category-link" href="https://weili-git.github.io/categories/javascript">Javascript</a>
     
   
 
@@ -319,64 +315,25 @@ code.has-jax {
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <h1 id="1-install-docker">1. Install Docker</h1>
-<p>First, we need to install <a href="https://docs.docker.com/engine/install/ubuntu/">Docker Engine</a> according to the instructions on the official website. Then, for convenience, we can do the following to avoid typing &lsquo;sudo&rsquo; each time.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cat /etc/group | grep docker
-</span></span><span style="display:flex;"><span>sudo groupadd docker    <span style="color:#75715e"># if no output</span>
-</span></span><span style="display:flex;"><span>sudo gpasswd -a <span style="color:#e6db74">${</span>USER<span style="color:#e6db74">}</span> docker
-</span></span><span style="display:flex;"><span>sudo service docker restart
-</span></span><span style="display:flex;"><span>newgrp - docker
-</span></span></code></pre></div><h1 id="2-image-command">2. Image Command</h1>
-<h2 id="21-search">2.1 search</h2>
-<p>We can search <a href="https://hub.docker.com/">Docker Hub</a> to find docker images that we want. Alternatively, we can use the command &lsquo;search&rsquo; to print a list of images based on arguments.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker search image-name
-</span></span><span style="display:flex;"><span>docker pull image-name <span style="color:#f92672">[</span>:tag<span style="color:#f92672">]</span>      <span style="color:#75715e"># specified version</span>
-</span></span></code></pre></div><h2 id="22-delete">2.2 delete</h2>
-<p>To delete images, we can use the command &lsquo;rmi&rsquo;</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker rmi -f image1-id image2-id ...
-</span></span><span style="display:flex;"><span>docker rmi -f <span style="color:#66d9ef">$(</span>docker images -aq<span style="color:#66d9ef">)</span>     <span style="color:#75715e"># delete all images</span>
-</span></span></code></pre></div><h1 id="3-container-command">3. Container Command</h1>
-<h2 id="31-pull-and-run">3.1 pull and run</h2>
-<p>Docker container is a running instance of a docker image. Here are the basic commands.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker pull ubuntu:18.04
-</span></span><span style="display:flex;"><span>docker run -it ubuntu:18.04 /bin/bash   <span style="color:#75715e"># interaction mode</span>
-</span></span><span style="display:flex;"><span>exit        <span style="color:#75715e"># stop and exit</span>
-</span></span><span style="display:flex;"><span>ctrl+p+q    <span style="color:#75715e"># stop but still running</span>
-</span></span></code></pre></div><h2 id="32-ps">3.2 ps</h2>
-<p>list all of the running containers</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker ps -aq      <span style="color:#75715e"># show all and history containers with id only</span>
-</span></span></code></pre></div><h2 id="33-remove">3.3 remove</h2>
-<p>remove docker container</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker rm container-id
-</span></span><span style="display:flex;"><span>docker rm -f <span style="color:#66d9ef">$(</span>docker ps -aq<span style="color:#66d9ef">)</span>      <span style="color:#75715e"># force to remove all of the running containers</span>
-</span></span><span style="display:flex;"><span>docker ps -aq|xargs docker rm      <span style="color:#75715e"># another way to remove</span>
-</span></span></code></pre></div><h2 id="34-start-and-stop">3.4 start and stop</h2>
-<p>start and stop the container</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker start container-id
-</span></span><span style="display:flex;"><span>docker restart container-id
-</span></span><span style="display:flex;"><span>docker stop container-id
-</span></span><span style="display:flex;"><span>docker kill container-id   <span style="color:#75715e"># force to stop</span>
-</span></span></code></pre></div><h2 id="35-others">3.5 others</h2>
-<p>other command</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run -d image-name    <span style="color:#75715e"># run in background, which requires foreground process</span>
-</span></span><span style="display:flex;"><span>docker logs -tf --tail num container-id
-</span></span><span style="display:flex;"><span>docker top container-id
-</span></span><span style="display:flex;"><span>docker inspect container-id
-</span></span></code></pre></div><h2 id="36-exec--cp">3.6 exec &amp;&amp; cp</h2>
-<p>enter the running container</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker exec -it container-id /bin/bash  <span style="color:#75715e"># create new terminal, recommend!!!</span>
-</span></span><span style="display:flex;"><span>docker attach container-id              <span style="color:#75715e"># continue last terminal</span>
-</span></span><span style="display:flex;"><span>docker cp container-id:path host-path
-</span></span></code></pre></div><h1 id="4-dockerfile">4 DockerFile</h1>
-<h2 id="41-instance">4.1 Instance</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-docker" data-lang="docker"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> ubuntu:18.04</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span></code></pre></div><h2 id="42-build">4.2 Build</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker build -t image-name<span style="color:#f92672">[</span>:tag<span style="color:#f92672">]</span> .
-</span></span></code></pre></div><h2 id="43-test">4.3 Test</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker run -it image-name<span style="color:#f92672">[</span>:tag<span style="color:#f92672">]</span>
-</span></span></code></pre></div><h2 id="44-history">4.4 History</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker history image-id
-</span></span></code></pre></div>
+              <h1 id="1-reference-before-assignment">1. Reference before assignment</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ShuffleArray</span>(<span style="color:#a6e22e">array</span>){ <span style="color:#75715e">// inplace
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#a6e22e">array</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">--</span>){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>()<span style="color:#f92672">*</span>(<span style="color:#a6e22e">i</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span>        [<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>], <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>]] <span style="color:#f92672">=</span> [<span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">j</span>], <span style="color:#a6e22e">arr</span>[<span style="color:#a6e22e">i</span>]]; <span style="color:#75715e">// no error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This function not only cannot modify the array, but also affects the global variables!</p>
+<h1 id="2-pass-by-reference-2d-array">2. Pass by reference (2d array)</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">arr1</span> <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>]];
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">arr2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">arr1</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// output: [[3,0], [1,1]] ???
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// console.log(...arr1) instead
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">arr2</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">arr2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// output: [[3,0], [1,1]]
+</span></span></span></code></pre></div><p>The output will be changed even before the assignment.</p>
+
               
 
 
@@ -393,7 +350,7 @@ code.has-jax {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2021/10/details/" data-tooltip="Details" aria-label="NEXT: Details">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2021/10/docker-engine/" data-tooltip="Docker Engine" aria-label="NEXT: Docker Engine">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -401,7 +358,7 @@ code.has-jax {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/1/01/trap-of-javascript/" data-tooltip="Trap of Javascript" aria-label="PREVIOUS: Trap of Javascript">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/1/01/tts-note-1/" data-tooltip="TTS note 1" aria-label="PREVIOUS: TTS note 1">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -419,19 +376,19 @@ code.has-jax {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2021/10/docker-engine/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/1/01/trap-of-javascript/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2021/10/docker-engine/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/1/01/trap-of-javascript/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2021/10/docker-engine/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/1/01/trap-of-javascript/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -462,9 +419,9 @@ code.has-jax {
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/weili-git.github.io\/2021\/10\/docker-engine\/';
+        this.page.url = 'https:\/\/weili-git.github.io\/1\/01\/trap-of-javascript\/';
         
-          this.page.identifier = '\/2021\/10\/docker-engine\/'
+          this.page.identifier = '\/1\/01\/trap-of-javascript\/'
         
       };
       (function() {
@@ -500,7 +457,7 @@ code.has-jax {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2021/10/details/" data-tooltip="Details" aria-label="NEXT: Details">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2021/10/docker-engine/" data-tooltip="Docker Engine" aria-label="NEXT: Docker Engine">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -508,7 +465,7 @@ code.has-jax {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/1/01/trap-of-javascript/" data-tooltip="Trap of Javascript" aria-label="PREVIOUS: Trap of Javascript">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/1/01/tts-note-1/" data-tooltip="TTS note 1" aria-label="PREVIOUS: TTS note 1">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -526,19 +483,19 @@ code.has-jax {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2021/10/docker-engine/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/1/01/trap-of-javascript/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2021/10/docker-engine/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/1/01/trap-of-javascript/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2021/10/docker-engine/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/1/01/trap-of-javascript/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -569,19 +526,19 @@ code.has-jax {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweili-git.github.io%2F2021%2F10%2Fdocker-engine%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweili-git.github.io%2F1%2F01%2Ftrap-of-javascript%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fweili-git.github.io%2F2021%2F10%2Fdocker-engine%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fweili-git.github.io%2F1%2F01%2Ftrap-of-javascript%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fweili-git.github.io%2F2021%2F10%2Fdocker-engine%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fweili-git.github.io%2F1%2F01%2Ftrap-of-javascript%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>

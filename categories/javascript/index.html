@@ -54,7 +54,7 @@ code.has-jax {
   },
   "name":"Hugo tranquilpeak theme",
   "description":"Hugo tranquilpeak theme demo",
-  "url":"https:\/\/weili-git.github.io\/",
+  "url":"https:\/\/weili-git.github.io\/categories\/javascript\/",
   "keywords":"[]"
 }
 
@@ -70,10 +70,10 @@ code.has-jax {
 
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hugo tranquilpeak theme">
-<meta name="twitter:title" content="Hugo tranquilpeak theme">
-<meta property="og:url" content="https://weili-git.github.io/">
-<meta property="twitter:url" content="https://weili-git.github.io/">
+<meta property="og:title" content="Javascript">
+<meta name="twitter:title" content="Javascript">
+<meta property="og:url" content="https://weili-git.github.io/categories/javascript/">
+<meta property="twitter:url" content="https://weili-git.github.io/categories/javascript/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta name="twitter:description" content="Hugo tranquilpeak theme demo">
@@ -96,16 +96,16 @@ code.has-jax {
 
 
 
-    <title>Hugo tranquilpeak theme</title>
+    <title>Javascript</title>
 
     <link rel="icon" href="https://weili-git.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://weili-git.github.io/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://weili-git.github.io/categories/javascript/index.xml">
     
 
     
 
-    <link rel="canonical" href="https://weili-git.github.io/">
+    <link rel="canonical" href="https://weili-git.github.io/categories/javascript/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -254,328 +254,18 @@ code.has-jax {
 </nav>
 
       
+        
 
+      
       <div id="main" data-behavior="2"
         class="
                hasCoverMetaIn
                ">
-        <section class="postShorten-group main-content-wrap">
-          
-          
+        
+          <section class="postShorten-group main-content-wrap">
             
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2023/02/all-kinds-of-django-view/" aria-label="Open the post: All kinds of Django View">
-      
-          All kinds of Django View
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2023-02-13T16:31:00&#43;09:00">
-        
-  February 13, 2023
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. First Example Suppose that we are going to build a blog application. The following codes will create the index page.
-# urls.py urlpatterns = [ path(&#39;&#39;, views.index, name=&#39;index&#39;), ] # views.py def index(request): latest = Post.objects.order_by(&#34;-modified_time&#34;) return render(request, &#34;index.html&#34;, {&#34;post_list&#34;: latest}) If we use View class, the codes will be easier to read.
-# urls.py urlpatterns = [ path(&#39;&#39;, views.IndexView.as_view(), name=&#39;index&#39;), ] # views.py from django.views.generic import ListView class IndexView(ListView): queryset = Post.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2023/02/all-kinds-of-django-view/" class="postShorten-excerpt_link link" aria-label="Open the post: All kinds of Django View">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
             
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/11/multiplication-in-pytorch/" aria-label="Open the post: Multiplication in PyTorch">
-      
-          Multiplication in PyTorch
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-11-15T16:42:00&#43;09:00">
-        
-  November 15, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. dot a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.dot(a, b) # 2 # x1y1 + x2y2 + x3y3 ... 2. mul This is the element-wise multiplication (broadcast). Or we can use &lsquo;*&rsquo;.
-a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.mul(a, b) # (1, -2, 3) a * b # (1, -2, 3) 3. mm &amp; bmm This is the matrix-multiplication. Also, &lsquo;bmm&rsquo; is used for batch data.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/11/multiplication-in-pytorch/" class="postShorten-excerpt_link link" aria-label="Open the post: Multiplication in PyTorch">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" aria-label="Open the post: Denosing Diffusion Probability Model">
-      
-          Denosing Diffusion Probability Model
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-10-02T18:51:00&#43;09:00">
-        
-  October 2, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Introduction 1.1 KL for two Gaussian distribution $$ KL(p,q) = \log\frac{\sigma_1}{\sigma_2} + \frac{\sigma_1^2+(\mu_1-\mu_2)^2}{2\sigma_2^2} - \frac{1}{2} $$
-1.2 Reparameterization If we want to sample from $N(\mu_1,\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\sigma*z+\mu$ which will help us to get partial gradients.
-1.3 Single layer of VAE The variational lower bound, or the evidence lower bound(ELBO), can be derived as follows.
-$$ \begin{aligned} p(x) &amp;= \int_z p_\theta(x|z)p(z) \\ &amp;= \int_z q_\phi(z|x)\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)} \\ \log p(x) &amp;= \log E_{z\sim q_\phi{z|x}}[\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \\ &amp;\ge E_{z\sim q_\phi{z|x}}[\log \frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \end{aligned} $$
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/" class="postShorten-excerpt_link link" aria-label="Open the post: Denosing Diffusion Probability Model">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/10/generative-flow/" aria-label="Open the post: Generative Flow">
-      
-          Generative Flow
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-10-01T18:53:00&#43;09:00">
-        
-  October 1, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Flow-Based Generatvie Model Give a datapoint $x$ and latent varible $z\sim p_{\theta}(z)$. The function $g_{\theta}(..)$ is invertible such that
-$$ \begin{aligned} x&amp;=g_{\theta}(z) \\ z&amp;=f_{\theta}(x) =g_{\theta}^{-1}(x) \end{aligned} $$
-The probability density function of the model can be written as:
-$$ \begin{aligned} \log p_{\theta}(x) &amp;= \log p_{\theta}(z) + \log | det(dz/dx) | \\ &amp;= \log p_{\theta}(z) + \sum_{i=1}^{K}\log | det(dh_i/dh_{i-1}) | \end{aligned} $$
-To simplify the calculation, we can choose transformations with Jacobian $dh_{i}/dh_{i-1}$ is a triangular matrix,
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/10/generative-flow/" class="postShorten-excerpt_link link" aria-label="Open the post: Generative Flow">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/vits/" aria-label="Open the post: VITS">
-      
-          VITS
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2022-09-30T13:02:00&#43;09:00">
-        
-  September 30, 2022
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. ELBO We define that $x$ is target and $z$ is hidden variable.
-$$P(x)=\int_{z}P(x|z)P(z)dz$$
-Since $P(x|z)$ is close to 0, we have to shrink the sample space of $z$. Supposed that $z \sim Q(z|x)$:
-$$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(z|x)] \\ KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(x|z) - \log P(z) + \log P(x)] \\ \log P(x) - D[Q(z|x),P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \\ \log P(x) &amp;\ge \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \end{aligned}$$
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2022/09/vits/" class="postShorten-excerpt_link link" aria-label="Open the post: VITS">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
+              
   
     
       
@@ -635,32 +325,36 @@ $$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x
   
 </article>
 
-          
             
+              
   
+    
+      
+        
+      
     
   
 
 
   
 
-<article class="postShorten postShorten--thumbnailimg-right">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
       <h1 class="postShorten-title">
       
-        <a class="link-unstyled" href="https://weili-git.github.io/2022/09/react/" aria-label="Open the post: react">
+        <a class="link-unstyled" href="https://weili-git.github.io/2022/05/javascript-review/" aria-label="Open the post: Javascript Review">
       
-          react
+          Javascript Review
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-09-22T10:09:00&#43;09:00">
+      <time datetime="2022-05-17T09:56:00&#43;08:00">
         
-  September 22, 2022
+  May 17, 2022
 
       </time>
     
@@ -669,7 +363,7 @@ $$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x
   
     <span>in</span>
     
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
+      <a class="category-link" href="https://weili-git.github.io/categories/javascript">Javascript</a>
     
   
 
@@ -678,54 +372,85 @@ $$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x
     </div>
     <div class="postShorten-excerpt">
       
-        1. Install $f(x)=\lambda x$
-def foo(): print(&#34;aa&#34;) 
+        1. Variable var a = 5; // declare global function myfunc(){ var a = 10; // override global { let a = 5; // local // here a = 5; } // here a = 10; } // only &#39;var&#39; can override in the same block // var a = 10; // let a = 5; illegal statement 2. Constant const a = 5; // initial value must be assigned a = 3 // illegal statement // the atribution of constant object can be changed const b = [&#34;Python&#34;, &#34;Java&#34;, &#34;C++&#34;]; b[0] = &#34;Ruby&#34;; // legal statement // but the object itself can not be re-assigned b = [&#34;C#&#34;, &#34;VB&#34;]; // illegal statment // more example const car = {type:&#34;porsche&#34;, model:&#34;911&#34;, color:&#34;Black&#34;}; car.
       
       <p>
         
-          <a href="https://weili-git.github.io/2022/09/react/" class="postShorten-excerpt_link link" aria-label="Open the post: react">Continue reading</a>
+          <a href="https://weili-git.github.io/2022/05/javascript-review/" class="postShorten-excerpt_link link" aria-label="Open the post: Javascript Review">Continue reading</a>
         
         
       </p>
     </div>
   </div>
   
-    <a href="https://weili-git.github.io/2022/09/react/" aria-label="Open the post: react">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" src="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg"/>
-      </div>
-    </a>
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/1/01/trap-of-javascript/" aria-label="Open the post: Trap of Javascript">
+      
+          Trap of Javascript
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="0001-01-01T00:00:00Z">
+        
+  January 1, 1
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/javascript">Javascript</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Reference before assignment function ShuffleArray(array){ // inplace for (let i=array.length-1; i&gt;0;i--){ var j = Math.floor(Math.random()*(i+1)); [arr[i], arr[j]] = [arr[j], arr[i]]; // no error } } This function not only cannot modify the array, but also affects the global variables!
+2. Pass by reference (2d array) arr1 = [[0,0], [1,1]]; arr2 = arr1; console.log(arr1); // output: [[3,0], [1,1]] ??? // console.log(...arr1) instead arr2[0][0] = 3; console.log(arr2); // output: [[3,0], [1,1]] The output will be changed even before the assignment.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/1/01/trap-of-javascript/" class="postShorten-excerpt_link link" aria-label="Open the post: Trap of Javascript">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
   
 </article>
 
-          
-          
-  <div class="pagination-bar">
-    <ul class="pagination">
-      
-        
-          <li class="pagination-prev">
-            <a class="btn btn--default btn--small" href="https://weili-git.github.io/" aria-label="NEWER POSTS">
-              <i class="fa fa-angle-left text-base icon-mr"></i>
-              <span>NEWER POSTS</span>
-            </a>
-          </li>
-        
-        
-          <li class="pagination-next">
-            <a class="btn btn--default btn--small" href="https://weili-git.github.io/page/3/" aria-label="OLDER POSTS">
-              <span>OLDER POSTS</span>
-              <i class="fa fa-angle-right text-base icon-ml"></i>
-            </a>
-          </li>
-        
-      
-      <li class="pagination-number">page 2 of 8</li>
-    </ul>
-  </div>
+            
+            
 
-
-        </section>
+          </section>
+        
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2023 LI WEI. All Rights Reserved
