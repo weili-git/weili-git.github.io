@@ -6,7 +6,18 @@
     <description>Recent content in TTS on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Nov 2023 21:18:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/tts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Dec 2023 15:14:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/tts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analysis of Speech Emotion Intensity</title>
+      <link>https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/</link>
+      <pubDate>Sun, 10 Dec 2023 15:14:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/</guid>
+      <description>1. Relative Attributes Extract emotion related features by OpenSMILE toolkit. (384-dim) Train Ranking function (Linear) based on the RA. Normalize the intensity values to the range 0 ~ 1. 2. Intensity Distribution 3. Intensity Embedding Map the real number to high dimensional embedding: (effective) $$Inty*W$$
+Combine the neutral and emotional embeddings: (not so effective) $$Neu*(1-Inty)+Emo*Inty$$
+Combine the neutral and emotional embeddings: (To be done) $$Neu.detach()(1-Inty)+EmoInty$$</description>
+    </item>
+    
     <item>
       <title>Intensity control of speech synthesis</title>
       <link>https://weili-git.github.io/2023/11/intensity-control-of-speech-synthesis/</link>

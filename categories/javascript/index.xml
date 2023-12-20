@@ -6,7 +6,17 @@
     <description>Recent content in Javascript on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Sep 2022 23:15:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Nov 2023 12:01:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trap of Javascript</title>
+      <link>https://weili-git.github.io/2023/11/trap-of-javascript/</link>
+      <pubDate>Sat, 18 Nov 2023 12:01:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/11/trap-of-javascript/</guid>
+      <description>1. Reference before assignment function ShuffleArray(array){ // inplace for (let i=array.length-1; i&amp;gt;0;i--){ var j = Math.floor(Math.random()*(i+1)); [arr[i], arr[j]] = [arr[j], arr[i]]; // no error } } This function not only cannot modify the array, but also affects the global variables!
+2. Pass by reference (2d array) arr1 = [[0,0], [1,1]]; arr2 = arr1; console.log(arr1); // output: [[3,0], [1,1]] ??? // console.log(...arr1) instead arr2[0][0] = 3; console.log(arr2); // output: [[3,0], [1,1]] The output will be changed even before the assignment.</description>
+    </item>
+    
     <item>
       <title>javascript</title>
       <link>https://weili-git.github.io/2022/09/javascript/</link>
@@ -24,16 +34,6 @@
       
       <guid>https://weili-git.github.io/2022/05/javascript-review/</guid>
       <description>1. Variable var a = 5; // declare global function myfunc(){ var a = 10; // override global { let a = 5; // local // here a = 5; } // here a = 10; } // only &amp;#39;var&amp;#39; can override in the same block // var a = 10; // let a = 5; illegal statement 2. Constant const a = 5; // initial value must be assigned a = 3 // illegal statement // the atribution of constant object can be changed const b = [&amp;#34;Python&amp;#34;, &amp;#34;Java&amp;#34;, &amp;#34;C++&amp;#34;]; b[0] = &amp;#34;Ruby&amp;#34;; // legal statement // but the object itself can not be re-assigned b = [&amp;#34;C#&amp;#34;, &amp;#34;VB&amp;#34;]; // illegal statment // more example const car = {type:&amp;#34;porsche&amp;#34;, model:&amp;#34;911&amp;#34;, color:&amp;#34;Black&amp;#34;}; car.</description>
-    </item>
-    
-    <item>
-      <title>Trap of Javascript</title>
-      <link>https://weili-git.github.io/1/01/trap-of-javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://weili-git.github.io/1/01/trap-of-javascript/</guid>
-      <description>1. Reference before assignment function ShuffleArray(array){ // inplace for (let i=array.length-1; i&amp;gt;0;i--){ var j = Math.floor(Math.random()*(i+1)); [arr[i], arr[j]] = [arr[j], arr[i]]; // no error } } This function not only cannot modify the array, but also affects the global variables!
-2. Pass by reference (2d array) arr1 = [[0,0], [1,1]]; arr2 = arr1; console.log(arr1); // output: [[3,0], [1,1]] ??? // console.log(...arr1) instead arr2[0][0] = 3; console.log(arr2); // output: [[3,0], [1,1]] The output will be changed even before the assignment.</description>
     </item>
     
   </channel>

@@ -44,10 +44,10 @@ code.has-jax {
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "TTS note 1",
+  "headline": "Analysis of Speech Emotion Intensity",
   
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
+  "datePublished": "2023-12-10T15:14:00+09:00",
+  "dateModified": "2023-12-10T15:14:00+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -57,7 +57,7 @@ code.has-jax {
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/weili-git.github.io\/1\/01\/tts-note-1\/" 
+    "@id": "https:\/\/weili-git.github.io\/2023\/12\/analysis-of-speech-emotion-intensity\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -69,7 +69,7 @@ code.has-jax {
     }
     
   },
-  "description": "1. Continual Speaker Adaptation for Text-to-Speech Synthesis Catastrophic Forgetting (CA) happens when we try to fine-tune TTS model with new speakers. It will result in the decrease of performance for existing speakers.\nTo solve this problem, experience replay (ER) is utilized which will keep a buffer of samples from previous speakers and combine them with current task.\n2. Bottleneck Layer Squeeze-and-Excitation Networks\n\u0026ldquo;global pooling -\u0026gt; fc -\u0026gt; relu -\u0026gt; fc -\u0026gt; sigmoid\u0026rdquo;",
+  "description": "1. Relative Attributes Extract emotion related features by OpenSMILE toolkit. (384-dim) Train Ranking function (Linear) based on the RA. Normalize the intensity values to the range 0 ~ 1. 2. Intensity Distribution 3. Intensity Embedding Map the real number to high dimensional embedding: (effective) $$Inty*W$$\nCombine the neutral and emotional embeddings: (not so effective) $$Neu*(1-Inty)+Emo*Inty$$\nCombine the neutral and emotional embeddings: (To be done) $$Neu.detach()(1-Inty)+EmoInty$$",
   "keywords": []
 }
 
@@ -80,21 +80,25 @@ code.has-jax {
 <meta name="generator" content="Hugo 0.104.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="LI WEI">
 <meta name="keywords" content="">
-<meta name="description" content="语音合成论文笔记 1">
+<meta name="description" content="语音情感强度分析">
 
 
-<meta property="og:description" content="语音合成论文笔记 1">
+<meta property="og:description" content="语音情感强度分析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TTS note 1">
-<meta name="twitter:title" content="TTS note 1">
-<meta property="og:url" content="https://weili-git.github.io/1/01/tts-note-1/">
-<meta property="twitter:url" content="https://weili-git.github.io/1/01/tts-note-1/">
+<meta property="og:title" content="Analysis of Speech Emotion Intensity">
+<meta name="twitter:title" content="Analysis of Speech Emotion Intensity">
+<meta property="og:url" content="https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/">
+<meta property="twitter:url" content="https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
-<meta property="og:description" content="语音合成论文笔记 1">
-<meta name="twitter:description" content="语音合成论文笔记 1">
+<meta property="og:description" content="语音情感强度分析">
+<meta name="twitter:description" content="语音情感强度分析">
 <meta property="og:locale" content="en-us">
 
   
+    <meta property="article:published_time" content="2023-12-10T15:14:00">
+  
+  
+    <meta property="article:modified_time" content="2023-12-10T15:14:00">
   
   
   
@@ -121,14 +125,14 @@ code.has-jax {
 
 
 
-    <title>TTS note 1</title>
+    <title>Analysis of Speech Emotion Intensity</title>
 
     <link rel="icon" href="https://weili-git.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://weili-git.github.io/1/01/tts-note-1/">
+    <link rel="canonical" href="https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -288,15 +292,15 @@ code.has-jax {
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      TTS note 1
+      Analysis of Speech Emotion Intensity
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="0001-01-01T00:00:00Z">
+      <time datetime="2023-12-10T15:14:00&#43;09:00">
         
-  January 1, 1
+  December 10, 2023
 
       </time>
     
@@ -315,35 +319,32 @@ code.has-jax {
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <h1 id="1-continual-speaker-adaptation-for-text-to-speech-synthesis">1. Continual Speaker Adaptation for Text-to-Speech Synthesis</h1>
-<p>Catastrophic Forgetting (CA) happens when we try to fine-tune TTS model with new speakers. It will result in the decrease of performance for existing speakers.</p>
-<p>To solve this problem, experience replay (ER) is utilized which will keep a buffer of samples from previous speakers and combine them with current task.</p>
-<h1 id="2-bottleneck-layer">2. Bottleneck Layer</h1>
-<blockquote>
-<p>Squeeze-and-Excitation Networks</p>
-</blockquote>
-<p>&ldquo;global pooling -&gt; fc -&gt; relu -&gt; fc -&gt; sigmoid&rdquo;</p>
-<blockquote>
-<p>Information Sieve: Content Leakage Reduction in End-to-End Prosody Transfer for Expressive Speech Synthesis</p>
-</blockquote>
-<h1 id="3-domain-adversarial-training-dat">3. Domain Adversarial Training (DAT)</h1>
-<p>Supposed that we&rsquo;ve trained a digit recognition model based on MNIST dataset. Now, we hope to improve the performance of the model on colorful images. What shoud we do?</p>
-<p>Domain Adversarial Training (DAT) is a technique that can solve this problem. Assume that our model is composed of a feature extractor and a classifier.</p>
-<p>We can add a domain classifer after the feature extractor. It&rsquo;s used to determine whether the input feature come from the source domain or not. On the other hand, the feature extractor aims to &ldquo;fool&rdquo; the domain classifier such that the features extracted from both the source domain and the target domain share similar distribution.</p>
-<blockquote>
-<p>Decision Boundary
-For target domain, we hope that the distribution of features are as far away from the decision boundary as possible. To do this, we expect the probability of classifier to be uneven. (DIRT-T)</p>
-</blockquote>
-<blockquote>
-<p>Universal Domain Adaptation
-In fact, the relationship between the source domain and the target domain maybe very complicated&hellip;</p>
-</blockquote>
-<blockquote>
-<p>Other problem
-We only pull the distributions together, but what will happen then?
-Also, there are some cases that the data of target domain are very limited (Few-shot), what should we do? (Domain generalization)</p>
-</blockquote>
-<h1 id="httpswwwyoutubecomwatchvmnk_ourgppm"><a href="https://www.youtube.com/watch?v=Mnk_oUrgppM">https://www.youtube.com/watch?v=Mnk_oUrgppM</a></h1>
+              <h1 id="1-relative-attributes">1. Relative Attributes</h1>
+<ul>
+<li>Extract emotion related features by OpenSMILE toolkit. (384-dim)</li>
+<li>Train Ranking function (Linear) based on the RA.</li>
+<li>Normalize the intensity values to the range 0 ~ 1.</li>
+</ul>
+<h1 id="2-intensity-distribution">2. Intensity Distribution</h1>
+<p><img src="https://weili-git.github.io/assets/images/hist_1.png" alt="angry">
+<img src="https://weili-git.github.io/assets/images/hist_2.png" alt="happy">
+<img src="https://weili-git.github.io/assets/images/hist_3.png" alt="sad">
+<img src="https://weili-git.github.io/assets/images/hist_4.png" alt="surprise"></p>
+<h1 id="3-intensity-embedding">3. Intensity Embedding</h1>
+<ul>
+<li>
+<p>Map the real number to high dimensional embedding: (effective)
+$$Inty*W$$</p>
+</li>
+<li>
+<p>Combine the neutral and emotional embeddings: (not so effective)
+$$Neu*(1-Inty)+Emo*Inty$$</p>
+</li>
+<li>
+<p>Combine the neutral and emotional embeddings: (To be done)
+$$Neu.detach()<em>(1-Inty)+Emo</em>Inty$$</p>
+</li>
+</ul>
 
               
 
@@ -361,7 +362,7 @@ Also, there are some cases that the data of target domain are very limited (Few-
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2021/10/docker-engine/" data-tooltip="Docker Engine" aria-label="NEXT: Docker Engine">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -369,7 +370,7 @@ Also, there are some cases that the data of target domain are very limited (Few-
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2023/11/trap-of-javascript/" data-tooltip="Trap of Javascript" aria-label="PREVIOUS: Trap of Javascript">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -387,19 +388,19 @@ Also, there are some cases that the data of target domain are very limited (Few-
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/1/01/tts-note-1/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/1/01/tts-note-1/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/1/01/tts-note-1/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -430,9 +431,9 @@ Also, there are some cases that the data of target domain are very limited (Few-
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/weili-git.github.io\/1\/01\/tts-note-1\/';
+        this.page.url = 'https:\/\/weili-git.github.io\/2023\/12\/analysis-of-speech-emotion-intensity\/';
         
-          this.page.identifier = '\/1\/01\/tts-note-1\/'
+          this.page.identifier = '\/2023\/12\/analysis-of-speech-emotion-intensity\/'
         
       };
       (function() {
@@ -468,7 +469,7 @@ Also, there are some cases that the data of target domain are very limited (Few-
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2021/10/docker-engine/" data-tooltip="Docker Engine" aria-label="NEXT: Docker Engine">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -476,7 +477,7 @@ Also, there are some cases that the data of target domain are very limited (Few-
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2023/11/trap-of-javascript/" data-tooltip="Trap of Javascript" aria-label="PREVIOUS: Trap of Javascript">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -494,19 +495,19 @@ Also, there are some cases that the data of target domain are very limited (Few-
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/1/01/tts-note-1/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/1/01/tts-note-1/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/1/01/tts-note-1/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -537,19 +538,19 @@ Also, there are some cases that the data of target domain are very limited (Few-
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweili-git.github.io%2F1%2F01%2Ftts-note-1%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweili-git.github.io%2F2023%2F12%2Fanalysis-of-speech-emotion-intensity%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fweili-git.github.io%2F1%2F01%2Ftts-note-1%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fweili-git.github.io%2F2023%2F12%2Fanalysis-of-speech-emotion-intensity%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fweili-git.github.io%2F1%2F01%2Ftts-note-1%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fweili-git.github.io%2F2023%2F12%2Fanalysis-of-speech-emotion-intensity%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>

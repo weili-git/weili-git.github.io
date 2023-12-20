@@ -6,7 +6,28 @@
     <description>Recent content in Posts on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Nov 2023 10:19:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Dec 2023 15:14:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analysis of Speech Emotion Intensity</title>
+      <link>https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/</link>
+      <pubDate>Sun, 10 Dec 2023 15:14:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/</guid>
+      <description>1. Relative Attributes Extract emotion related features by OpenSMILE toolkit. (384-dim) Train Ranking function (Linear) based on the RA. Normalize the intensity values to the range 0 ~ 1. 2. Intensity Distribution 3. Intensity Embedding Map the real number to high dimensional embedding: (effective) $$Inty*W$$
+Combine the neutral and emotional embeddings: (not so effective) $$Neu*(1-Inty)+Emo*Inty$$
+Combine the neutral and emotional embeddings: (To be done) $$Neu.detach()(1-Inty)+EmoInty$$</description>
+    </item>
+    
+    <item>
+      <title>Trap of Javascript</title>
+      <link>https://weili-git.github.io/2023/11/trap-of-javascript/</link>
+      <pubDate>Sat, 18 Nov 2023 12:01:00 +0900</pubDate>
+      
+      <guid>https://weili-git.github.io/2023/11/trap-of-javascript/</guid>
+      <description>1. Reference before assignment function ShuffleArray(array){ // inplace for (let i=array.length-1; i&amp;gt;0;i--){ var j = Math.floor(Math.random()*(i+1)); [arr[i], arr[j]] = [arr[j], arr[i]]; // no error } } This function not only cannot modify the array, but also affects the global variables!
+2. Pass by reference (2d array) arr1 = [[0,0], [1,1]]; arr2 = arr1; console.log(arr1); // output: [[3,0], [1,1]] ??? // console.log(...arr1) instead arr2[0][0] = 3; console.log(arr2); // output: [[3,0], [1,1]] The output will be changed even before the assignment.</description>
+    </item>
+    
     <item>
       <title>Trouble of life</title>
       <link>https://weili-git.github.io/2023/11/trouble-of-life/</link>
@@ -601,16 +622,6 @@ Header 1 This is a normal paragraph following a header. GitHub is a code hosting
       <guid>https://weili-git.github.io/2021/10/docker-engine/</guid>
       <description>1. Install Docker First, we need to install Docker Engine according to the instructions on the official website. Then, for convenience, we can do the following to avoid typing &amp;lsquo;sudo&amp;rsquo; each time.
 cat /etc/group | grep docker sudo groupadd docker # if no output sudo gpasswd -a ${USER} docker sudo service docker restart newgrp - docker 2. Image Command 2.1 search We can search Docker Hub to find docker images that we want.</description>
-    </item>
-    
-    <item>
-      <title>Trap of Javascript</title>
-      <link>https://weili-git.github.io/1/01/trap-of-javascript/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://weili-git.github.io/1/01/trap-of-javascript/</guid>
-      <description>1. Reference before assignment function ShuffleArray(array){ // inplace for (let i=array.length-1; i&amp;gt;0;i--){ var j = Math.floor(Math.random()*(i+1)); [arr[i], arr[j]] = [arr[j], arr[i]]; // no error } } This function not only cannot modify the array, but also affects the global variables!
-2. Pass by reference (2d array) arr1 = [[0,0], [1,1]]; arr2 = arr1; console.log(arr1); // output: [[3,0], [1,1]] ??? // console.log(...arr1) instead arr2[0][0] = 3; console.log(arr2); // output: [[3,0], [1,1]] The output will be changed even before the assignment.</description>
     </item>
     
     <item>

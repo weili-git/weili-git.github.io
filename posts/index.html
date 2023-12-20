@@ -47,7 +47,7 @@ code.has-jax {
   "headline": "Posts",
   
   "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "2023-11-05T10:19:00+09:00",
+  "dateModified": "2023-12-10T15:14:00+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -277,6 +277,129 @@ code.has-jax {
         <section class="postShorten-group main-content-wrap">
           
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/" aria-label="Open the post: Analysis of Speech Emotion Intensity">
+      
+          Analysis of Speech Emotion Intensity
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-12-10T15:14:00&#43;09:00">
+        
+  December 10, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/tts">TTS</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Relative Attributes Extract emotion related features by OpenSMILE toolkit. (384-dim) Train Ranking function (Linear) based on the RA. Normalize the intensity values to the range 0 ~ 1. 2. Intensity Distribution 3. Intensity Embedding Map the real number to high dimensional embedding: (effective) $$Inty*W$$
+Combine the neutral and emotional embeddings: (not so effective) $$Neu*(1-Inty)+Emo*Inty$$
+Combine the neutral and emotional embeddings: (To be done) $$Neu.detach()(1-Inty)+EmoInty$$
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/" class="postShorten-excerpt_link link" aria-label="Open the post: Analysis of Speech Emotion Intensity">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2023/11/trap-of-javascript/" aria-label="Open the post: Trap of Javascript">
+      
+          Trap of Javascript
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-11-18T12:01:00&#43;09:00">
+        
+  November 18, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/javascript">Javascript</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Reference before assignment function ShuffleArray(array){ // inplace for (let i=array.length-1; i&gt;0;i--){ var j = Math.floor(Math.random()*(i+1)); [arr[i], arr[j]] = [arr[j], arr[i]]; // no error } } This function not only cannot modify the array, but also affects the global variables!
+2. Pass by reference (2d array) arr1 = [[0,0], [1,1]]; arr2 = arr1; console.log(arr1); // output: [[3,0], [1,1]] ??? // console.log(...arr1) instead arr2[0][0] = 3; console.log(arr2); // output: [[3,0], [1,1]] The output will be changed even before the assignment.
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2023/11/trap-of-javascript/" class="postShorten-excerpt_link link" aria-label="Open the post: Trap of Javascript">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -583,129 +706,6 @@ example city_list = [&#39;New York&#39;, &#39;London&#39;, &#39;Tokyo&#39;] city
       <p>
         
           <a href="https://weili-git.github.io/2023/02/python-knowledge/" class="postShorten-excerpt_link link" aria-label="Open the post: Python knowledge">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2023/02/intro-to-redis/" aria-label="Open the post: Intro to Redis">
-      
-          Intro to Redis
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2023-02-15T22:36:00&#43;09:00">
-        
-  February 15, 2023
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Basic Concepts Redis is a NoSql database. Its characteristics are non-structured, non-relational, no SQL grammar. Other NoSQL includes MongoDB, elaticsearch. Besides, Redis only has base transaction.
-Redis stores key-value, runs in single thread with low latency. Data persistence is supported in case of blackout.
-2. Install See Redis. For mac os, we can just run
-brew install redis 3. Basic Commands brew services start redis # start redis redis-cli -h 127.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2023/02/intro-to-redis/" class="postShorten-excerpt_link link" aria-label="Open the post: Intro to Redis">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2023/02/introduction-to-kubenetes/" aria-label="Open the post: Introduction to Kubenetes">
-      
-          Introduction to Kubenetes
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2023-02-15T21:37:00&#43;09:00">
-        
-  February 15, 2023
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Install See minikube.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2023/02/introduction-to-kubenetes/" class="postShorten-excerpt_link link" aria-label="Open the post: Introduction to Kubenetes">Continue reading</a>
         
         
       </p>
