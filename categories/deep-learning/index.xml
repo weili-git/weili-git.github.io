@@ -1,272 +1,159 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Deep-learning on Hugo tranquilpeak theme</title>
+    <title>Deep-Learning on Hugo tranquilpeak theme</title>
     <link>https://weili-git.github.io/categories/deep-learning/</link>
-    <description>Recent content in Deep-learning on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Deep-Learning on Hugo tranquilpeak theme</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Nov 2022 16:42:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Nov 2022 16:42:00 +0900</lastBuildDate>
+    <atom:link href="https://weili-git.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Multiplication in PyTorch</title>
       <link>https://weili-git.github.io/2022/11/multiplication-in-pytorch/</link>
       <pubDate>Tue, 15 Nov 2022 16:42:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/11/multiplication-in-pytorch/</guid>
-      <description>1. dot a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.dot(a, b) # 2 # x1y1 + x2y2 + x3y3 ... 2. mul This is the element-wise multiplication (broadcast). Or we can use &amp;lsquo;*&amp;rsquo;.
-a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.mul(a, b) # (1, -2, 3) a * b # (1, -2, 3) 3. mm &amp;amp; bmm This is the matrix-multiplication. Also, &amp;lsquo;bmm&amp;rsquo; is used for batch data.</description>
+      <description>1. dot a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.dot(a, b) # 2 # x1y1 + x2y2 + x3y3 ... 2. mul This is the element-wise multiplication (broadcast). Or we can use &amp;lsquo;*&amp;rsquo;.&#xA;a = torch.tensor(1, 2, 3) b = torch.tensor(1, -1, 1) torch.mul(a, b) # (1, -2, 3) a * b # (1, -2, 3) 3. mm &amp;amp; bmm This is the matrix-multiplication. Also, &amp;lsquo;bmm&amp;rsquo; is used for batch data.</description>
     </item>
-    
     <item>
       <title>Denosing Diffusion Probability Model</title>
       <link>https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/</link>
       <pubDate>Sun, 02 Oct 2022 18:51:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/10/denosing-diffusion-probability-model/</guid>
-      <description>1. Introduction 1.1 KL for two Gaussian distribution $$ KL(p,q) = \log\frac{\sigma_1}{\sigma_2} + \frac{\sigma_1^2+(\mu_1-\mu_2)^2}{2\sigma_2^2} - \frac{1}{2} $$
-1.2 Reparameterization If we want to sample from $N(\mu_1,\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\sigma*z+\mu$ which will help us to get partial gradients.
-1.3 Single layer of VAE The variational lower bound, or the evidence lower bound(ELBO), can be derived as follows.
-$$ \begin{aligned} p(x) &amp;amp;= \int_z p_\theta(x|z)p(z) \\ &amp;amp;= \int_z q_\phi(z|x)\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)} \\ \log p(x) &amp;amp;= \log E_{z\sim q_\phi{z|x}}[\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \\ &amp;amp;\ge E_{z\sim q_\phi{z|x}}[\log \frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \end{aligned} $$</description>
+      <description>1. Introduction 1.1 KL for two Gaussian distribution $$ KL(p,q) = \log\frac{\sigma_1}{\sigma_2} + \frac{\sigma_1^2+(\mu_1-\mu_2)^2}{2\sigma_2^2} - \frac{1}{2} $$&#xA;1.2 Reparameterization If we want to sample from $N(\mu_1,\sigma_1)$, we can first sample $z$ from $N(0,1)$ and calculate $\sigma*z+\mu$ which will help us to get partial gradients.&#xA;1.3 Single layer of VAE The variational lower bound, or the evidence lower bound(ELBO), can be derived as follows.&#xA;$$ \begin{aligned} p(x) &amp;amp;= \int_z p_\theta(x|z)p(z) \\ &amp;amp;= \int_z q_\phi(z|x)\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)} \\ \log p(x) &amp;amp;= \log E_{z\sim q_\phi{z|x}}[\frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \\ &amp;amp;\ge E_{z\sim q_\phi{z|x}}[\log \frac{p_\theta(x|z)p(z)}{q_\phi(z|x)}] \end{aligned} $$</description>
     </item>
-    
     <item>
       <title>Generative Flow</title>
       <link>https://weili-git.github.io/2022/10/generative-flow/</link>
       <pubDate>Sat, 01 Oct 2022 18:53:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/10/generative-flow/</guid>
-      <description>1. Flow-Based Generatvie Model Give a datapoint $x$ and latent varible $z\sim p_{\theta}(z)$. The function $g_{\theta}(..)$ is invertible such that
-$$ \begin{aligned} x&amp;amp;=g_{\theta}(z) \\ z&amp;amp;=f_{\theta}(x) =g_{\theta}^{-1}(x) \end{aligned} $$
-The probability density function of the model can be written as:
-$$ \begin{aligned} \log p_{\theta}(x) &amp;amp;= \log p_{\theta}(z) + \log | det(dz/dx) | \\ &amp;amp;= \log p_{\theta}(z) + \sum_{i=1}^{K}\log | det(dh_i/dh_{i-1}) | \end{aligned} $$
-To simplify the calculation, we can choose transformations with Jacobian $dh_{i}/dh_{i-1}$ is a triangular matrix,</description>
+      <description>1. Flow-Based Generatvie Model Give a datapoint $x$ and latent varible $z\sim p_{\theta}(z)$. The function $g_{\theta}(..)$ is invertible such that&#xA;$$ \begin{aligned} x&amp;amp;=g_{\theta}(z) \\ z&amp;amp;=f_{\theta}(x) =g_{\theta}^{-1}(x) \end{aligned} $$&#xA;The probability density function of the model can be written as:&#xA;$$ \begin{aligned} \log p_{\theta}(x) &amp;amp;= \log p_{\theta}(z) + \log | det(dz/dx) | \\ &amp;amp;= \log p_{\theta}(z) + \sum_{i=1}^{K}\log | det(dh_i/dh_{i-1}) | \end{aligned} $$&#xA;To simplify the calculation, we can choose transformations with Jacobian $dh_{i}/dh_{i-1}$ is a triangular matrix,</description>
     </item>
-    
     <item>
       <title>VITS</title>
       <link>https://weili-git.github.io/2022/09/vits/</link>
       <pubDate>Fri, 30 Sep 2022 13:02:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/09/vits/</guid>
-      <description>1. ELBO We define that $x$ is target and $z$ is hidden variable.
-$$P(x)=\int_{z}P(x|z)P(z)dz$$
-Since $P(x|z)$ is close to 0, we have to shrink the sample space of $z$. Supposed that $z \sim Q(z|x)$:
-$$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(z|x)] \\ KL[Q(z|x) || P(z|x)] &amp;amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(x|z) - \log P(z) + \log P(x)] \\ \log P(x) - D[Q(z|x),P(z|x)] &amp;amp;= \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \\ \log P(x) &amp;amp;\ge \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \end{aligned}$$</description>
+      <description>1. ELBO We define that $x$ is target and $z$ is hidden variable.&#xA;$$P(x)=\int_{z}P(x|z)P(z)dz$$&#xA;Since $P(x|z)$ is close to 0, we have to shrink the sample space of $z$. Supposed that $z \sim Q(z|x)$:&#xA;$$\begin{aligned} KL[Q(z|x) || P(z|x)] &amp;amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(z|x)] \\ KL[Q(z|x) || P(z|x)] &amp;amp;= \Epsilon_{z\sim Q(z|x)}[\log Q(z|x) - \log P(x|z) - \log P(z) + \log P(x)] \\ \log P(x) - D[Q(z|x),P(z|x)] &amp;amp;= \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \\ \log P(x) &amp;amp;\ge \Epsilon_{z\sim Q(z|x)}[\log P(x|z)] - KL[P(z) || Q(z|x)] \end{aligned}$$</description>
     </item>
-    
     <item>
       <title>VAE</title>
       <link>https://weili-git.github.io/2022/06/vae/</link>
       <pubDate>Tue, 14 Jun 2022 10:43:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/06/vae/</guid>
-      <description>1. Auto Encoder Before we formally introduce the VAE, let&amp;rsquo;s first look at the structure of AE. It consists of an Encoder and a Decoder.
-The input data will be input to the Encoder to get the &amp;lsquo;hidden states&amp;rsquo;. Then the Decoder will eat these &amp;lsquo;hidden states&amp;rsquo; to recover the input which means the output should be as close to the input as possible.
-Usually, we hope that the dimension of &amp;lsquo;hidden states&amp;rsquo; will be less than the input to achieve dimension reduction.</description>
+      <description>1. Auto Encoder Before we formally introduce the VAE, let&amp;rsquo;s first look at the structure of AE. It consists of an Encoder and a Decoder.&#xA;The input data will be input to the Encoder to get the &amp;lsquo;hidden states&amp;rsquo;. Then the Decoder will eat these &amp;lsquo;hidden states&amp;rsquo; to recover the input which means the output should be as close to the input as possible.&#xA;Usually, we hope that the dimension of &amp;lsquo;hidden states&amp;rsquo; will be less than the input to achieve dimension reduction.</description>
     </item>
-    
     <item>
       <title>Attention</title>
       <link>https://weili-git.github.io/2022/05/attention/</link>
       <pubDate>Sun, 01 May 2022 20:43:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/05/attention/</guid>
-      <description>1. Input There&amp;rsquo;re 3 inputs Q(query), K(key), V(value) for attention mechanism. If Q=K=V, we call it &amp;lsquo;self-attention&amp;rsquo;. Also, there&amp;rsquo;re several rules to calculate it.
-$$Attention(Q,K,V) = Softmax(Linear([Q,K])) \cdot V$$
-$$Attention(Q,K,V) = Softmax(sum(\tanh(Linear([Q,K])))) \cdot V$$
-$$Attention(Q,K,V) = Softmax(\frac{Q \cdot K^T}{\sqrt{d_k}}) \cdot V$$
-The &amp;lsquo;bmm&amp;rsquo; is a special tensor multiply operation, batch matrices multiplication.
-$$(b, n, m)*(b, m, p) \rightarrow (b, n, p)$$
-Attention is usually used in seq2seq task.
-import torch import torch.</description>
+      <description>1. Input There&amp;rsquo;re 3 inputs Q(query), K(key), V(value) for attention mechanism. If Q=K=V, we call it &amp;lsquo;self-attention&amp;rsquo;. Also, there&amp;rsquo;re several rules to calculate it.&#xA;$$Attention(Q,K,V) = Softmax(Linear([Q,K])) \cdot V$$&#xA;$$Attention(Q,K,V) = Softmax(sum(\tanh(Linear([Q,K])))) \cdot V$$&#xA;$$Attention(Q,K,V) = Softmax(\frac{Q \cdot K^T}{\sqrt{d_k}}) \cdot V$$&#xA;The &amp;lsquo;bmm&amp;rsquo; is a special tensor multiply operation, batch matrices multiplication.&#xA;$$(b, n, m)*(b, m, p) \rightarrow (b, n, p)$$&#xA;Attention is usually used in seq2seq task.&#xA;import torch import torch.</description>
     </item>
-    
     <item>
       <title>Recurrent Neural Network</title>
       <link>https://weili-git.github.io/2022/05/recurrent-neural-network/</link>
       <pubDate>Sun, 01 May 2022 09:03:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/05/recurrent-neural-network/</guid>
-      <description>1. RNN Hidden state at time t depends on the current input and the previous hidden state. Activation function&amp;rsquo;tanh&amp;rsquo; add unlinearity and output values from -1 to 1.
-$$h_t = \tanh(W_t \cdot [h_{t-1}, x_t]+b_t)$$
-import torch import torch.nn as nn rnn = nn.RNN(input_size, hidden_size, num_layers) input1 = torch.randn(sequence_length, batch_size, input_size) h0 = torch.randn(num_layers*num_directions, batch_size, hidden_size) output, hn = rnn(input1, h0) RNN is useful in short sequence, but may encounter &amp;lsquo;gradients vanishing&amp;rsquo; and &amp;lsquo;gradients explosion&amp;rsquo; while processing long sequence.</description>
+      <description>1. RNN Hidden state at time t depends on the current input and the previous hidden state. Activation function&amp;rsquo;tanh&amp;rsquo; add unlinearity and output values from -1 to 1.&#xA;$$h_t = \tanh(W_t \cdot [h_{t-1}, x_t]+b_t)$$&#xA;import torch import torch.nn as nn rnn = nn.RNN(input_size, hidden_size, num_layers) input1 = torch.randn(sequence_length, batch_size, input_size) h0 = torch.randn(num_layers*num_directions, batch_size, hidden_size) output, hn = rnn(input1, h0) RNN is useful in short sequence, but may encounter &amp;lsquo;gradients vanishing&amp;rsquo; and &amp;lsquo;gradients explosion&amp;rsquo; while processing long sequence.</description>
     </item>
-    
     <item>
       <title>Tacotron2</title>
       <link>https://weili-git.github.io/2022/04/tacotron2/</link>
       <pubDate>Sat, 30 Apr 2022 21:44:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/04/tacotron2/</guid>
-      <description>1. Encoder $$one_hot \Rightarrow char_embedding \Rightarrow 3*Conv_layer \Rightarrow LSTM \Rightarrow Context$$
-Char_level embeddings are vector representation of the original sentences. We can use conv_layers and LSTM to extract meanings of them.
-2. Prenet $$[frame_t, batch, frame_dim] \Rightarrow 2*Linear(ReLU) \Rightarrow F_t$$
-$$concat(F_t,~Context, F_{t-1}) \Rightarrow LSTM_Cell$$</description>
+      <description>1. Encoder $$one_hot \Rightarrow char_embedding \Rightarrow 3*Conv_layer \Rightarrow LSTM \Rightarrow Context$$&#xA;Char_level embeddings are vector representation of the original sentences. We can use conv_layers and LSTM to extract meanings of them.&#xA;2. Prenet $$[frame_t, batch, frame_dim] \Rightarrow 2*Linear(ReLU) \Rightarrow F_t$$&#xA;$$concat(F_t,~Context, F_{t-1}) \Rightarrow LSTM_Cell$$</description>
     </item>
-    
     <item>
       <title>Word2vec</title>
       <link>https://weili-git.github.io/2022/04/word2vec/</link>
       <pubDate>Fri, 29 Apr 2022 20:59:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/04/word2vec/</guid>
-      <description>1. CBOW &amp;amp; Skip-Gram Skip-gram is an easier model, so we just discuss it only. Suppose that the size of vocabulary is 10000, and we want to map it into a 300-dim features vector. It&amp;rsquo;s consists of a hidden layer (10000x300) and an output layer(300x10000).
-Note that there are millions of parameters that needs updating, so we have to use some strategies to avoid this.
-Word Pairs &amp;ldquo;New York&amp;rdquo; are regarded as single word, which has different meanings from &amp;ldquo;New&amp;rdquo; and &amp;ldquo;York&amp;rdquo;.</description>
+      <description>1. CBOW &amp;amp; Skip-Gram Skip-gram is an easier model, so we just discuss it only. Suppose that the size of vocabulary is 10000, and we want to map it into a 300-dim features vector. It&amp;rsquo;s consists of a hidden layer (10000x300) and an output layer(300x10000).&#xA;Note that there are millions of parameters that needs updating, so we have to use some strategies to avoid this.&#xA;Word Pairs &amp;ldquo;New York&amp;rdquo; are regarded as single word, which has different meanings from &amp;ldquo;New&amp;rdquo; and &amp;ldquo;York&amp;rdquo;.</description>
     </item>
-    
     <item>
       <title>Support Vector Machine</title>
       <link>https://weili-git.github.io/2022/04/support-vector-machine/</link>
       <pubDate>Wed, 27 Apr 2022 21:20:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/04/support-vector-machine/</guid>
-      <description>1. Classification Problem Supposed that we are given a batch of data $$D={(x_1, y_1), (x_2, y_2), &amp;hellip;, (x_m, y_m)},y_i \in {-1,+1}$$, and we want to find a hyper-plane such that it can properly divide these two class of data. A good hyper-plane should be able to accept slight disturbance.
-Multi-class Classification A classification task with the assumption that each sample belongs to one and only one class. $${dog, cat}$$
-Multi-label Classification A classification task that handle several joint classification tasks.</description>
+      <description>1. Classification Problem Supposed that we are given a batch of data $$D={(x_1, y_1), (x_2, y_2), &amp;hellip;, (x_m, y_m)},y_i \in {-1,+1}$$, and we want to find a hyper-plane such that it can properly divide these two class of data. A good hyper-plane should be able to accept slight disturbance.&#xA;Multi-class Classification A classification task with the assumption that each sample belongs to one and only one class. $${dog, cat}$$&#xA;Multi-label Classification A classification task that handle several joint classification tasks.</description>
     </item>
-    
     <item>
       <title>Clustering</title>
       <link>https://weili-git.github.io/2022/04/clustering/</link>
       <pubDate>Sun, 24 Apr 2022 17:16:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/04/clustering/</guid>
-      <description>1. Definition Formally, suppose that we have a dataset $$D={x_1,x_2,&amp;hellip;,x_m}$$, in which every sample is a n-dim vector. Clustering is to divide these data into k disjoint &amp;lsquo;cluster&amp;rsquo; $${C_l \vert l=1,2,&amp;hellip;,k}$$. This is just like &amp;lsquo;Disjoint Set&amp;rsquo; that we learn in algorithm course.
-2. K-means The intuition of K-means algorithm is very straight-forward. Initially, we choose k random samples $${ \mu_1,\mu_2,&amp;hellip;,\mu_k }$$ as the &amp;lsquo;mean vector&amp;rsquo;, which represent the center position of k cluster.</description>
+      <description>1. Definition Formally, suppose that we have a dataset $$D={x_1,x_2,&amp;hellip;,x_m}$$, in which every sample is a n-dim vector. Clustering is to divide these data into k disjoint &amp;lsquo;cluster&amp;rsquo; $${C_l \vert l=1,2,&amp;hellip;,k}$$. This is just like &amp;lsquo;Disjoint Set&amp;rsquo; that we learn in algorithm course.&#xA;2. K-means The intuition of K-means algorithm is very straight-forward. Initially, we choose k random samples $${ \mu_1,\mu_2,&amp;hellip;,\mu_k }$$ as the &amp;lsquo;mean vector&amp;rsquo;, which represent the center position of k cluster.</description>
     </item>
-    
     <item>
       <title>Transposed Convolution</title>
       <link>https://weili-git.github.io/2022/04/transposed-convolution/</link>
       <pubDate>Thu, 07 Apr 2022 18:16:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/04/transposed-convolution/</guid>
-      <description>1. Function ConvTransposed can be used to enlarge the width and height from the input.
-2. Principle pad=0, strd=1 Fill the input into size kernel-1, then apply Transposed kernel Conv (主副对角线转置).
-3. General Case Insert stride lines between rows/cols , then fill the input into size kernel-padding-1, then Transposed kernel Conv (k, 1, 0)
-ConvTranspose2d
-$$n^* = (n-1)s + k - 2p$$
-Conv2d
-$$n^* = floor( \frac{n -k + 2p + s}{s} )$$</description>
+      <description>1. Function ConvTransposed can be used to enlarge the width and height from the input.&#xA;2. Principle pad=0, strd=1 Fill the input into size kernel-1, then apply Transposed kernel Conv (主副对角线转置).&#xA;3. General Case Insert stride lines between rows/cols , then fill the input into size kernel-padding-1, then Transposed kernel Conv (k, 1, 0)&#xA;ConvTranspose2d&#xA;$$n^* = (n-1)s + k - 2p$$&#xA;Conv2d&#xA;$$n^* = floor( \frac{n -k + 2p + s}{s} )$$</description>
     </item>
-    
     <item>
       <title>Sequential Model</title>
       <link>https://weili-git.github.io/2022/04/sequential-model/</link>
       <pubDate>Sun, 03 Apr 2022 20:26:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/04/sequential-model/</guid>
-      <description>1. Sequential Model 1.1 Conditional Probability $$P(\bold x)=P(x_1)P(x_2|x_1)P(x_3|x_1,x_2)&amp;hellip;P(x_t|x_1,x_2,&amp;hellip;,x_{t-1})$$
-1.2 Autoregressive Model For ever-known model, we call it AR Model.
-$$p(x_t|x_1,x_2,&amp;hellip;,x_{t-1})=p(x_t|f(x_1,x_2,&amp;hellip;,x_{t-1}))$$
-1.3 Markov Model By Markov Hypothesis, the current state is determined by previous$$\tau$$ points.
-$$p(x_t|x_1,x_2,&amp;hellip;,x_{t-1})=p(x_t|x_{t-\tau},&amp;hellip;,x_{t-1})=p(x_t|f(x_{t-\tau},&amp;hellip;,x_{t-1}))$$
-1.4 Latent Model 潜变量模型 we use a variable to represent the inner states (RNN is one of the Latent Model)
-$$h_t=f(x_1,&amp;hellip;,x_{t-1})$$
-$$x_t=p(x_t|h_t)$$
-QA&amp;hellip;</description>
+      <description>1. Sequential Model 1.1 Conditional Probability $$P(\bold x)=P(x_1)P(x_2|x_1)P(x_3|x_1,x_2)&amp;hellip;P(x_t|x_1,x_2,&amp;hellip;,x_{t-1})$$&#xA;1.2 Autoregressive Model For ever-known model, we call it AR Model.&#xA;$$p(x_t|x_1,x_2,&amp;hellip;,x_{t-1})=p(x_t|f(x_1,x_2,&amp;hellip;,x_{t-1}))$$&#xA;1.3 Markov Model By Markov Hypothesis, the current state is determined by previous$$\tau$$ points.&#xA;$$p(x_t|x_1,x_2,&amp;hellip;,x_{t-1})=p(x_t|x_{t-\tau},&amp;hellip;,x_{t-1})=p(x_t|f(x_{t-\tau},&amp;hellip;,x_{t-1}))$$&#xA;1.4 Latent Model 潜变量模型 we use a variable to represent the inner states (RNN is one of the Latent Model)&#xA;$$h_t=f(x_1,&amp;hellip;,x_{t-1})$$&#xA;$$x_t=p(x_t|h_t)$$&#xA;QA&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Cross Entropy</title>
       <link>https://weili-git.github.io/2022/01/cross-entropy/</link>
       <pubDate>Tue, 25 Jan 2022 11:58:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/01/cross-entropy/</guid>
-      <description>1. Review of Entropy Entropy is usually used to represent the average amount of self-information. The calculation formula is as follows:
-$$H(X) = E(log\frac{1}{p_i}) = -\sum_{i=1}^{n}p_ilogp_i $$
-For example, supposed that we have a probability distribution X = [0.7, 0.3]. Then we have,
-$$H(X) = -0.7log0.7-0.3log0.3 = 0.88 bit$$
-What&amp;rsquo;s more, we can easily find that $$0\le H(X) \le logn$$ is always true.
-The proof of the left inequality is trivial because $$0\le p\le 1$$ the equality is established if and only if $$p_i=1$$</description>
+      <description>1. Review of Entropy Entropy is usually used to represent the average amount of self-information. The calculation formula is as follows:&#xA;$$H(X) = E(log\frac{1}{p_i}) = -\sum_{i=1}^{n}p_ilogp_i $$&#xA;For example, supposed that we have a probability distribution X = [0.7, 0.3]. Then we have,&#xA;$$H(X) = -0.7log0.7-0.3log0.3 = 0.88 bit$$&#xA;What&amp;rsquo;s more, we can easily find that $$0\le H(X) \le logn$$ is always true.&#xA;The proof of the left inequality is trivial because $$0\le p\le 1$$ the equality is established if and only if $$p_i=1$$</description>
     </item>
-    
     <item>
       <title>ResNet</title>
       <link>https://weili-git.github.io/2021/12/resnet/</link>
       <pubDate>Tue, 14 Dec 2021 10:02:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2021/12/resnet/</guid>
-      <description>1. Preface Does deeper model always have good performance? Not Really!
-2. ResNet Block Similar to VGG and GoogLeNet, ResNet make it easy to training deep neural networks.
-$$f(x)= x + g(x)$$
-3. Q&amp;amp;A </description>
+      <description>1. Preface Does deeper model always have good performance? Not Really!&#xA;2. ResNet Block Similar to VGG and GoogLeNet, ResNet make it easy to training deep neural networks.&#xA;$$f(x)= x + g(x)$$&#xA;3. Q&amp;amp;A </description>
     </item>
-    
     <item>
       <title>BatchNorm</title>
       <link>https://weili-git.github.io/2021/12/batchnorm/</link>
       <pubDate>Mon, 13 Dec 2021 10:05:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2021/12/batchnorm/</guid>
-      <description>1. Preface As the Neural Network grows deeper, there are a few questions.
-the loss comes at the end the top layers train faster the bottom layers train slowly the data is at the bottom as the bottom layers update, all other layers need to change the top layers retrain many times slower convergence 2. BatchNorm Fix mini-batch&amp;rsquo;s mean and variance:
-$$\mu_B=\frac{1}{|B|}\sum_{i\in B}x_i$$
-and
-$$\sigma_{B}^{2}=\frac{1}{|B|}\sum_{i\in B}(x_i-\mu_B)^2+\epsilon$$
-additional adjustments (trainable parameters):</description>
+      <description>1. Preface As the Neural Network grows deeper, there are a few questions.&#xA;the loss comes at the end the top layers train faster the bottom layers train slowly the data is at the bottom as the bottom layers update, all other layers need to change the top layers retrain many times slower convergence 2. BatchNorm Fix mini-batch&amp;rsquo;s mean and variance:&#xA;$$\mu_B=\frac{1}{|B|}\sum_{i\in B}x_i$$&#xA;and&#xA;$$\sigma_{B}^{2}=\frac{1}{|B|}\sum_{i\in B}(x_i-\mu_B)^2+\epsilon$$&#xA;additional adjustments (trainable parameters):</description>
     </item>
-    
     <item>
       <title>GoogLeNet</title>
       <link>https://weili-git.github.io/2021/12/googlenet/</link>
       <pubDate>Sun, 12 Dec 2021 20:08:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2021/12/googlenet/</guid>
-      <description>1. Inception Block (v1) Extract information from 4 different paths, and then concatenate them in output channel. It has less parameters and time complexity. The assignment of channels are based on the significance.
-1x1 Conv (64) 1x1 Conv (96); 3x3 Conv, pad 1 (128) 1x1 Conv (16); 5x5 Conv, pad 2 (32) 3x3 MaxPool, pad 1; 1x1 Conv (32) 2. Architecture You can see that there are so many hyper-parameters (num of channels).</description>
+      <description>1. Inception Block (v1) Extract information from 4 different paths, and then concatenate them in output channel. It has less parameters and time complexity. The assignment of channels are based on the significance.&#xA;1x1 Conv (64) 1x1 Conv (96); 3x3 Conv, pad 1 (128) 1x1 Conv (16); 5x5 Conv, pad 2 (32) 3x3 MaxPool, pad 1; 1x1 Conv (32) 2. Architecture You can see that there are so many hyper-parameters (num of channels).</description>
     </item>
-    
     <item>
       <title>NiN</title>
       <link>https://weili-git.github.io/2021/12/nin/</link>
       <pubDate>Sat, 11 Dec 2021 10:20:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2021/12/nin/</guid>
-      <description>1. NiN block Since &amp;lsquo;Dense Layer&amp;rsquo; has so many parameters, we replace them by &amp;lsquo;1x1 Conv&amp;rsquo;. The shape doesn&amp;rsquo;t change while using &amp;lsquo;1x1 Conv&amp;rsquo;.
-Conv2d (the same as AlexNet, ReLu) 1x1 Conv, stride 1, no pad (out_channel = in_channel, ReLU) 1x1 Conv, stride 1, no pad (out_channel = in_channel, ReLU) 2. Architecture NiN&amp;rsquo;s architecture is based on AlexNet, but we don&amp;rsquo;t use &amp;lsquo;Dense Layer&amp;rsquo;.
-NiN block 3x3 MaxPool, stride 2 (half size) &amp;hellip; Dropout(0.</description>
+      <description>1. NiN block Since &amp;lsquo;Dense Layer&amp;rsquo; has so many parameters, we replace them by &amp;lsquo;1x1 Conv&amp;rsquo;. The shape doesn&amp;rsquo;t change while using &amp;lsquo;1x1 Conv&amp;rsquo;.&#xA;Conv2d (the same as AlexNet, ReLu) 1x1 Conv, stride 1, no pad (out_channel = in_channel, ReLU) 1x1 Conv, stride 1, no pad (out_channel = in_channel, ReLU) 2. Architecture NiN&amp;rsquo;s architecture is based on AlexNet, but we don&amp;rsquo;t use &amp;lsquo;Dense Layer&amp;rsquo;.&#xA;NiN block 3x3 MaxPool, stride 2 (half size) &amp;hellip; Dropout(0.</description>
     </item>
-    
     <item>
       <title>VGG</title>
       <link>https://weili-git.github.io/2021/12/vgg/</link>
       <pubDate>Sat, 11 Dec 2021 09:35:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2021/12/vgg/</guid>
-      <description>1. VGG block 3x3 Conv, pad 1 (n layers, m channels usually double, ReLU) 2x2 MaxPool, stride 2 (half size per block) It turns out that &amp;lsquo;deeper 3x3 Conv&amp;rsquo; is better than &amp;lsquo;5x5 Conv&amp;rsquo;.
-2. Architecture multiple VGG blocks Dense (4096) (Flatten, Linear, ReLU, Dropout) Dense (4096) (Linear, ReLU, Dropout) Dense (1000) 3. Code import torch from torch import nn def vgg_block(num_conv,in_channels,out_channels) -&amp;gt;nn.Sequential: layers: List[nn.Module] = [] for _ in range(num_conv): layers.</description>
+      <description>1. VGG block 3x3 Conv, pad 1 (n layers, m channels usually double, ReLU) 2x2 MaxPool, stride 2 (half size per block) It turns out that &amp;lsquo;deeper 3x3 Conv&amp;rsquo; is better than &amp;lsquo;5x5 Conv&amp;rsquo;.&#xA;2. Architecture multiple VGG blocks Dense (4096) (Flatten, Linear, ReLU, Dropout) Dense (4096) (Linear, ReLU, Dropout) Dense (1000) 3. Code import torch from torch import nn def vgg_block(num_conv,in_channels,out_channels) -&amp;gt;nn.Sequential: layers: List[nn.Module] = [] for _ in range(num_conv): layers.</description>
     </item>
-    
     <item>
       <title>AlexNet</title>
       <link>https://weili-git.github.io/2021/12/alexnet/</link>
       <pubDate>Thu, 09 Dec 2021 10:49:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2021/12/alexnet/</guid>
-      <description>1. AlexNet Compared with LeNet, it has some changes.
-Add noise and avoid overfitting(data transform). bigger and deeper use dropout (normalization) AvgPooling -&amp;gt; MaxPooling Sigmoid -&amp;gt; ReLU 2. Code net = nn.Sequential( nn.Conv2d(3,96,kernel_size=11,stride=4,padding=2),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), # nn.Conv2d(96,128*2,kernel_size=5,padding=2),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), nn.Conv2d(128*2,192*2,kernel_size=3,padding=1),nn.ReLU(), nn.Conv2d(192*2,192*2,kernel_size=3,padding=1),nn.ReLU(), nn.Conv2d(192*2,128*2,kernel_size=3,padding=1),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), # 6*6*256 nn.Flatten(), nn.Linear(6*6*256,2048*2),nn.ReLU(),nn.Dropout(p=0.5), nn.Linear(2048*2,2048*2),nn.ReLU(),nn.Dropout(p=0.5), nn.Linear(2048*2,1000),nn.ReLU(), ) 3. Q&amp;amp;A CNN提取的特征只是针对最后的分类任务，对于人来说大部分难以理解，因此它的可解释性较差。 Last two 4096 Full Connected Layers is necessary. A good name. </description>
+      <description>1. AlexNet Compared with LeNet, it has some changes.&#xA;Add noise and avoid overfitting(data transform). bigger and deeper use dropout (normalization) AvgPooling -&amp;gt; MaxPooling Sigmoid -&amp;gt; ReLU 2. Code net = nn.Sequential( nn.Conv2d(3,96,kernel_size=11,stride=4,padding=2),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), # nn.Conv2d(96,128*2,kernel_size=5,padding=2),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), nn.Conv2d(128*2,192*2,kernel_size=3,padding=1),nn.ReLU(), nn.Conv2d(192*2,192*2,kernel_size=3,padding=1),nn.ReLU(), nn.Conv2d(192*2,128*2,kernel_size=3,padding=1),nn.ReLU(), nn.MaxPool2d(kernel_size=3,stride=2), # 6*6*256 nn.Flatten(), nn.Linear(6*6*256,2048*2),nn.ReLU(),nn.Dropout(p=0.5), nn.Linear(2048*2,2048*2),nn.ReLU(),nn.Dropout(p=0.5), nn.Linear(2048*2,1000),nn.ReLU(), ) 3. Q&amp;amp;A CNN提取的特征只是针对最后的分类任务，对于人来说大部分难以理解，因此它的可解释性较差。 Last two 4096 Full Connected Layers is necessary. A good name. </description>
     </item>
-    
     <item>
       <title>CNN</title>
       <link>https://weili-git.github.io/2021/11/cnn/</link>
       <pubDate>Sat, 27 Nov 2021 13:30:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2021/11/cnn/</guid>
-      <description>1. Concept Applying &amp;rsquo;translation invariance&amp;rsquo; and &amp;rsquo;locality&amp;rsquo; to the MLP, we then get a CNN which can significantly reduce the parameters.
-$$h_{i,j} = \sum_{a,b}v_{i,j,a,b}x_{i+a,j+b}$$
-$$\Rightarrow h_{i,j} = \sum_{a=-\Delta}^{\Delta}\sum_{b=-\Delta}^{\Delta}v_{a,b}x_{i+a,j+b}$$
-2. Conv2d 2.1 Definition Input $$X: (N, C_{in}, H, W)$$
-Kernel $$W: (h,w)$$
-Bias: $$b$$
-Output $$Y: (N, C_{out}, H&amp;rsquo;, W&amp;rsquo;)$$
-$$Y=X\star W+b$$
-2.2 Cross Correlation $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{a,b}x_{i+a,j+b}$$
-2.3 Conv2d $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{-a,-b}x_{i+a,j+b}$$
-As for implementation, we use &amp;lsquo;Cross Correlation&amp;rsquo; but call it &amp;lsquo;Conv2d&amp;rsquo;.</description>
+      <description>1. Concept Applying &amp;rsquo;translation invariance&amp;rsquo; and &amp;rsquo;locality&amp;rsquo; to the MLP, we then get a CNN which can significantly reduce the parameters.&#xA;$$h_{i,j} = \sum_{a,b}v_{i,j,a,b}x_{i+a,j+b}$$&#xA;$$\Rightarrow h_{i,j} = \sum_{a=-\Delta}^{\Delta}\sum_{b=-\Delta}^{\Delta}v_{a,b}x_{i+a,j+b}$$&#xA;2. Conv2d 2.1 Definition Input $$X: (N, C_{in}, H, W)$$&#xA;Kernel $$W: (h,w)$$&#xA;Bias: $$b$$&#xA;Output $$Y: (N, C_{out}, H&amp;rsquo;, W&amp;rsquo;)$$&#xA;$$Y=X\star W+b$$&#xA;2.2 Cross Correlation $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{a,b}x_{i+a,j+b}$$&#xA;2.3 Conv2d $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{-a,-b}x_{i+a,j+b}$$&#xA;As for implementation, we use &amp;lsquo;Cross Correlation&amp;rsquo; but call it &amp;lsquo;Conv2d&amp;rsquo;.</description>
     </item>
-    
   </channel>
 </rss>

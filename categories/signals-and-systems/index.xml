@@ -4,63 +4,30 @@
     <title>Signals and Systems on Hugo tranquilpeak theme</title>
     <link>https://weili-git.github.io/categories/signals-and-systems/</link>
     <description>Recent content in Signals and Systems on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Feb 2022 10:25:00 +0800</lastBuildDate><atom:link href="https://weili-git.github.io/categories/signals-and-systems/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Feb 2022 10:25:00 +0800</lastBuildDate>
+    <atom:link href="https://weili-git.github.io/categories/signals-and-systems/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fourier Transform</title>
       <link>https://weili-git.github.io/2022/02/fourier-transform/</link>
       <pubDate>Thu, 10 Feb 2022 10:25:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/02/fourier-transform/</guid>
-      <description>1. Fourier Series Orthogonal Basis Functions The &amp;lsquo;orthogonal basis functions&amp;rsquo; are a set of functions of time, $$\phi(t)$$, such that the followings holds over some specified time interval $$T$$,
-$$\forall k,\forall m,k \neq m, \int_{T} \overline{\phi_k(t)} \phi_m(t) =0$$
-Triangle Fourier Series the &amp;lsquo;OBF&amp;rsquo; of triangle fourier series are as follows
-$${cos(nw_0t),sin(nw_0t)}$$
-which satisfy that
-$$\int_Tcos(nw_0t)sin(mw_0t)dt = 0$$
-$$\int_Tcos(nw_0t)cos(mw_0t)dt = \int_Tsin(nw_0t)sin(mw_0t)dt = \begin{cases} \frac{T}{2},m=n\ 0,m\neq n \end{cases}$$
-$$\int_T1dt=T$$
-Therefore, we can express a periodic signal with fundamental period T as a sum of sinusoids,</description>
+      <description>1. Fourier Series Orthogonal Basis Functions The &amp;lsquo;orthogonal basis functions&amp;rsquo; are a set of functions of time, $$\phi(t)$$, such that the followings holds over some specified time interval $$T$$,&#xA;$$\forall k,\forall m,k \neq m, \int_{T} \overline{\phi_k(t)} \phi_m(t) =0$$&#xA;Triangle Fourier Series the &amp;lsquo;OBF&amp;rsquo; of triangle fourier series are as follows&#xA;$${cos(nw_0t),sin(nw_0t)}$$&#xA;which satisfy that&#xA;$$\int_Tcos(nw_0t)sin(mw_0t)dt = 0$$&#xA;$$\int_Tcos(nw_0t)cos(mw_0t)dt = \int_Tsin(nw_0t)sin(mw_0t)dt = \begin{cases} \frac{T}{2},m=n\ 0,m\neq n \end{cases}$$&#xA;$$\int_T1dt=T$$&#xA;Therefore, we can express a periodic signal with fundamental period T as a sum of sinusoids,</description>
     </item>
-    
     <item>
       <title>Signal&#39;s Convolution</title>
       <link>https://weili-git.github.io/2022/02/signals-convolution/</link>
       <pubDate>Wed, 09 Feb 2022 10:35:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/02/signals-convolution/</guid>
-      <description>1. Moving Average(MA) filter N-points MA filter is defined as
-$$y[n]=\sum_{i=0}^{N-1}\frac{1}{N}x[n-i]$$
-where N is a positive integer.
-For example, in the 3-points MA filter, the output is
-$$y[n]=\frac{1}{3}x[n]+\frac{1}{3}x[n-1]+\frac{1}{3}x[n-2]$$
-As a general class of system, the input/output relationship is defined as
-$$y[n] = \sum_{i=0}^{n}w_ix[n-i],n\ge 0$$
-it turns out that any &amp;lsquo;causal linear time-invariant&amp;rsquo; DT system with the input x[n] equal to 0 for all n &amp;lt; 0 can be expressed as above.</description>
+      <description>1. Moving Average(MA) filter N-points MA filter is defined as&#xA;$$y[n]=\sum_{i=0}^{N-1}\frac{1}{N}x[n-i]$$&#xA;where N is a positive integer.&#xA;For example, in the 3-points MA filter, the output is&#xA;$$y[n]=\frac{1}{3}x[n]+\frac{1}{3}x[n-1]+\frac{1}{3}x[n-2]$$&#xA;As a general class of system, the input/output relationship is defined as&#xA;$$y[n] = \sum_{i=0}^{n}w_ix[n-i],n\ge 0$$&#xA;it turns out that any &amp;lsquo;causal linear time-invariant&amp;rsquo; DT system with the input x[n] equal to 0 for all n &amp;lt; 0 can be expressed as above.</description>
     </item>
-    
     <item>
       <title>Signal&#39;s Properties</title>
       <link>https://weili-git.github.io/2022/02/signals-properties/</link>
       <pubDate>Tue, 08 Feb 2022 19:58:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/02/signals-properties/</guid>
-      <description>1.Periodic Continuous-Time Signals given two periodic CT signals
-$$\forall t, x_1(t+T_1) = x_1(t)$$
-and
-$$\forall t, x_2(t+T_2) = x_2(t)$$
-if the sum of them is periodic, then
-$$\forall t, x_1(t+T)+x_2(t+T)=x_1(t)+x_2(t)$$
-it is satisfied if and only if
-$$\exists p,q \in N^*, T=pT_1=qT_2$$
-in other word, p and q are coprime
-$$\frac{T_1}{T_2}=\frac{p}{q}\in Q$$
-2. Sifting Property note that $$\forall \lambda \neq t_1, \delta(\lambda-t_1)=0$$
-it follows that
-$$\int_{-\infty}^{+\infty}f(\lambda)\delta(\lambda-t_1)d\lambda=\int_{t_1-\epsilon}^{t_1+\epsilon}f(\lambda)\delta(\lambda-t_1)d\lambda=f(t_1)$$
-where $$f(t)$$ is continuous at $$t=t_1$$</description>
+      <description>1.Periodic Continuous-Time Signals given two periodic CT signals&#xA;$$\forall t, x_1(t+T_1) = x_1(t)$$&#xA;and&#xA;$$\forall t, x_2(t+T_2) = x_2(t)$$&#xA;if the sum of them is periodic, then&#xA;$$\forall t, x_1(t+T)+x_2(t+T)=x_1(t)+x_2(t)$$&#xA;it is satisfied if and only if&#xA;$$\exists p,q \in N^*, T=pT_1=qT_2$$&#xA;in other word, p and q are coprime&#xA;$$\frac{T_1}{T_2}=\frac{p}{q}\in Q$$&#xA;2. Sifting Property note that $$\forall \lambda \neq t_1, \delta(\lambda-t_1)=0$$&#xA;it follows that&#xA;$$\int_{-\infty}^{+\infty}f(\lambda)\delta(\lambda-t_1)d\lambda=\int_{t_1-\epsilon}^{t_1+\epsilon}f(\lambda)\delta(\lambda-t_1)d\lambda=f(t_1)$$&#xA;where $$f(t)$$ is continuous at $$t=t_1$$</description>
     </item>
-    
   </channel>
 </rss>

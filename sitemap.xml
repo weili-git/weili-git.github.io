@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/</loc>
-    <lastmod>2023-12-10T15:14:00+09:00</lastmod>
-  </url><url>
     <loc>https://weili-git.github.io/categories/</loc>
-    <lastmod>2023-12-10T15:14:00+09:00</lastmod>
+    <lastmod>2024-06-01T12:08:00+09:00</lastmod>
   </url><url>
     <loc>https://weili-git.github.io/</loc>
-    <lastmod>2023-12-10T15:14:00+09:00</lastmod>
+    <lastmod>2024-06-01T12:08:00+09:00</lastmod>
   </url><url>
     <loc>https://weili-git.github.io/posts/</loc>
+    <lastmod>2024-06-01T12:08:00+09:00</lastmod>
+  </url><url>
+    <loc>https://weili-git.github.io/2024/06/router-cors/</loc>
+    <lastmod>2024-06-01T12:08:00+09:00</lastmod>
+  </url><url>
+    <loc>https://weili-git.github.io/categories/web/</loc>
+    <lastmod>2024-06-01T12:08:00+09:00</lastmod>
+  </url><url>
+    <loc>https://weili-git.github.io/2023/12/analysis-of-speech-emotion-intensity/</loc>
     <lastmod>2023-12-10T15:14:00+09:00</lastmod>
   </url><url>
     <loc>https://weili-git.github.io/categories/tts/</loc>
@@ -36,9 +42,6 @@
     <lastmod>2023-03-25T11:02:00+09:00</lastmod>
   </url><url>
     <loc>https://weili-git.github.io/2023/02/internet-basics/</loc>
-    <lastmod>2023-02-23T08:45:00+09:00</lastmod>
-  </url><url>
-    <loc>https://weili-git.github.io/categories/web/</loc>
     <lastmod>2023-02-23T08:45:00+09:00</lastmod>
   </url><url>
     <loc>https://weili-git.github.io/categories/programming/</loc>

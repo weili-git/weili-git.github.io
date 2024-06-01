@@ -4,155 +4,114 @@
     <title>Web on Hugo tranquilpeak theme</title>
     <link>https://weili-git.github.io/categories/web/</link>
     <description>Recent content in Web on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Feb 2023 08:45:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Jun 2024 12:08:00 +0900</lastBuildDate>
+    <atom:link href="https://weili-git.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Router &amp; CORS</title>
+      <link>https://weili-git.github.io/2024/06/router-cors/</link>
+      <pubDate>Sat, 01 Jun 2024 12:08:00 +0900</pubDate>
+      <guid>https://weili-git.github.io/2024/06/router-cors/</guid>
+      <description>1. Basic Setting We are developing a web applications. Gin is for backend and vue is for frontend.&#xA;However, I often encouter router problems when sending request from frontend to the backend.&#xA;Here are quick rules to avoid these problems.&#xA;2. Router //routers.go func Router() *gin.Engine { r := gin.Default() r.Use(middleware.Cors()) user := r.Group(&amp;#34;/user&amp;#34;) { user.GET(&amp;#34;/test/&amp;#34;, controllers.Test) user.GET(&amp;#34;/&amp;#34;, controllers.GetUsers) user.GET(&amp;#34;/:id&amp;#34;, controllers.GetUser) user.POST(&amp;#34;/new&amp;#34;, controllers.NewUser) user.POST(&amp;#34;/update/:id&amp;#34;, controllers.UpdateUser) } return r } &amp;lt;script&amp;gt; // add end slash const res = await $fetch(&amp;#34;http://localhost:8080/user/test/&amp;#34;) const res = await $fetch(&amp;#34;http://localhost:8080/user/&amp;#34;); // no end slash const res = await $fetch(&amp;#34;http://localhost:8080/user/1&amp;#34;); const res = await $fetch(&amp;#34;http://localhost:8080/user/new&amp;#34;, { .</description>
+    </item>
     <item>
       <title>Internet Basics</title>
       <link>https://weili-git.github.io/2023/02/internet-basics/</link>
       <pubDate>Thu, 23 Feb 2023 08:45:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2023/02/internet-basics/</guid>
-      <description>1. Open System Interconncetion Reference Model (OSI model) Physical Layer: Network interface controller (网卡), ethernet hub (集线器), network switch, transmission medium. It converts digital bits to electrical, radio or optical signals. Voltage characteristics are defined.
-Datalink Layer: Medium access control (MAC) layer, logical link control (LLC) layer. Correct errors that may occur in physical layers.
-Network Layer: Provides to transfer packets from node to node. (IP)
-Transport Layer: Provides to transfer variable length data sequences from source host to destination host.</description>
+      <description>1. Open System Interconncetion Reference Model (OSI model) Physical Layer: Network interface controller (网卡), ethernet hub (集线器), network switch, transmission medium. It converts digital bits to electrical, radio or optical signals. Voltage characteristics are defined.&#xA;Datalink Layer: Medium access control (MAC) layer, logical link control (LLC) layer. Correct errors that may occur in physical layers.&#xA;Network Layer: Provides to transfer packets from node to node. (IP)&#xA;Transport Layer: Provides to transfer variable length data sequences from source host to destination host.</description>
     </item>
-    
     <item>
       <title>Intro to Redis</title>
       <link>https://weili-git.github.io/2023/02/intro-to-redis/</link>
       <pubDate>Wed, 15 Feb 2023 22:36:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2023/02/intro-to-redis/</guid>
-      <description>1. Basic Concepts Redis is a NoSql database. Its characteristics are non-structured, non-relational, no SQL grammar. Other NoSQL includes MongoDB, elaticsearch. Besides, Redis only has base transaction.
-Redis stores key-value, runs in single thread with low latency. Data persistence is supported in case of blackout.
-2. Install See Redis. For mac os, we can just run
-brew install redis 3. Basic Commands brew services start redis # start redis redis-cli -h 127.</description>
+      <description>1. Basic Concepts Redis is a NoSql database. Its characteristics are non-structured, non-relational, no SQL grammar. Other NoSQL includes MongoDB, elaticsearch. Besides, Redis only has base transaction.&#xA;Redis stores key-value, runs in single thread with low latency. Data persistence is supported in case of blackout.&#xA;2. Install See Redis. For mac os, we can just run&#xA;brew install redis 3. Basic Commands brew services start redis # start redis redis-cli -h 127.</description>
     </item>
-    
     <item>
       <title>Introduction to Kubenetes</title>
       <link>https://weili-git.github.io/2023/02/introduction-to-kubenetes/</link>
       <pubDate>Wed, 15 Feb 2023 21:37:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2023/02/introduction-to-kubenetes/</guid>
       <description>1. Install See minikube.</description>
     </item>
-    
     <item>
       <title>All kinds of Django View</title>
       <link>https://weili-git.github.io/2023/02/all-kinds-of-django-view/</link>
       <pubDate>Mon, 13 Feb 2023 16:31:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2023/02/all-kinds-of-django-view/</guid>
-      <description>1. First Example Suppose that we are going to build a blog application. The following codes will create the index page.
-# urls.py urlpatterns = [ path(&amp;#39;&amp;#39;, views.index, name=&amp;#39;index&amp;#39;), ] # views.py def index(request): latest = Post.objects.order_by(&amp;#34;-modified_time&amp;#34;) return render(request, &amp;#34;index.html&amp;#34;, {&amp;#34;post_list&amp;#34;: latest}) If we use View class, the codes will be easier to read.
-# urls.py urlpatterns = [ path(&amp;#39;&amp;#39;, views.IndexView.as_view(), name=&amp;#39;index&amp;#39;), ] # views.py from django.views.generic import ListView class IndexView(ListView): queryset = Post.</description>
+      <description>1. First Example Suppose that we are going to build a blog application. The following codes will create the index page.&#xA;# urls.py urlpatterns = [ path(&amp;#39;&amp;#39;, views.index, name=&amp;#39;index&amp;#39;), ] # views.py def index(request): latest = Post.objects.order_by(&amp;#34;-modified_time&amp;#34;) return render(request, &amp;#34;index.html&amp;#34;, {&amp;#34;post_list&amp;#34;: latest}) If we use View class, the codes will be easier to read.&#xA;# urls.py urlpatterns = [ path(&amp;#39;&amp;#39;, views.IndexView.as_view(), name=&amp;#39;index&amp;#39;), ] # views.py from django.views.generic import ListView class IndexView(ListView): queryset = Post.</description>
     </item>
-    
     <item>
       <title>react</title>
       <link>https://weili-git.github.io/2022/09/react/</link>
       <pubDate>Thu, 22 Sep 2022 10:09:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/09/react/</guid>
-      <description>1. Install $f(x)=\lambda x$
-def foo(): print(&amp;#34;aa&amp;#34;) </description>
+      <description>1. Install $f(x)=\lambda x$&#xA;def foo(): print(&amp;#34;aa&amp;#34;) </description>
     </item>
-    
     <item>
       <title>bootstrap</title>
       <link>https://weili-git.github.io/2022/09/bootstrap/</link>
       <pubDate>Wed, 21 Sep 2022 21:10:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/09/bootstrap/</guid>
       <description>1. Quick Start &amp;lt;head&amp;gt; ... &amp;lt;!-- development --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;static/plugins/bootstrap-3.4.1/css/bootstrap.css&amp;#34;&amp;gt; &amp;lt;!-- production --&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;static/plugins/bootstrap-3.4.1/css/bootstrap.min.css&amp;#34;&amp;gt; &amp;lt;style&amp;gt; .navbar{ border-radius: 0; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- button --&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;enter&amp;#34; class=&amp;#34;btn btn-primary&amp;#34;/&amp;gt; &amp;lt;!-- col-xs --&amp;gt; &amp;lt;div class=&amp;#34;col-xs-offset-2 col-xs-2&amp;#34; style=&amp;#34;color:red;&amp;#34;&amp;gt;1&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;col-xs-2&amp;#34; style=&amp;#34;color:green;&amp;#34;&amp;gt;2&amp;lt;/div&amp;gt; &amp;lt;!-- col-sm col-md col-lg --&amp;gt; &amp;lt;/body&amp;gt; </description>
     </item>
-    
     <item>
       <title>CSS</title>
       <link>https://weili-git.github.io/2022/09/css/</link>
       <pubDate>Mon, 19 Sep 2022 11:19:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/09/css/</guid>
       <description>1. Intro 1.1 &amp;lt;div style=&amp;#34;color:red;&amp;#34;&amp;gt; contents &amp;lt;/div&amp;gt; 1.2 &amp;lt;head&amp;gt; &amp;lt;style&amp;gt; .c1{ color: red; } #c２{ color: green; } li{ /* global */ color: pink; } input[type=&amp;#39;text&amp;#39;]{ border: 1px solid red; } .v1[attr=&amp;#39;123&amp;#39;]{ ... } .mylist li{ /* children and grandchildren */ color: red; } .mydiv &amp;gt; a{ /* only children */ } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; ... &amp;lt;div class=&amp;#39;c1&amp;#39;&amp;gt;contents&amp;lt;/div&amp;gt; &amp;lt;div id=&amp;#39;c2&amp;#39;&amp;gt;contents&amp;lt;/div&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt; ccc &amp;lt;/li&amp;gt; ... &amp;lt;/ul&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; /&amp;gt; &amp;lt;input type=&amp;#34;password&amp;#34; /&amp;gt; 1.</description>
     </item>
-    
     <item>
       <title>Ajax</title>
       <link>https://weili-git.github.io/2022/09/ajax/</link>
       <pubDate>Fri, 16 Sep 2022 11:44:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/09/ajax/</guid>
-      <description>1. Intro Ajax can send request without refreshing the webpage.
-1.1 Get function clickMe(){ $.ajax({ url: &amp;#34;/user/list&amp;#34;, type: &amp;#34;get&amp;#34;, data: { name: $(&amp;#34;#input1&amp;#34;).val(), passwd: $(&amp;#34;#input2&amp;#34;).val() }, // data: $(&amp;#34;#form1&amp;#34;).serialize(), dataType: &amp;#34;JSON&amp;#34;, success:function(res){ console.log(res.data); } }) } ... &amp;lt;div&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;button&amp;#34; onclick=&amp;#34;clickMe();&amp;#34; /&amp;gt; &amp;lt;/div&amp;gt; ... Or, we can use JQuery to bind the event of button click.
-1.2 Post # views.py from django.shortcuts import render, HttpResponse from django.http import JsonResponse from django.</description>
+      <description>1. Intro Ajax can send request without refreshing the webpage.&#xA;1.1 Get function clickMe(){ $.ajax({ url: &amp;#34;/user/list&amp;#34;, type: &amp;#34;get&amp;#34;, data: { name: $(&amp;#34;#input1&amp;#34;).val(), passwd: $(&amp;#34;#input2&amp;#34;).val() }, // data: $(&amp;#34;#form1&amp;#34;).serialize(), dataType: &amp;#34;JSON&amp;#34;, success:function(res){ console.log(res.data); } }) } ... &amp;lt;div&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;button&amp;#34; onclick=&amp;#34;clickMe();&amp;#34; /&amp;gt; &amp;lt;/div&amp;gt; ... Or, we can use JQuery to bind the event of button click.&#xA;1.2 Post # views.py from django.shortcuts import render, HttpResponse from django.http import JsonResponse from django.</description>
     </item>
-    
     <item>
       <title>ORM</title>
       <link>https://weili-git.github.io/2022/09/orm/</link>
       <pubDate>Thu, 15 Sep 2022 15:14:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/09/orm/</guid>
       <description>1. Install pip install mysqlclient # python&amp;lt;=3.5 pip install pymysql # python&amp;gt;3.5 2. connect # mysite/settings.py ... import pymysql # python&amp;gt;=3.5 pymysql.install_as_MySQLdb() DATABASES = { &amp;#39;default&amp;#39;: { &amp;#39;ENGINE&amp;#39;: &amp;#39;django.db.backends.mysql&amp;#39;, &amp;#39;NAME&amp;#39;: &amp;#39;table111&amp;#39;, &amp;#39;USER&amp;#39;: &amp;#39;root&amp;#39;, &amp;#39;PASSWORD&amp;#39;: &amp;#39;Root1234@&amp;#39;, &amp;#39;HOST&amp;#39;: &amp;#39;localhost&amp;#39;, &amp;#39;PORT&amp;#39;: 3306, } } ... 3. CRUD # models.py from django.db import models class User(models.Model): name = models.CharField(max_len=32) passwd = models.CharField(max_len=64) age = models.IntegerField() &amp;#34;&amp;#34;&amp;#34; create table myapp_user( id bigint auto_increment primary key, name varchar(32), passwd varchar(64), age int ) &amp;#34;&amp;#34;&amp;#34; Make sure that we have registered our &amp;lsquo;myapp&amp;rsquo; in &amp;lsquo;mysite&amp;rsquo; project.</description>
     </item>
-    
     <item>
       <title>MySQL</title>
       <link>https://weili-git.github.io/2022/09/mysql/</link>
       <pubDate>Mon, 12 Sep 2022 11:35:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/09/mysql/</guid>
-      <description>1. install brew install mysql mysql.server start mysql_secure_installation Root1234@ See details for installation.
-If you get an error &amp;ldquo;The server quit without updating PID file (xxx.lock.pid)&amp;rdquo; while running the commands above, you can remove the file &amp;ldquo;/tmp/mysql.sock&amp;rdquo; and try again.
-2. basics mysql -u root -p mysql&amp;gt; show databases; mysql&amp;gt; create database table_name; mysql&amp;gt; use table_name; mysql&amp;gt; create table test( id int auto_increment primary key, name varchar(16) not null, age int default 18, salary decimal(8,2), birth datetime ); mysql&amp;gt; show tables; mysql&amp;gt; insert into test values (1, &amp;#34;zhang san&amp;#34;, 23); mysql&amp;gt; insert into test (name, age) values (&amp;#34;li si&amp;#34;, 25), (&amp;#34;wang wu&amp;#34;, 27); mysql&amp;gt; select * from test where id&amp;gt;3; mysql&amp;gt; delete from test where id=1; mysql&amp;gt; update test set name=&amp;#34;abc&amp;#34; where id=2; mysql&amp;gt; drop table test; mysql&amp;gt; drop database table_name; mysql&amp;gt; exit; 3.</description>
+      <description>1. install brew install mysql mysql.server start mysql_secure_installation Root1234@ See details for installation.&#xA;If you get an error &amp;ldquo;The server quit without updating PID file (xxx.lock.pid)&amp;rdquo; while running the commands above, you can remove the file &amp;ldquo;/tmp/mysql.sock&amp;rdquo; and try again.&#xA;2. basics mysql -u root -p mysql&amp;gt; show databases; mysql&amp;gt; create database table_name; mysql&amp;gt; use table_name; mysql&amp;gt; create table test( id int auto_increment primary key, name varchar(16) not null, age int default 18, salary decimal(8,2), birth datetime ); mysql&amp;gt; show tables; mysql&amp;gt; insert into test values (1, &amp;#34;zhang san&amp;#34;, 23); mysql&amp;gt; insert into test (name, age) values (&amp;#34;li si&amp;#34;, 25), (&amp;#34;wang wu&amp;#34;, 27); mysql&amp;gt; select * from test where id&amp;gt;3; mysql&amp;gt; delete from test where id=1; mysql&amp;gt; update test set name=&amp;#34;abc&amp;#34; where id=2; mysql&amp;gt; drop table test; mysql&amp;gt; drop database table_name; mysql&amp;gt; exit; 3.</description>
     </item>
-    
     <item>
       <title>Django Quick Start</title>
       <link>https://weili-git.github.io/2022/09/django-quick-start/</link>
       <pubDate>Fri, 09 Sep 2022 14:38:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/09/django-quick-start/</guid>
-      <description>1. Preparation Firstly, we can install django and create our project as follows.
-# to install django framework pip install django pip install djangorestframework # create our applications django-admin startproject mysite cd mysite python managy.py startapp myapp To test the project, we can use &amp;ldquo;runserver&amp;rdquo; command.
-python manage.py runserver 2. Models In the file &amp;ldquo;myapp/models.py&amp;rdquo;, we can create some models to specify the layout of our database.
-from django.db import models class User(models.</description>
+      <description>1. Preparation Firstly, we can install django and create our project as follows.&#xA;# to install django framework pip install django pip install djangorestframework # create our applications django-admin startproject mysite cd mysite python managy.py startapp myapp To test the project, we can use &amp;ldquo;runserver&amp;rdquo; command.&#xA;python manage.py runserver 2. Models In the file &amp;ldquo;myapp/models.py&amp;rdquo;, we can create some models to specify the layout of our database.&#xA;from django.db import models class User(models.</description>
     </item>
-    
     <item>
       <title>Nginx</title>
       <link>https://weili-git.github.io/2022/05/nginx/</link>
       <pubDate>Sun, 08 May 2022 22:21:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/05/nginx/</guid>
-      <description>1. Function Load Balance(负载均衡) and Reverse Proxy(反向代理).
-https://www.runoob.com/linux/nginx-install-setup.html
-2. Command nginx nginx -s reload # reload config file. </description>
+      <description>1. Function Load Balance(负载均衡) and Reverse Proxy(反向代理).&#xA;https://www.runoob.com/linux/nginx-install-setup.html&#xA;2. Command nginx nginx -s reload # reload config file. </description>
     </item>
-    
     <item>
       <title>SpringBoot</title>
       <link>https://weili-git.github.io/2022/05/springboot/</link>
       <pubDate>Sat, 07 May 2022 22:33:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/05/springboot/</guid>
-      <description>1. Create Project We can get access to Spring and download the project. Don&amp;rsquo;t forget to add &amp;lsquo;Spring Web&amp;rsquo; dependency.
-After that, we can run the project with IDEA. It&amp;rsquo;ll take around 20 minutes to download the necessary files. Then, we can follow the guidance from Quick Start to test the installation.
-If you got trouble &amp;lsquo;Port 8080 was already in use&amp;rsquo;, you can create a file &amp;lsquo;/resource/application.yml&amp;rsquo;, and add the configuration.</description>
+      <description>1. Create Project We can get access to Spring and download the project. Don&amp;rsquo;t forget to add &amp;lsquo;Spring Web&amp;rsquo; dependency.&#xA;After that, we can run the project with IDEA. It&amp;rsquo;ll take around 20 minutes to download the necessary files. Then, we can follow the guidance from Quick Start to test the installation.&#xA;If you got trouble &amp;lsquo;Port 8080 was already in use&amp;rsquo;, you can create a file &amp;lsquo;/resource/application.yml&amp;rsquo;, and add the configuration.</description>
     </item>
-    
     <item>
       <title>Live2d</title>
       <link>https://weili-git.github.io/2021/12/live2d/</link>
       <pubDate>Thu, 09 Dec 2021 10:49:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2021/12/live2d/</guid>
-      <description>1. Install Hexo npm install hexo-cli -g hexo init blog cd blog npm install hexo server 2. Add Live2d npm install --save hexo-helper-live2d then, insert code into _config.xml
-live2d: enable: true scriptFrom: local pluginRootPath: live2dw/ pluginJsPath: lib/ pluginModelPath: assets/ tagMode: false debug: false model: use: wanko display: position: right width: 150 height: 300 mobile: show: true pull your &amp;lsquo;assets&amp;rsquo; contents from live2d model directory to &amp;lsquo;./live2d_models/wanko&amp;rsquo;. At last, let&amp;rsquo;s run and compile the project</description>
+      <description>1. Install Hexo npm install hexo-cli -g hexo init blog cd blog npm install hexo server 2. Add Live2d npm install --save hexo-helper-live2d then, insert code into _config.xml&#xA;live2d: enable: true scriptFrom: local pluginRootPath: live2dw/ pluginJsPath: lib/ pluginModelPath: assets/ tagMode: false debug: false model: use: wanko display: position: right width: 150 height: 300 mobile: show: true pull your &amp;lsquo;assets&amp;rsquo; contents from live2d model directory to &amp;lsquo;./live2d_models/wanko&amp;rsquo;. At last, let&amp;rsquo;s run and compile the project</description>
     </item>
-    
   </channel>
 </rss>

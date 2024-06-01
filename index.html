@@ -62,7 +62,7 @@ code.has-jax {
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.104.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.126.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="LI WEI">
 <meta name="keywords" content="">
 <meta name="description" content="Hugo tranquilpeak theme demo">
@@ -118,7 +118,9 @@ code.has-jax {
     
 
     
-      
+  
+
+
     
     
   </head>
@@ -261,6 +263,69 @@ code.has-jax {
                ">
         <section class="postShorten-group main-content-wrap">
           
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://weili-git.github.io/2024/06/router-cors/" aria-label="Open the post: Router &amp; CORS">
+      
+          Router &amp; CORS
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2024-06-01T12:08:00&#43;09:00">
+        
+  June 1, 2024
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        1. Basic Setting We are developing a web applications. Gin is for backend and vue is for frontend.
+However, I often encouter router problems when sending request from frontend to the backend.
+Here are quick rules to avoid these problems.
+2. Router //routers.go func Router() *gin.Engine { r := gin.Default() r.Use(middleware.Cors()) user := r.Group(&#34;/user&#34;) { user.GET(&#34;/test/&#34;, controllers.Test) user.GET(&#34;/&#34;, controllers.GetUsers) user.GET(&#34;/:id&#34;, controllers.GetUser) user.POST(&#34;/new&#34;, controllers.NewUser) user.POST(&#34;/update/:id&#34;, controllers.UpdateUser) } return r } &lt;script&gt; // add end slash const res = await $fetch(&#34;http://localhost:8080/user/test/&#34;) const res = await $fetch(&#34;http://localhost:8080/user/&#34;); // no end slash const res = await $fetch(&#34;http://localhost:8080/user/1&#34;); const res = await $fetch(&#34;http://localhost:8080/user/new&#34;, { .
+      
+      <p>
+        
+          <a href="https://weili-git.github.io/2024/06/router-cors/" class="postShorten-excerpt_link link" aria-label="Open the post: Router &amp; CORS">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
           
             
   
@@ -636,69 +701,6 @@ Transport Layer: Provides to transfer variable length data sequences from source
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://weili-git.github.io/2023/02/python-knowledge/" aria-label="Open the post: Python knowledge">
-      
-          Python knowledge
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2023-02-22T20:16:00&#43;09:00">
-        
-  February 22, 2023
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://weili-git.github.io/categories/programming">Programming</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        1. Mutable &amp; Immutable In python, built-in types are classified as mutable and immutable.
-immutable: tuple, string, number, bool
-mutable: list, dict, set
-example city_list = [&#39;New York&#39;, &#39;London&#39;, &#39;Tokyo&#39;] city_list.append(&#39;Paris&#39;) print(city_list) # [&#39;New York&#39;, &#39;London&#39;, &#39;Tokyo&#39;, &#39;Paris&#39;] tuple_a = (1, 2) tuple_a[0] = 3 # error, since tuple_a is immutable, we can&#39;t modify it tuple_b = ([], 0) tuple_b[0].append(1) # success, because the address of the first element didn&#39;t change print(tuple_b) # ([1], 0) Conlusion Mutable objects are often used in the situations where we want to do updates.
-      
-      <p>
-        
-          <a href="https://weili-git.github.io/2023/02/python-knowledge/" class="postShorten-excerpt_link link" aria-label="Open the post: Python knowledge">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
   <div class="pagination-bar">
     <ul class="pagination">
@@ -721,7 +723,7 @@ example city_list = [&#39;New York&#39;, &#39;London&#39;, &#39;Tokyo&#39;] city
         </section>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2023 LI WEI. All Rights Reserved
+    &copy; 2024 LI WEI. All Rights Reserved
   </span>
 </footer>
 

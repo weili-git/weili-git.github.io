@@ -77,7 +77,7 @@ code.has-jax {
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.104.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="generator" content="Hugo 0.126.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="LI WEI">
 <meta name="keywords" content="">
 <meta name="description" content="SpringBoot项目">
@@ -145,7 +145,9 @@ code.has-jax {
     
 
     
-      
+  
+
+
     
     
   </head>
@@ -332,13 +334,13 @@ code.has-jax {
 </span></span></code></pre></div><h1 id="2-controller">2. Controller</h1>
 <p>We can add controller &lsquo;/controller/testController.java&rsquo; in the same (or sub) directory as Application.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Controller</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">testController</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/say&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">testController</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@RequestMapping</span>(value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/say&#34;</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@ResponseBody</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">say</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello world!&#34;</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">say</span>(){
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello world!&#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h1 id="3-maven-mirror">3. Maven Mirror</h1>
 <p>&ldquo;/apache-maven-3.8.4/conf/settings.xml&rdquo;</p>
 <h1 id="4-configuration">4. Configuration</h1>
@@ -455,7 +457,7 @@ code.has-jax {
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2023 LI WEI. All Rights Reserved
+    &copy; 2024 LI WEI. All Rights Reserved
   </span>
 </footer>
 

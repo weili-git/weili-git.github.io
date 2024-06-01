@@ -4,20 +4,16 @@
     <title>Paper on Hugo tranquilpeak theme</title>
     <link>https://weili-git.github.io/categories/paper/</link>
     <description>Recent content in Paper on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 May 2022 19:45:00 +0800</lastBuildDate><atom:link href="https://weili-git.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 May 2022 19:45:00 +0800</lastBuildDate>
+    <atom:link href="https://weili-git.github.io/categories/paper/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prosody Ttransfer ETTS</title>
       <link>https://weili-git.github.io/2022/05/prosody-ttransfer-etts/</link>
       <pubDate>Thu, 12 May 2022 19:45:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/05/prosody-ttransfer-etts/</guid>
-      <description>Prosody is underspecified by the text. (eg. rising intonation)
-Add a multi-speaker model to Tacotron. (speaker embedding)
-reference encoder: using a fixed-dimension embeddings.
-Reference https://arxiv.org/pdf/1803.09047.pdf</description>
+      <description>Prosody is underspecified by the text. (eg. rising intonation)&#xA;Add a multi-speaker model to Tacotron. (speaker embedding)&#xA;reference encoder: using a fixed-dimension embeddings.&#xA;Reference https://arxiv.org/pdf/1803.09047.pdf</description>
     </item>
-    
   </channel>
 </rss>

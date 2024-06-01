@@ -4,37 +4,30 @@
     <title>Javascript on Hugo tranquilpeak theme</title>
     <link>https://weili-git.github.io/categories/javascript/</link>
     <description>Recent content in Javascript on Hugo tranquilpeak theme</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Nov 2023 12:01:00 +0900</lastBuildDate><atom:link href="https://weili-git.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Nov 2023 12:01:00 +0900</lastBuildDate>
+    <atom:link href="https://weili-git.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Trap of Javascript</title>
       <link>https://weili-git.github.io/2023/11/trap-of-javascript/</link>
       <pubDate>Sat, 18 Nov 2023 12:01:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2023/11/trap-of-javascript/</guid>
-      <description>1. Reference before assignment function ShuffleArray(array){ // inplace for (let i=array.length-1; i&amp;gt;0;i--){ var j = Math.floor(Math.random()*(i+1)); [arr[i], arr[j]] = [arr[j], arr[i]]; // no error } } This function not only cannot modify the array, but also affects the global variables!
-2. Pass by reference (2d array) arr1 = [[0,0], [1,1]]; arr2 = arr1; console.log(arr1); // output: [[3,0], [1,1]] ??? // console.log(...arr1) instead arr2[0][0] = 3; console.log(arr2); // output: [[3,0], [1,1]] The output will be changed even before the assignment.</description>
+      <description>1. Reference before assignment function ShuffleArray(array){ // inplace for (let i=array.length-1; i&amp;gt;0;i--){ var j = Math.floor(Math.random()*(i+1)); [arr[i], arr[j]] = [arr[j], arr[i]]; // no error } } This function not only cannot modify the array, but also affects the global variables!&#xA;2. Pass by reference (2d array) arr1 = [[0,0], [1,1]]; arr2 = arr1; console.log(arr1); // output: [[3,0], [1,1]] ??? // console.log(...arr1) instead arr2[0][0] = 3; console.log(arr2); // output: [[3,0], [1,1]] The output will be changed even before the assignment.</description>
     </item>
-    
     <item>
       <title>javascript</title>
       <link>https://weili-git.github.io/2022/09/javascript/</link>
       <pubDate>Mon, 26 Sep 2022 23:15:00 +0900</pubDate>
-      
       <guid>https://weili-git.github.io/2022/09/javascript/</guid>
-      <description>1. jQuery &amp;lt;!-- https://jquery.com/download/ --&amp;gt; &amp;lt;script src=&amp;#34;{% static &amp;#39;js/jquery-3.6.1.min.js&amp;#39; %}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;{% static &amp;#39;plugins/bootstrap-3.4.1-dist/js/bootstrap.min.js&amp;#39; %}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; Bootstrap with jQuery will help us to create a lot of dynamic pages.
-&amp;lt;!-- Button trigger modal --&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-primary btn-lg&amp;#34; data-toggle=&amp;#34;modal&amp;#34; data-target=&amp;#34;#myModal&amp;#34;&amp;gt; delete &amp;lt;/button&amp;gt; &amp;lt;!-- Modal --&amp;gt; &amp;lt;div class=&amp;#34;modal fade&amp;#34; id=&amp;#34;myModal&amp;#34; tabindex=&amp;#34;-1&amp;#34; role=&amp;#34;dialog&amp;#34; aria-labelledby=&amp;#34;myModalLabel&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;modal-dialog&amp;#34; role=&amp;#34;document&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;modal-content&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;modal-header&amp;#34;&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;close&amp;#34; data-dismiss=&amp;#34;modal&amp;#34; aria-label=&amp;#34;Close&amp;#34;&amp;gt;&amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt; &amp;lt;h4 class=&amp;#34;modal-title&amp;#34; id=&amp;#34;myModalLabel&amp;#34;&amp;gt;Warning&amp;lt;/h4&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;modal-body&amp;#34;&amp;gt; Are you sure that you want to delete this article?</description>
+      <description>1. jQuery &amp;lt;!-- https://jquery.com/download/ --&amp;gt; &amp;lt;script src=&amp;#34;{% static &amp;#39;js/jquery-3.6.1.min.js&amp;#39; %}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;{% static &amp;#39;plugins/bootstrap-3.4.1-dist/js/bootstrap.min.js&amp;#39; %}&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; Bootstrap with jQuery will help us to create a lot of dynamic pages.&#xA;&amp;lt;!-- Button trigger modal --&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-primary btn-lg&amp;#34; data-toggle=&amp;#34;modal&amp;#34; data-target=&amp;#34;#myModal&amp;#34;&amp;gt; delete &amp;lt;/button&amp;gt; &amp;lt;!-- Modal --&amp;gt; &amp;lt;div class=&amp;#34;modal fade&amp;#34; id=&amp;#34;myModal&amp;#34; tabindex=&amp;#34;-1&amp;#34; role=&amp;#34;dialog&amp;#34; aria-labelledby=&amp;#34;myModalLabel&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;modal-dialog&amp;#34; role=&amp;#34;document&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;modal-content&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;modal-header&amp;#34;&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;close&amp;#34; data-dismiss=&amp;#34;modal&amp;#34; aria-label=&amp;#34;Close&amp;#34;&amp;gt;&amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;amp;times;&amp;lt;/span&amp;gt;&amp;lt;/button&amp;gt; &amp;lt;h4 class=&amp;#34;modal-title&amp;#34; id=&amp;#34;myModalLabel&amp;#34;&amp;gt;Warning&amp;lt;/h4&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;modal-body&amp;#34;&amp;gt; Are you sure that you want to delete this article?</description>
     </item>
-    
     <item>
       <title>Javascript Review</title>
       <link>https://weili-git.github.io/2022/05/javascript-review/</link>
       <pubDate>Tue, 17 May 2022 09:56:00 +0800</pubDate>
-      
       <guid>https://weili-git.github.io/2022/05/javascript-review/</guid>
       <description>1. Variable var a = 5; // declare global function myfunc(){ var a = 10; // override global { let a = 5; // local // here a = 5; } // here a = 10; } // only &amp;#39;var&amp;#39; can override in the same block // var a = 10; // let a = 5; illegal statement 2. Constant const a = 5; // initial value must be assigned a = 3 // illegal statement // the atribution of constant object can be changed const b = [&amp;#34;Python&amp;#34;, &amp;#34;Java&amp;#34;, &amp;#34;C++&amp;#34;]; b[0] = &amp;#34;Ruby&amp;#34;; // legal statement // but the object itself can not be re-assigned b = [&amp;#34;C#&amp;#34;, &amp;#34;VB&amp;#34;]; // illegal statment // more example const car = {type:&amp;#34;porsche&amp;#34;, model:&amp;#34;911&amp;#34;, color:&amp;#34;Black&amp;#34;}; car.</description>
     </item>
-    
   </channel>
 </rss>
