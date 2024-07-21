@@ -44,10 +44,10 @@ code.has-jax {
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "CNN",
+  "headline": "MySQL Char \u0026 Index",
   
-  "datePublished": "2021-11-27T13:30:00+08:00",
-  "dateModified": "2021-11-27T13:30:00+08:00",
+  "datePublished": "2024-07-22T00:07:00+09:00",
+  "dateModified": "2024-07-22T00:07:00+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -57,7 +57,7 @@ code.has-jax {
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/weili-git.github.io\/2021\/11\/cnn\/" 
+    "@id": "https:\/\/weili-git.github.io\/2024\/07\/mysql-char-index\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -69,7 +69,7 @@ code.has-jax {
     }
     
   },
-  "description": "1. Concept Applying \u0026rsquo;translation invariance\u0026rsquo; and \u0026rsquo;locality\u0026rsquo; to the MLP, we then get a CNN which can significantly reduce the parameters.\n$$h_{i,j} = \\sum_{a,b}v_{i,j,a,b}x_{i+a,j+b}$$\n$$\\Rightarrow h_{i,j} = \\sum_{a=-\\Delta}^{\\Delta}\\sum_{b=-\\Delta}^{\\Delta}v_{a,b}x_{i+a,j+b}$$\n2. Conv2d 2.1 Definition Input $$X: (N, C_{in}, H, W)$$\nKernel $$W: (h,w)$$\nBias: $$b$$\nOutput $$Y: (N, C_{out}, H\u0026rsquo;, W\u0026rsquo;)$$\n$$Y=X\\star W+b$$\n2.2 Cross Correlation $$y_{i,j} = \\sum_{a=1}^{h}\\sum_{b=1}^{w}w_{a,b}x_{i+a,j+b}$$\n2.3 Conv2d $$y_{i,j} = \\sum_{a=1}^{h}\\sum_{b=1}^{w}w_{-a,-b}x_{i+a,j+b}$$\nAs for implementation, we use \u0026lsquo;Cross Correlation\u0026rsquo; but call it \u0026lsquo;Conv2d\u0026rsquo;.",
+  "description": "1. Types of char 1.1 CHAR fixed size: 1~255 padding with space fast query speed 1.2 VARCHAR dynamic size: 1~65535 extra byte to store length slow query speed 1.3 TEXT dynamic size: 1~65535 extra 2 bytes to store length slowest query speed 2. Index Create index for database can speed up query.\n2.1 How to create index create index idx_name on employee(name); -- or alter table employee add index idx_name(name); -- unique index create unique index idx_name on employee(name); 2.",
   "keywords": []
 }
 
@@ -80,30 +80,30 @@ code.has-jax {
 <meta name="generator" content="Hugo 0.126.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="LI WEI">
 <meta name="keywords" content="">
-<meta name="description" content="Convolutional Neural Networks">
+<meta name="description" content="MySQL Usage">
 
 
-<meta property="og:description" content="Convolutional Neural Networks">
+<meta property="og:description" content="MySQL Usage">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CNN">
-<meta name="twitter:title" content="CNN">
-<meta property="og:url" content="https://weili-git.github.io/2021/11/cnn/">
-<meta property="twitter:url" content="https://weili-git.github.io/2021/11/cnn/">
+<meta property="og:title" content="MySQL Char &amp; Index">
+<meta name="twitter:title" content="MySQL Char &amp; Index">
+<meta property="og:url" content="https://weili-git.github.io/2024/07/mysql-char-index/">
+<meta property="twitter:url" content="https://weili-git.github.io/2024/07/mysql-char-index/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
-<meta property="og:description" content="Convolutional Neural Networks">
-<meta name="twitter:description" content="Convolutional Neural Networks">
+<meta property="og:description" content="MySQL Usage">
+<meta name="twitter:description" content="MySQL Usage">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2021-11-27T13:30:00">
+    <meta property="article:published_time" content="2024-07-22T00:07:00">
   
   
-    <meta property="article:modified_time" content="2021-11-27T13:30:00">
+    <meta property="article:modified_time" content="2024-07-22T00:07:00">
   
   
   
     
-      <meta property="article:section" content="Deep-learning">
+      <meta property="article:section" content="Web">
     
   
   
@@ -125,14 +125,14 @@ code.has-jax {
 
 
 
-    <title>CNN</title>
+    <title>MySQL Char &amp; Index</title>
 
     <link rel="icon" href="https://weili-git.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://weili-git.github.io/2021/11/cnn/">
+    <link rel="canonical" href="https://weili-git.github.io/2024/07/mysql-char-index/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -294,15 +294,15 @@ code.has-jax {
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      CNN
+      MySQL Char &amp; Index
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2021-11-27T13:30:00&#43;08:00">
+      <time datetime="2024-07-22T00:07:00&#43;09:00">
         
-  November 27, 2021
+  July 22, 2024
 
       </time>
     
@@ -311,7 +311,7 @@ code.has-jax {
   
     <span>in</span>
     
-      <a class="category-link" href="https://weili-git.github.io/categories/deep-learning">Deep-learning</a>
+      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
     
   
 
@@ -321,96 +321,43 @@ code.has-jax {
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <h1 id="1-concept">1. Concept</h1>
-<p>Applying &rsquo;translation invariance&rsquo; and &rsquo;locality&rsquo; to the MLP, we then get a CNN which can significantly reduce the parameters.</p>
-<p>$$h_{i,j} = \sum_{a,b}v_{i,j,a,b}x_{i+a,j+b}$$</p>
-<p>$$\Rightarrow h_{i,j} = \sum_{a=-\Delta}^{\Delta}\sum_{b=-\Delta}^{\Delta}v_{a,b}x_{i+a,j+b}$$</p>
-<h1 id="2-conv2d">2. Conv2d</h1>
-<h2 id="21-definition">2.1 Definition</h2>
+              <h1 id="1-types-of-char">1. Types of char</h1>
+<h2 id="11-char">1.1 CHAR</h2>
 <ul>
-<li>
-<p>Input $$X: (N, C_{in}, H, W)$$</p>
-</li>
-<li>
-<p>Kernel $$W: (h,w)$$</p>
-</li>
-<li>
-<p>Bias: $$b$$</p>
-</li>
-<li>
-<p>Output $$Y: (N, C_{out}, H&rsquo;, W&rsquo;)$$</p>
-</li>
+<li>fixed size: 1~255</li>
+<li>padding with space</li>
+<li>fast query speed</li>
 </ul>
-<p>$$Y=X\star W+b$$</p>
-<h2 id="22-cross-correlation">2.2 Cross Correlation</h2>
-<p>$$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{a,b}x_{i+a,j+b}$$</p>
-<h2 id="23-conv2d">2.3 Conv2d</h2>
-<p>$$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{-a,-b}x_{i+a,j+b}$$</p>
-<p>As for implementation, we use &lsquo;Cross Correlation&rsquo; but call it &lsquo;Conv2d&rsquo;.</p>
-<h2 id="24-conv1d--conv3d">2.4 Conv1d &amp;&amp; Conv3d</h2>
-<p>text, language, time sequences.</p>
-<p>$$y_{i} = \sum_{a=1}^{h}w_{a}x_{i+a}$$</p>
-<p>videos, medical images, meteorology.</p>
-<p>$$y_{i, j, k} = \sum_{a=1}^{h}\sum_{b=1}^{w}\sum_{c=1}^{d}w_{a,b,c}x_{i+a,j+b,k+c}$$</p>
-<p>inception v1&hellip;</p>
-<h1 id="3-padding">3. Padding</h1>
-<p>While using Conv2d, we usually get smaller features. In order to keep the shape constant, we fill 0s at the edge.</p>
-<p>Output Shape: $$(H, W) =&gt; (H-h+p_h+1,W-w+p_w+1)$$</p>
-<p>Normally we choose $$p_h = h-1, p_w = w-1$$, then the shape doesn&rsquo;t change.</p>
-<p>If h is odd, then padding $$\frac{p_h}{2}$$ on both sides, otherwise, we padding $$\lfloor \frac{p_h}{2} \rfloor$$ and $$\lceil \frac{p_h}{2} \rceil$$.</p>
-<h1 id="4-stride">4. Stride</h1>
-<p>While using Conv2d, sometimes we hope to decrease the shape faster. What we can do is to increase the stride of each move.</p>
-<p>Output Shape: $$(H, W) =&gt; (\lfloor\frac{H-h+p_h+s_h}{s_h}\rfloor,\lfloor\frac{W-w+p_w+s_w}{s_w}\rfloor)$$</p>
-<p>If $$p_h = h-1, p_w = w-1$$, and we know that $$\frac{s_h-1}{s_h}&lt;1$$, then the output is $$(\lfloor\frac{H}{s_h}\rfloor,\lfloor\frac{W}{s_w}\rfloor)$$</p>
-<p>the essence of ml is compression!</p>
-<h1 id="5-channel">5. Channel</h1>
-<p>Each channel has a corresponding kernel, and the result is the sum of them.
-<img src="https://weili-git.github.io/assets/images/2021-11-27-1.png" alt="example"></p>
-<h2 id="51-input-channel">5.1 Input channel</h2>
+<h2 id="12-varchar">1.2 VARCHAR</h2>
 <ul>
-<li>
-<p>input: $$X: C_{in},H,W$$</p>
-</li>
-<li>
-<p>kernel: $$W: C_{in},h,w$$</p>
-</li>
-<li>
-<p>output: $$Y: H&rsquo;,W&rsquo;$$</p>
-</li>
+<li>dynamic size: 1~65535</li>
+<li>extra byte to store length</li>
+<li>slow query speed</li>
 </ul>
-<p>$$Y=\sum_{i=0}^{C_{in}}X_{i,:,:}\star W_{i,:,:}$$</p>
-<h2 id="52-output-channel">5.2 Output channel</h2>
-<p>Output channel can be regarded as patterns that we want to recognize. For MNIST, we gradually increase the number of channels and obtain the textures of these images, then compress these information into the &lsquo;class label&rsquo; of each image by MLP.</p>
+<h2 id="13-text">1.3 TEXT</h2>
 <ul>
-<li>
-<p>input: $$X: C_{in},H,W$$</p>
-</li>
-<li>
-<p>kernel: $$W: C_{out},C_{in},h,w$$</p>
-</li>
-<li>
-<p>output: $$Y: C_{out},H&rsquo;,W&rsquo;$$</p>
-</li>
+<li>dynamic size: 1~65535</li>
+<li>extra 2 bytes to store length</li>
+<li>slowest query speed</li>
 </ul>
-<h2 id="53-1x1-kernel">5.3 1x1 Kernel</h2>
-<p>It&rsquo;s equivalent to a Full Connected Layer, and each kernel fuse channels by sharing parameters. No space pattern.</p>
-<h2 id="54-complexity">5.4 Complexity</h2>
-<p>$$O(C_{in}C_{out}hwH&rsquo;W&rsquo;)$$</p>
-<p>&lsquo;padding 0&rsquo; only add a constant to the result.</p>
-<h1 id="6-pooling-layer">6. Pooling Layer</h1>
-<p>Edge detecton [1, -1] is position sensitive. So &lsquo;Pooling Layer&rsquo; add transform invariance which return the maximum(average) of the sliding window. In general, Max and Avg has no difference, but Avg data doesn&rsquo;t appear in original data.</p>
-<h1 id="61-features">6.1 features</h1>
-<ul>
-<li>hyperparameter: size, padding, stride(=size by default)</li>
-<li>no learning parameter</li>
-<li>input channel + pooling layer =&gt; output channel</li>
-<li>output channel = input channel (no channel fuse)</li>
-</ul>
-<h1 id="62-qa">6.2 Q&amp;A</h1>
-<p>The &lsquo;data transform&rsquo; play down its role.
-cnn visualization..
-transfer learning..</p>
-
+<h1 id="2-index">2. Index</h1>
+<p>Create index for database can speed up query.</p>
+<h2 id="21-how-to-create-index">2.1 How to create index</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">index</span> idx_name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> employee(name);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- or
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> employee
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">add</span> <span style="color:#66d9ef">index</span> idx_name(name);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- unique index
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">unique</span> <span style="color:#66d9ef">index</span> idx_name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> employee(name);
+</span></span></code></pre></div><h2 id="22-how-to-check-index">2.2 How to check index</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">index</span> <span style="color:#66d9ef">from</span> employee;
+</span></span></code></pre></div><h2 id="23-how-to-drop-index">2.3 How to drop index</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">drop</span> <span style="color:#66d9ef">index</span> idx_name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> employee;
+</span></span></code></pre></div>
               
 
 
@@ -427,7 +374,7 @@ transfer learning..</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2021/12/live2d/" data-tooltip="Live2d" aria-label="NEXT: Live2d">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -435,7 +382,7 @@ transfer learning..</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2021/11/to-do-list/" data-tooltip="To Do List" aria-label="PREVIOUS: To Do List">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2024/06/router-cors/" data-tooltip="Router &amp; CORS" aria-label="PREVIOUS: Router &amp; CORS">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -453,19 +400,19 @@ transfer learning..</p>
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2021/11/cnn/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2021/11/cnn/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2021/11/cnn/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -496,9 +443,9 @@ transfer learning..</p>
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/weili-git.github.io\/2021\/11\/cnn\/';
+        this.page.url = 'https:\/\/weili-git.github.io\/2024\/07\/mysql-char-index\/';
         
-          this.page.identifier = '\/2021\/11\/cnn\/'
+          this.page.identifier = '\/2024\/07\/mysql-char-index\/'
         
       };
       (function() {
@@ -534,7 +481,7 @@ transfer learning..</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2021/12/live2d/" data-tooltip="Live2d" aria-label="NEXT: Live2d">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -542,7 +489,7 @@ transfer learning..</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2021/11/to-do-list/" data-tooltip="To Do List" aria-label="PREVIOUS: To Do List">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2024/06/router-cors/" data-tooltip="Router &amp; CORS" aria-label="PREVIOUS: Router &amp; CORS">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -560,19 +507,19 @@ transfer learning..</p>
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2021/11/cnn/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2021/11/cnn/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2021/11/cnn/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -603,19 +550,19 @@ transfer learning..</p>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweili-git.github.io%2F2021%2F11%2Fcnn%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweili-git.github.io%2F2024%2F07%2Fmysql-char-index%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fweili-git.github.io%2F2021%2F11%2Fcnn%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fweili-git.github.io%2F2024%2F07%2Fmysql-char-index%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fweili-git.github.io%2F2021%2F11%2Fcnn%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fweili-git.github.io%2F2024%2F07%2Fmysql-char-index%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>

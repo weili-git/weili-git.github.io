@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Hugo tranquilpeak theme</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jun 2024 12:08:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2024 00:07:00 +0900</lastBuildDate>
     <atom:link href="https://weili-git.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL Char &amp; Index</title>
+      <link>https://weili-git.github.io/2024/07/mysql-char-index/</link>
+      <pubDate>Mon, 22 Jul 2024 00:07:00 +0900</pubDate>
+      <guid>https://weili-git.github.io/2024/07/mysql-char-index/</guid>
+      <description>1. Types of char 1.1 CHAR fixed size: 1~255 padding with space fast query speed 1.2 VARCHAR dynamic size: 1~65535 extra byte to store length slow query speed 1.3 TEXT dynamic size: 1~65535 extra 2 bytes to store length slowest query speed 2. Index Create index for database can speed up query.&#xA;2.1 How to create index create index idx_name on employee(name); -- or alter table employee add index idx_name(name); -- unique index create unique index idx_name on employee(name); 2.</description>
+    </item>
     <item>
       <title>Router &amp; CORS</title>
       <link>https://weili-git.github.io/2024/06/router-cors/</link>
@@ -364,6 +371,13 @@
       <pubDate>Sat, 27 Nov 2021 13:30:00 +0800</pubDate>
       <guid>https://weili-git.github.io/2021/11/cnn/</guid>
       <description>1. Concept Applying &amp;rsquo;translation invariance&amp;rsquo; and &amp;rsquo;locality&amp;rsquo; to the MLP, we then get a CNN which can significantly reduce the parameters.&#xA;$$h_{i,j} = \sum_{a,b}v_{i,j,a,b}x_{i+a,j+b}$$&#xA;$$\Rightarrow h_{i,j} = \sum_{a=-\Delta}^{\Delta}\sum_{b=-\Delta}^{\Delta}v_{a,b}x_{i+a,j+b}$$&#xA;2. Conv2d 2.1 Definition Input $$X: (N, C_{in}, H, W)$$&#xA;Kernel $$W: (h,w)$$&#xA;Bias: $$b$$&#xA;Output $$Y: (N, C_{out}, H&amp;rsquo;, W&amp;rsquo;)$$&#xA;$$Y=X\star W+b$$&#xA;2.2 Cross Correlation $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{a,b}x_{i+a,j+b}$$&#xA;2.3 Conv2d $$y_{i,j} = \sum_{a=1}^{h}\sum_{b=1}^{w}w_{-a,-b}x_{i+a,j+b}$$&#xA;As for implementation, we use &amp;lsquo;Cross Correlation&amp;rsquo; but call it &amp;lsquo;Conv2d&amp;rsquo;.</description>
+    </item>
+    <item>
+      <title>To Do List</title>
+      <link>https://weili-git.github.io/2021/11/to-do-list/</link>
+      <pubDate>Sun, 21 Nov 2021 19:30:00 +0800</pubDate>
+      <guid>https://weili-git.github.io/2021/11/to-do-list/</guid>
+      <description>Homepage add publish time simplfy the layout page support search Navigator navigation link Categories list categories add sidebar cat navigate Live2d baisc function switch model Markdown Mathjax In progress.. </description>
     </item>
     <item>
       <title>Details</title>

@@ -6,8 +6,15 @@
     <description>Recent content in Web on Hugo tranquilpeak theme</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jun 2024 12:08:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2024 00:07:00 +0900</lastBuildDate>
     <atom:link href="https://weili-git.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL Char &amp; Index</title>
+      <link>https://weili-git.github.io/2024/07/mysql-char-index/</link>
+      <pubDate>Mon, 22 Jul 2024 00:07:00 +0900</pubDate>
+      <guid>https://weili-git.github.io/2024/07/mysql-char-index/</guid>
+      <description>1. Types of char 1.1 CHAR fixed size: 1~255 padding with space fast query speed 1.2 VARCHAR dynamic size: 1~65535 extra byte to store length slow query speed 1.3 TEXT dynamic size: 1~65535 extra 2 bytes to store length slowest query speed 2. Index Create index for database can speed up query.&#xA;2.1 How to create index create index idx_name on employee(name); -- or alter table employee add index idx_name(name); -- unique index create unique index idx_name on employee(name); 2.</description>
+    </item>
     <item>
       <title>Router &amp; CORS</title>
       <link>https://weili-git.github.io/2024/06/router-cors/</link>
