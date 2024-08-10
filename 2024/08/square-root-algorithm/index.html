@@ -44,10 +44,10 @@ code.has-jax {
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "MySQL Char \u0026 Index",
+  "headline": "Square root algorithm",
   
-  "datePublished": "2024-07-22T00:07:00+09:00",
-  "dateModified": "2024-07-22T00:07:00+09:00",
+  "datePublished": "2024-08-10T00:22:29+09:00",
+  "dateModified": "2024-08-10T00:22:29+09:00",
   "author": {
     "@type": "Person",
     "name": "LI WEI",
@@ -57,7 +57,7 @@ code.has-jax {
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/weili-git.github.io\/2024\/07\/mysql-char-index\/" 
+    "@id": "https:\/\/weili-git.github.io\/2024\/08\/square-root-algorithm\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -69,7 +69,7 @@ code.has-jax {
     }
     
   },
-  "description": "1. Types of char Type Size Range Extra Space Query Speed CHAR Fixed 1~255 0 fast VARCHAR Dynamic 1~65535 1~2 bytes slow TEXT Dynamic 1~65535 2 bytes slowest 2. Index Create index for database can speed up query.\n2.1 How to create index create index idx_name on employee(name); -- or alter table employee add index idx_name(name); -- unique index create unique index idx_name on employee(name); 2.2 How to check index show index from employee; 2.",
+  "description": "1. Dichotomy def sqrt(x, e=1e-6): if x\u0026lt;0: return -1 # error if x==0: return 0 if x \u0026lt; 1: a, b = x, 1 else: a, b = 0, x while b-a \u0026gt; e: m = (a+b)/2 if m*m \u0026gt; x: b = m else: a = m return (a+b)/2 Time complexity: $$ \\frac{x}{2^{f(n)}} \u0026lt; e \\ f(n) \u0026gt; log2(x/e) $$ Since e is usually a fixed number, the time complexity is $O(log(x))$",
   "keywords": []
 }
 
@@ -80,30 +80,30 @@ code.has-jax {
 <meta name="generator" content="Hugo 0.126.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="LI WEI">
 <meta name="keywords" content="">
-<meta name="description" content="MySQL Usage">
+<meta name="description" content="Square root algorithm">
 
 
-<meta property="og:description" content="MySQL Usage">
+<meta property="og:description" content="Square root algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL Char &amp; Index">
-<meta name="twitter:title" content="MySQL Char &amp; Index">
-<meta property="og:url" content="https://weili-git.github.io/2024/07/mysql-char-index/">
-<meta property="twitter:url" content="https://weili-git.github.io/2024/07/mysql-char-index/">
+<meta property="og:title" content="Square root algorithm">
+<meta name="twitter:title" content="Square root algorithm">
+<meta property="og:url" content="https://weili-git.github.io/2024/08/square-root-algorithm/">
+<meta property="twitter:url" content="https://weili-git.github.io/2024/08/square-root-algorithm/">
 <meta property="og:site_name" content="Hugo tranquilpeak theme">
-<meta property="og:description" content="MySQL Usage">
-<meta name="twitter:description" content="MySQL Usage">
+<meta property="og:description" content="Square root algorithm">
+<meta name="twitter:description" content="Square root algorithm">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2024-07-22T00:07:00">
+    <meta property="article:published_time" content="2024-08-10T00:22:29">
   
   
-    <meta property="article:modified_time" content="2024-07-22T00:07:00">
+    <meta property="article:modified_time" content="2024-08-10T00:22:29">
   
   
   
     
-      <meta property="article:section" content="Web">
+      <meta property="article:section" content="Algorithm">
     
   
   
@@ -125,14 +125,14 @@ code.has-jax {
 
 
 
-    <title>MySQL Char &amp; Index</title>
+    <title>Square root algorithm</title>
 
     <link rel="icon" href="https://weili-git.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://weili-git.github.io/2024/07/mysql-char-index/">
+    <link rel="canonical" href="https://weili-git.github.io/2024/08/square-root-algorithm/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -294,15 +294,15 @@ code.has-jax {
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      MySQL Char &amp; Index
+      Square root algorithm
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2024-07-22T00:07:00&#43;09:00">
+      <time datetime="2024-08-10T00:22:29&#43;09:00">
         
-  July 22, 2024
+  August 10, 2024
 
       </time>
     
@@ -311,7 +311,7 @@ code.has-jax {
   
     <span>in</span>
     
-      <a class="category-link" href="https://weili-git.github.io/categories/web">Web</a>
+      <a class="category-link" href="https://weili-git.github.io/categories/algorithm">Algorithm</a>
     
   
 
@@ -321,59 +321,51 @@ code.has-jax {
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <h1 id="1-types-of-char">1. Types of char</h1>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Size</th>
-<th>Range</th>
-<th>Extra Space</th>
-<th>Query Speed</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CHAR</td>
-<td>Fixed</td>
-<td>1~255</td>
-<td>0</td>
-<td>fast</td>
-</tr>
-<tr>
-<td>VARCHAR</td>
-<td>Dynamic</td>
-<td>1~65535</td>
-<td>1~2 bytes</td>
-<td>slow</td>
-</tr>
-<tr>
-<td>TEXT</td>
-<td>Dynamic</td>
-<td>1~65535</td>
-<td>2 bytes</td>
-<td>slowest</td>
-</tr>
-</tbody>
-</table>
-<h1 id="2-index">2. Index</h1>
-<p>Create index for database can speed up query.</p>
-<h2 id="21-how-to-create-index">2.1 How to create index</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">index</span> idx_name
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> employee(name);
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- or
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">alter</span> <span style="color:#66d9ef">table</span> employee
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">add</span> <span style="color:#66d9ef">index</span> idx_name(name);
+              <h1 id="1-dichotomy">1. Dichotomy</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sqrt</span>(x, e<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-6</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> x<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#75715e"># error</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> x<span style="color:#f92672">==</span><span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">-- unique index
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">unique</span> <span style="color:#66d9ef">index</span> idx_name
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> employee(name);
-</span></span></code></pre></div><h2 id="22-how-to-check-index">2.2 How to check index</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">index</span> <span style="color:#66d9ef">from</span> employee;
-</span></span></code></pre></div><h2 id="23-how-to-drop-index">2.3 How to drop index</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">drop</span> <span style="color:#66d9ef">index</span> idx_name
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">on</span> employee;
-</span></span></code></pre></div>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        a, b <span style="color:#f92672">=</span> x, <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        a, b <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, x
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> b<span style="color:#f92672">-</span>a <span style="color:#f92672">&gt;</span> e:
+</span></span><span style="display:flex;"><span>        m <span style="color:#f92672">=</span> (a<span style="color:#f92672">+</span>b)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> m<span style="color:#f92672">*</span>m <span style="color:#f92672">&gt;</span> x:
+</span></span><span style="display:flex;"><span>            b <span style="color:#f92672">=</span> m
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            a <span style="color:#f92672">=</span> m
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (a<span style="color:#f92672">+</span>b)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><h2 id="time-complexity">Time complexity:</h2>
+<p>$$
+\frac{x}{2^{f(n)}} &lt; e \
+f(n) &gt; log2(x/e)
+$$
+Since e is usually a fixed number, the time complexity is $O(log(x))$</p>
+<h1 id="2-newtons-method">2. Newton&rsquo;s method</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sqrt</span>(x, e<span style="color:#f92672">=</span><span style="color:#ae81ff">1e-6</span>):
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">=</span> x <span style="color:#75715e"># initial guess</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> abs(y<span style="color:#f92672">*</span>y<span style="color:#f92672">-</span>x) <span style="color:#f92672">&gt;</span> e:
+</span></span><span style="display:flex;"><span>        y <span style="color:#f92672">=</span> (y <span style="color:#f92672">+</span> x<span style="color:#f92672">/</span>y)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> y
+</span></span></code></pre></div><h2 id="proof">Proof</h2>
+<p>We define $f(x) = x^2 - c$ and try to find the square root of c.</p>
+<p>In the beginning, we guess $x_0$. And draw a tangent line to $f(x)$ at $x_0$.</p>
+<p>$$\begin{aligned}
+g(x) &amp;= f(x_0) + f&rsquo;(x_0)(x-x_0) \
+&amp;= x_0^2 - c + 2x_0(x-x_0) \
+&amp;= 2x_0x - x_0^2 - c
+\end{aligned}$$</p>
+<p>The tangent line intersects the $x$-axis at $x_1$.</p>
+<p>$$
+x_1 = (x_0 + \frac{c}{x_0})*0.5
+$$</p>
+<p><img src="%5Cassets%5Cimages%5CMethode_newton.png" alt="From Wikipedia"></p>
+
               
 
 
@@ -390,7 +382,7 @@ code.has-jax {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2024/08/square-root-algorithm/" data-tooltip="Square root algorithm" aria-label="NEXT: Square root algorithm">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -398,7 +390,7 @@ code.has-jax {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2024/06/router-cors/" data-tooltip="Router &amp; CORS" aria-label="PREVIOUS: Router &amp; CORS">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2024/07/mysql-char-index/" data-tooltip="MySQL Char &amp; Index" aria-label="PREVIOUS: MySQL Char &amp; Index">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -416,19 +408,19 @@ code.has-jax {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2024/08/square-root-algorithm/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2024/08/square-root-algorithm/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2024/08/square-root-algorithm/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -459,9 +451,9 @@ code.has-jax {
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/weili-git.github.io\/2024\/07\/mysql-char-index\/';
+        this.page.url = 'https:\/\/weili-git.github.io\/2024\/08\/square-root-algorithm\/';
         
-          this.page.identifier = '\/2024\/07\/mysql-char-index\/'
+          this.page.identifier = '\/2024\/08\/square-root-algorithm\/'
         
       };
       (function() {
@@ -497,7 +489,7 @@ code.has-jax {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2024/08/square-root-algorithm/" data-tooltip="Square root algorithm" aria-label="NEXT: Square root algorithm">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -505,7 +497,7 @@ code.has-jax {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2024/06/router-cors/" data-tooltip="Router &amp; CORS" aria-label="PREVIOUS: Router &amp; CORS">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://weili-git.github.io/2024/07/mysql-char-index/" data-tooltip="MySQL Char &amp; Index" aria-label="PREVIOUS: MySQL Char &amp; Index">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -523,19 +515,19 @@ code.has-jax {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://weili-git.github.io/2024/08/square-root-algorithm/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://weili-git.github.io/2024/08/square-root-algorithm/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2024/07/mysql-char-index/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://weili-git.github.io/2024/08/square-root-algorithm/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -566,19 +558,19 @@ code.has-jax {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweili-git.github.io%2F2024%2F07%2Fmysql-char-index%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweili-git.github.io%2F2024%2F08%2Fsquare-root-algorithm%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fweili-git.github.io%2F2024%2F07%2Fmysql-char-index%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fweili-git.github.io%2F2024%2F08%2Fsquare-root-algorithm%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fweili-git.github.io%2F2024%2F07%2Fmysql-char-index%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fweili-git.github.io%2F2024%2F08%2Fsquare-root-algorithm%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>

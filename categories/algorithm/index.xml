@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithm on Hugo tranquilpeak theme</title>
+    <link>https://weili-git.github.io/categories/algorithm/</link>
+    <description>Recent content in Algorithm on Hugo tranquilpeak theme</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2024 00:22:29 +0900</lastBuildDate>
+    <atom:link href="https://weili-git.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Square root algorithm</title>
+      <link>https://weili-git.github.io/2024/08/square-root-algorithm/</link>
+      <pubDate>Sat, 10 Aug 2024 00:22:29 +0900</pubDate>
+      <guid>https://weili-git.github.io/2024/08/square-root-algorithm/</guid>
+      <description>1. Dichotomy def sqrt(x, e=1e-6): if x&amp;lt;0: return -1 # error if x==0: return 0 if x &amp;lt; 1: a, b = x, 1 else: a, b = 0, x while b-a &amp;gt; e: m = (a+b)/2 if m*m &amp;gt; x: b = m else: a = m return (a+b)/2 Time complexity: $$ \frac{x}{2^{f(n)}} &amp;lt; e \ f(n) &amp;gt; log2(x/e) $$ Since e is usually a fixed number, the time complexity is $O(log(x))$</description>
+    </item>
+  </channel>
+</rss>
